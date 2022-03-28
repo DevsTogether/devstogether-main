@@ -1,17 +1,13 @@
 import { getSession } from "next-auth/react"
+import { getException } from '../../../src/utils/exceptionHandler/exceptionHandler.js'
 
 const handler = async (req, res) => {
   const session = await getSession({ req })
 
   if (session) {
-    res.send({
-      content:
-        "This is protected content. You can access this content because you are signed in.",
-    })
+    res.send({})
   } else {
-    res.send({
-      error: "You must be sign in to view the protected content on this page.",
-    })
+    res.send(getException("api-endpoint-auth-required"))
   }
 }
 
