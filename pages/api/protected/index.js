@@ -1,5 +1,5 @@
 import { getSession } from "next-auth/react"
-import { getException } from '../../../src/utils/exceptionHandler/exceptionHandler.js'
+import { getException } from '../../../utils/exceptionHandler/exceptionHandler.js'
 
 const handler = async (req, res) => {
   const session = await getSession({ req })
