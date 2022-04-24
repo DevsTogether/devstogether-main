@@ -4,11 +4,9 @@ import { getException } from '../../../src/utils/exceptionHandler/exceptionHandl
 const handler = async (req, res) => {
   const session = await getSession({ req })
 
-  if (session) {
-    res.send({})
-  } else {
-    res.send(getException("api-endpoint-auth-required"))
-  }
+  if (!session) res.send(getException("api-endpoint-auth-required"))
+
+  res.send(session)
 }
 
 export default handler
