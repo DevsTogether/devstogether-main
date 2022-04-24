@@ -1,30 +1,30 @@
 {
-	"api-endpoint-auth-required": {
-		"errorName": "api-endpoint-auth-required",
+    "api-endpoint-auth-required": {
+        "errorName": "api-endpoint-auth-required",
         "helpUrl": null
-	},
-	"view-page-auth-required": {
-		"errorName": "view-page-auth-required",
+    },
+    "view-page-auth-required": {
+        "errorName": "view-page-auth-required",
         "helpUrl": null
-	},
+    },
     "firebase-get-operation-error": {
-		"errorName": "firebase-get-operation-error",
+        "errorName": "firebase-get-operation-error",
         "helpUrl": null
-	},
+    },
     "firebase-post-operation-error": {
-		"errorName": "firebase-post-operation-error",
+        "errorName": "firebase-post-operation-error",
         "helpUrl": null
-	},
+    },
     "firebase-update-operation-error": {
-		"errorName": "firebase-update-operation-error",
+        "errorName": "firebase-update-operation-error",
         "helpUrl": null
-	},
+    },
     "firebase-delete-operation-error": {
-		"errorName": "firebase-delete-operation-error",
+        "errorName": "firebase-delete-operation-error",
         "helpUrl": null
-	},
-	"unrecognized-error": {
-		"errorName": "unrecognized-error",
+    },
+    "unrecognized-error": {
+        "errorName": "unrecognized-error",
         "helpUrl": null
-	}
+    }
 }
