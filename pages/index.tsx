@@ -1,7 +1,8 @@
+import type { NextPage } from 'next'
 import Image from 'next/image';
 import logo from '../public/logo.png';
 
-export default function Home() {
+const Home: NextPage = () => {
     return (
         <div>
             <Image src={logo} alt="" width={300} height={300} />
@@ -51,3 +52,5 @@ export default function Home() {
         </div>
     );
 }
+
+export default Home;
