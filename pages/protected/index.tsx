@@ -1,7 +1,9 @@
+import type { NextPage } from 'next'
 import { useSession, signIn, signOut } from 'next-auth/react';
 
-export default function Protected() {
+const ProtectedPage: NextPage = () => {
     const { data: session } = useSession();
+
     if (session) {
         return (
             <>
@@ -18,3 +20,5 @@ export default function Protected() {
         </>
     );
 }
+
+export default ProtectedPage;

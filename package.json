@@ -12,13 +12,17 @@
     },
     "dependencies": {
         "firebase": "^9.6.9",
-        "next": "12.1.0",
         "next-auth": "^4.3.1",
-        "react": "17.0.2",
-        "react-dom": "17.0.2",
+        "next": "12.1.5",
+        "react": "18.1.0",
+        "react-dom": "18.1.0",
         "styled-jsx": "^5.0.2"
     },
     "devDependencies": {
+        "typescript": "4.6.4",
+        "@types/node": "17.0.31",
+        "@types/react": "18.0.8",
+        "@types/react-dom": "18.0.3",
         "eslint": "8.11.0",
         "eslint-config-next": "12.1.0",
         "husky": "^7.0.4",
