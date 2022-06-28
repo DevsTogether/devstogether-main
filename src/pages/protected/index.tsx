@@ -1,4 +1,4 @@
-import type { NextPage } from 'next'
+import type { NextPage } from 'next';
 import { useSession, signIn, signOut } from 'next-auth/react';
 
 const ProtectedPage: NextPage = () => {
@@ -19,6 +19,6 @@ const ProtectedPage: NextPage = () => {
             <button onClick={() => signIn()}>Sign in</button>
         </>
     );
-}
+};
 
 export default ProtectedPage;

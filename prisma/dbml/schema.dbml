@@ -1,0 +1,271 @@
+//// ------------------------------------------------------
+//// THIS FILE WAS AUTOMATICALLY GENERATED (DO NOT MODIFY)
+//// ------------------------------------------------------
+
+Table Account {
+  id String [pk]
+  userId String [not null]
+  type String [not null]
+  provider String [not null]
+  providerAccountId String [not null]
+  refresh_token String
+  access_token String
+  expires_at Int
+  token_type String
+  scope String
+  id_token String
+  session_state String
+  user User [not null]
+
+  indexes {
+    (provider, providerAccountId) [unique]
+  }
+}
+
+Table Session {
+  id String [pk]
+  sessionToken String [unique, not null]
+  userId String [not null]
+  expires DateTime [not null]
+  user User [not null]
+}
+
+Table VerificationToken {
+  identifier String [not null]
+  token String [unique, not null]
+  expires DateTime [not null]
+
+  indexes {
+    (identifier, token) [unique]
+  }
+}
+
+Table User {
+  id String [pk]
+  name String
+  username String
+  email String [unique]
+  emailVerified DateTime
+  image String
+  bio String
+  reputation Int [default: 0]
+  helpedUsers Int [default: 0]
+  restrictions Json
+  createdAt DateTime [default: `now()`]
+  banned Boolean [default: false]
+  specialization String
+  accounts Account [not null]
+  sessions Session [not null]
+  level Level [not null]
+  role Role [not null]
+  levelId Int [not null]
+  roleId Int [not null]
+  languages UserLanguage [not null]
+  medals UserMedal [not null]
+  integrations Integration [not null]
+  Questions Question [not null]
+  Reports Report [not null]
+  Comments Comment [not null]
+  Call Call [not null]
+  CallParticipant CallParticipant [not null]
+  Vote Vote [not null]
+}
+
+Table Role {
+  id Int [pk, increment, unique]
+  name String [not null]
+  roles Json
+  User User [not null]
+}
+
+Table Level {
+  id Int [pk, increment, unique]
+  name String
+  reputationRequired Int
+  User User [not null]
+}
+
+Table Language {
+  id Int [pk, increment, unique]
+  name String [not null]
+  UserLanguage UserLanguage [not null]
+}
+
+Table UserLanguage {
+  id Int [increment, unique, not null]
+  User User [not null]
+  userId String [not null]
+  language Language [not null]
+  languageId Int [not null]
+
+  indexes {
+    (id, userId, languageId) [pk]
+  }
+}
+
+Table Medal {
+  id Int [pk, increment, unique]
+  name String
+  details String
+  type String
+  UserMedal UserMedal [not null]
+}
+
+Table UserMedal {
+  id Int [pk, increment]
+  User User [not null]
+  userId String [not null]
+  medal Medal [not null]
+  medalId Int [not null]
+  obtainedAt DateTime
+}
+
+Table Integration {
+  id String [pk, unique]
+  integrationData Json
+  User User [not null]
+  userId String [not null]
+}
+
+Table Question {
+  id String [pk, unique]
+  title String [not null]
+  content String [not null]
+  visits Int [not null, default: 0]
+  reward Int
+  type String
+  tags QuestionTag [not null]
+  createdAt DateTime [default: `now()`]
+  updatedAt DateTime
+  User User
+  userId String
+  Comment Comment [not null]
+  Call Call [not null]
+  Vote Vote [not null]
+}
+
+Table Vote {
+  id String [pk, unique]
+  point Int
+  User User [not null]
+  userId String [not null]
+  Question Question
+  questionId String
+  Response Response
+  responseId String
+  createdAt DateTime [default: `now()`]
+}
+
+Table Response {
+  id String [pk, unique]
+  content String [not null]
+  createdAt DateTime [default: `now()`]
+  updatedAt DateTime
+  comments Comment [not null]
+  questionId String [not null]
+  Vote Vote [not null]
+}
+
+Table Tag {
+  id Int [pk, increment, unique]
+  about String
+  QuestionTag QuestionTag [not null]
+}
+
+Table QuestionTag {
+  id Int [pk, increment]
+  tag Tag
+  tagId Int
+  question Question
+  questionId String
+}
+
+Table Report {
+  id String [pk, unique]
+  User User
+  userId String
+  userReportedId String
+  origin String
+  reason String
+  details String
+}
+
+Table Comment {
+  id String [pk, unique]
+  User User
+  Response Response
+  Question Question
+  userId String
+  responseId String
+  questionId String
+  content String [not null]
+  createdAt DateTime [default: `now()`]
+  updatedAt DateTime
+}
+
+Table Call {
+  id String [pk, unique]
+  start DateTime
+  ending DateTime
+  expires DateTime
+  isOpen Boolean [not null, default: false]
+  question Question
+  questionId String
+  userId String [not null]
+  User User [not null]
+  CallParticipant CallParticipant [not null]
+}
+
+Table CallParticipant {
+  id String [pk, unique]
+  Call Call
+  callId String
+  User User
+  userId String
+}
+
+Ref: Account.userId > User.id [delete: Cascade]
+
+Ref: Session.userId > User.id [delete: Cascade]
+
+Ref: User.levelId > Level.id
+
+Ref: User.roleId > Role.id
+
+Ref: UserLanguage.userId > User.id
+
+Ref: UserLanguage.languageId > Language.id
+
+Ref: UserMedal.userId > User.id
+
+Ref: UserMedal.medalId > Medal.id
+
+Ref: Integration.userId > User.id
+
+Ref: Question.userId > User.id
+
+Ref: Vote.userId > User.id
+
+Ref: Vote.questionId > Question.id
+
+Ref: Vote.responseId > Response.id
+
+Ref: QuestionTag.tagId > Tag.id
+
+Ref: QuestionTag.questionId > Question.id
+
+Ref: Report.userId > User.id
+
+Ref: Comment.userId > User.id
+
+Ref: Comment.responseId > Response.id
+
+Ref: Comment.questionId > Question.id
+
+Ref: Call.questionId > Question.id
+
+Ref: Call.userId > User.id
+
+Ref: CallParticipant.callId > Call.id
+
+Ref: CallParticipant.userId > User.id
