@@ -1,15 +1,16 @@
+import { PrismaAdapter } from '@next-auth/prisma-adapter';
 import { PrismaClient } from '@prisma/client';
-import { randomUUID } from 'crypto';
 import NextAuth from 'next-auth';
-import CredentialsProvider from 'next-auth/providers/credentials';
+import EmailProvider from 'next-auth/providers/email';
 import FacebookProvider from 'next-auth/providers/facebook';
 import GitHubProvider from 'next-auth/providers/github';
 import GoogleProvider from 'next-auth/providers/google';
+import { sendVerificationRequest } from './emailAuth';
 
 const prisma = new PrismaClient();
 
 export default NextAuth({
-    //adapter: PrismaAdapter(prisma),
+    adapter: PrismaAdapter(prisma),
     providers: [
         GoogleProvider({
             clientId: process.env.GOOGLE_ID,
@@ -22,7 +23,7 @@ export default NextAuth({
         FacebookProvider({
             clientId: process.env.FACEBOOK_CLIENT_ID,
             clientSecret: process.env.FACEBOOK_CLIENT_SECRET,
-        }),/* 
+        }),
         EmailProvider({
             server: {
                 server: {
@@ -30,27 +31,23 @@ export default NextAuth({
                     port: process.env.EMAIL_SERVER_PORT,
                     auth: {
                         user: process.env.EMAIL_SERVER_USER,
-                        pass: process.env.EMAIL_SERVER_PASSWORD
-                    }
+                        pass: process.env.EMAIL_SERVER_PASSWORD,
+                    },
                 },
-                from: process.env.EMAIL_FROM
+                from: process.env.EMAIL_FROM,
             },
-            from: process.env.EMAIL_FROM
-        }), */
-        CredentialsProvider({
-            name: 'guest',
-            async authorize() {
-                const user = {
-                    id: randomUUID(),
-                    name: `AnonymousCoder`,
-                };
-
-                return user;
-            },
+            from: process.env.EMAIL_FROM,
+            sendVerificationRequest,
         }),
     ],
+    callbacks: {
+        redirect: async ({ url, baseUrl }) => {
+            return `${baseUrl}/protected`;
+        },
+    },
     debug: process.env.NODE_ENV === 'development',
     session: {
-        jwt: true
-    }
+        strategy: 'database',
+        maxAge: 30 * 24 * 60 * 60,
+    },
 });

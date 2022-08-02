@@ -56,8 +56,8 @@ Table User {
   specialization String
   accounts Account [not null]
   sessions Session [not null]
-  level Level [not null]
-  role Role [not null]
+  level Level
+  role Role
   levelId Int [not null]
   roleId Int [not null]
   languages UserLanguage [not null]

@@ -62,8 +62,8 @@ model User {
   specialization  String?
   accounts        Account[]
   sessions        Session[]
-  level           Level             @relation(fields: [levelId], references: [id])
-  role            Role              @relation(fields: [roleId], references: [id])
+  level           Level?            @relation(fields: [levelId], references: [id])
+  role            Role?             @relation(fields: [roleId], references: [id])
   levelId         Int
   roleId          Int
   languages       UserLanguage[]

@@ -5,9 +5,9 @@ import { getSession } from 'next-auth/react';
 const handler = async (req: NextApiRequest, res: NextApiResponse) => {
     const session = await getSession({ req });
 
-    if (!session) res.send(getException('api-endpoint-auth-required'));
+    res.send(JSON.stringify(session));
 
-    res.send(session);
+    if (!session) res.send(getException('api-endpoint-auth-required'));
 };
 
 export default handler;
