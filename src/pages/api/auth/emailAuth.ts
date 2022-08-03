@@ -1,5 +1,4 @@
 import { readFileSync } from 'fs';
-import { createTransport } from 'nodemailer';
 import path from 'path';
 
 async function getEmailTemplate(
@@ -34,23 +33,29 @@ async function sendVerificationRequest({
     provider: { server: string; from: string };
 }) {
     const { host } = new URL(url);
-
-    const transport = createTransport(provider.server);
     const emailBody: string = await getEmailTemplate(
         'sendVerificationRequest',
         { host, url }
     );
-
-    const result = await transport.sendMail({
+    const sendGrid = require('@sendgrid/mail');
+    const email = {
         to: identifier,
         from: provider.from,
-        subject: `Email de verificação - DevsTogether`,
-        text: `Email de verificação - DevsTogether`,
+        subject: 'Entre em sua conta DevsTogether',
+        text: 'Entre em sua conta DevsTogether',
         html: emailBody,
-    });
-    const failed = result.rejected.concat(result.pending).filter(Boolean);
-    if (failed.length) {
-        throw new Error(`Email(s) (${failed.join(', ')}) could not be sent`);
+    };
+    sendGrid.setApiKey(process.env.SENDGRID_API_KEY);
+
+    try {
+        await sendGrid.send(email);
+        console.log('email sent!');
+    } catch (error: any) {
+        console.error(error);
+
+        if (error.response) {
+            console.error(error.response.body);
+        }
     }
 }
 
