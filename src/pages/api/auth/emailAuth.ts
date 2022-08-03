@@ -35,7 +35,7 @@ async function sendVerificationRequest({
     const { host } = new URL(url);
     const emailBody: string = await getEmailTemplate(
         'sendVerificationRequest',
-        { host, url }
+        { host, url, url_link: url }
     );
     const sendGrid = require('@sendgrid/mail');
     const email = {

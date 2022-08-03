@@ -6,7 +6,7 @@ const ProtectedPage: NextPage = () => {
     const { data: session } = useSession();
     const profilePicture: String =
         session?.user?.image ||
-        'https://cdn2.iconfinder.com/data/icons/hacker-solid/100/hacker_hacker_human_-512.png';
+        'https://www.89fmonline.com.br/admin/uploads/upload_0cb7aed88154ebefc0684692bc91a01a.jpg';
 
     console.log(session);
 
