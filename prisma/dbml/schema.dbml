@@ -53,13 +53,14 @@ Table User {
   restrictions Json
   createdAt DateTime [default: `now()`]
   banned Boolean [default: false]
+  active Boolean [default: true]
   specialization String
   accounts Account [not null]
   sessions Session [not null]
   level Level
   role Role
-  levelId Int [not null]
-  roleId Int [not null]
+  levelId Int [not null, default: 1]
+  roleId Int [not null, default: 3]
   languages UserLanguage [not null]
   medals UserMedal [not null]
   integrations Integration [not null]
