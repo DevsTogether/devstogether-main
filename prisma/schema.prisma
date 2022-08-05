@@ -125,7 +125,7 @@ model UserMedal {
 }
 
 model Integration {
-  id              String @id @unique
+  id              String @id @unique @default(cuid())
   integrationData Json?
   User            User   @relation(fields: [userId], references: [id])
   userId          String
