@@ -117,7 +117,7 @@ model Medal {
 }
 
 model UserMedal {
-  id         Int       @id @default(autoincrement())
+  id         Int       @id @unique @default(autoincrement())
   User       User      @relation(fields: [userId], references: [id])
   userId     String
   medal      Medal     @relation(fields: [medalId], references: [id])
@@ -173,12 +173,13 @@ model Response {
 
 model Tag {
   id          Int           @id @unique @default(autoincrement())
+  name        String        @unique
   about       String?
   QuestionTag QuestionTag[]
 }
 
 model QuestionTag {
-  id         Int       @id @default(autoincrement())
+  id         Int       @id @unique @default(autoincrement())
   tag        Tag?      @relation(fields: [tagId], references: [id])
   tagId      Int?
   question   Question? @relation(fields: [questionId], references: [id])
@@ -188,7 +189,7 @@ model QuestionTag {
 model Report {
   id             String  @id @unique @default(cuid())
   User           User?   @relation(fields: [userId], references: [id])
-  userId         String?
+  userId         String? 
   userReportedId String?
   origin         String?
   reason         String?
