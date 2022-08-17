@@ -4,17 +4,9 @@ import type { NextApiRequest, NextApiResponse } from 'next';
 const handler = async (req: NextApiRequest, res: NextApiResponse) => {
     const prisma = new PrismaClient();
 
-    const users = await prisma.user.findMany({
-        include: {
-            _count: {
-                select: {
-                    accounts: true,
-                },
-            },
-        },
-    });
+    const users = await prisma.user.findMany();
 
-    res.send(users);
+    res.json(users);
 };
 
 export default handler;
