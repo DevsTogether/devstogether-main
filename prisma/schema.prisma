@@ -138,19 +138,20 @@ model Question {
   content   String
   visits    Int           @default(0)
   reward    Int?
-  type      String?
-  tags      QuestionTag[]
+  type      String?       @default("default")
+  tags      QuestionTag[] 
   createdAt DateTime?     @default(now())
   updatedAt DateTime?
   User      User?         @relation(fields: [userId], references: [id])
   userId    String?
   Comment   Comment[]
+  Responses Response[]
   Call      Call[]
   Vote      Vote[]
 }
 
 model Vote {
-  id         String    @id @unique @default(cuid())
+  id         String    @unique @default(cuid())
   point      Int?
   User       User      @relation(fields: [userId], references: [id])
   userId     String
@@ -159,6 +160,8 @@ model Vote {
   Response   Response? @relation(fields: [responseId], references: [id])
   responseId String?
   createdAt  DateTime? @default(now())
+
+  @@id([id, userId])
 }
 
 model Response {
@@ -167,6 +170,7 @@ model Response {
   createdAt  DateTime? @default(now())
   updatedAt  DateTime?
   comments   Comment[]
+  Question   Question  @relation(fields: [questionId], references: [id])
   questionId String
   Vote       Vote[]
 }
