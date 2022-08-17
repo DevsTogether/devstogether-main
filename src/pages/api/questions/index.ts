@@ -6,7 +6,7 @@ const handler = async (req: NextApiRequest, res: NextApiResponse) => {
 
     const question = await prisma.question.findMany();
 
-    res.send(question);
+    res.json(question);
 };
 
 export default handler;

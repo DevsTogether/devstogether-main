@@ -13,7 +13,7 @@ const handler = async (req: NextApiRequest, res: NextApiResponse) => {
             },
         });
 
-        res.send(question);
+        res.json(question);
     } else if (method === 'POST') {
         const body: Question = JSON.parse(req.body);
 
@@ -26,14 +26,33 @@ const handler = async (req: NextApiRequest, res: NextApiResponse) => {
                 userId: '', //pegar da sessão
             },
         });
-    } else if (method === 'DELETE') {
-        await prisma.report.delete({
+    } else if (method === 'UPDATE') {
+        const body: Question = JSON.parse(req.body);
+
+        await prisma.question.update({
             where: {
                 id: id.toString(),
             },
+            data: {
+                title: body.title,
+                content: body.content,
+                reward: 11,
+                visits: 0,
+                userId: '', //pegar da sessão
+            },
         });
+    } else if (method === 'DELETE') {
+        try {
+            await prisma.report.delete({
+                where: {
+                    id: id.toString(),
+                },
+            });
 
-        res.send({});
+            res.json({ status: id });
+        } catch (error) {
+            res.json({ status: null, error: error });
+        }
     }
 };
 
