@@ -6,7 +6,8 @@ const handler = async (req: NextApiRequest, res: NextApiResponse) => {
 
     const roles = await prisma.level.findMany();
 
-    res.send(roles);
+    res.setHeader('Cache-Control', 's-maxage=1800, stale-while-revalidate');
+    res.json(roles);
 };
 
 export default handler;

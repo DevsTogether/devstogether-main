@@ -6,7 +6,8 @@ const handler = async (req: NextApiRequest, res: NextApiResponse) => {
 
     const tags = await prisma.tag.findMany();
 
-    res.send(tags);
+    res.setHeader('Cache-Control', 's-maxage=1800, stale-while-revalidate');
+    res.json(tags);
 };
 
 export default handler;

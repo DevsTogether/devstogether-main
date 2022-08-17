@@ -11,7 +11,8 @@ const handler = async (req: NextApiRequest, res: NextApiResponse) => {
         },
     });
 
-    res.send(role);
+    res.setHeader('Cache-Control', 's-maxage=1800, stale-while-revalidate');
+    res.json(role);
 };
 
 export default handler;

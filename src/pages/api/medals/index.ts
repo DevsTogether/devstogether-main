@@ -6,7 +6,8 @@ const handler = async (req: NextApiRequest, res: NextApiResponse) => {
 
     const medals = await prisma.medal.findMany();
 
-    res.send(medals);
+    res.setHeader('Cache-Control', 's-maxage=1800, stale-while-revalidate');
+    res.json(medals);
 };
 
 export default handler;

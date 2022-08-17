@@ -15,7 +15,8 @@ const handler = async (req: NextApiRequest, res: NextApiResponse) => {
         select: select,
     });
 
-    res.send(level);
+    res.setHeader('Cache-Control', 's-maxage=1800, stale-while-revalidate');
+    res.json(level);
 };
 
 export default handler;
