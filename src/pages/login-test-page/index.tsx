@@ -2,7 +2,7 @@
 import type { NextPage } from 'next';
 import { signIn, signOut, useSession } from 'next-auth/react';
 
-const ProtectedPage: NextPage = () => {
+const page: NextPage = () => {
     const { data: session } = useSession();
     const profilePicture: String =
         session?.user?.image ||
@@ -44,4 +44,4 @@ const ProtectedPage: NextPage = () => {
     );
 };
 
-export default ProtectedPage;
+export default page;
