@@ -20,7 +20,7 @@ const handler = async (req: NextApiRequest, res: NextApiResponse) => {
             });
 
             if (vote?.id) {
-                if (vote.point === 1) {
+                if (vote.point === -1) {
                     const deletedVote = await prisma.vote.delete({
                         select: {
                             id: true,
@@ -45,7 +45,7 @@ const handler = async (req: NextApiRequest, res: NextApiResponse) => {
                             id: vote.id
                         },
                         data: {
-                            point: 1
+                            point: -1
                         }
                     });
                     
@@ -62,7 +62,7 @@ const handler = async (req: NextApiRequest, res: NextApiResponse) => {
                         id: true
                     },
                     data: {
-                        point: 1,
+                        point: -1,
                         responseId: id.toString(),
                         userId: 'cl6berue50018icvx4oelm5bn', //pegar da sessão,
                     }

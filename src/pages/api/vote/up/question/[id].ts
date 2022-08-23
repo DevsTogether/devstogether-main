@@ -8,54 +8,76 @@ const handler = async (req: NextApiRequest, res: NextApiResponse) => {
 
     try {
         if (method === 'POST') {
-            const vote = await prisma.vote.create({
-                select: {
-                    id: true,
-                },
-                data: {
-                    userId: 'cl6berue50018icvx4oelm5bn', //pegar da sessão
-                    questionId: id.toString(),
-                    point: 1,
-                },
-            });
-
-            res.json({
-                status: {
-                    questionId: id.toString(),
-                    voteId: vote.id,
-                },
-            });
-        } else if (method === 'DELETE') {
             const vote = await prisma.vote.findFirst({
                 select: {
-                    id: true,
+                    point: true,
+                    id: true
                 },
                 where: {
-                    AND: {
-                        questionId: id.toString(),
-                        userId: 'cl6berue50018icvx4oelm5bn', // pegar da sessão
-                    },
-                },
-            });
-
-            const deletedVote = await prisma.vote.delete({
-                select: {
-                    id: true,
-                },
-                where: {
-                    id: vote?.id,
-                },
-            });
-
-            res.json({
-                status: {
+                    userId: 'cl6berue50018icvx4oelm5bn', //pegar da sessão,
                     questionId: id.toString(),
-                    voteId: deletedVote.id,
-                },
+                }
             });
+
+            if (vote?.id) {
+                if (vote.point === 1) {
+                    const deletedVote = await prisma.vote.delete({
+                        select: {
+                            id: true,
+                        },
+                        where: {
+                            id: vote?.id
+                        }
+                    });
+
+                    res.json({
+                        status: {
+                            questionId: id.toString(),
+                            voteId: deletedVote.id,
+                        },
+                    });
+                } else {
+                    const updatedVote = await prisma.vote.update({
+                        select: {
+                            id: true
+                        },
+                        where: {
+                            id: vote.id
+                        },
+                        data: {
+                            point: 1
+                        }
+                    });
+                    
+                    res.json({
+                        status: {
+                            questionId: id.toString(),
+                            voteId: updatedVote.id,
+                        },
+                    });
+                }
+            } else {
+                const createdVote = await prisma.vote.create({
+                    select: {
+                        id: true
+                    },
+                    data: {
+                        point: 1,
+                        questionId: id.toString(),
+                        userId: 'cl6berue50018icvx4oelm5bn', //pegar da sessão,
+                    }
+                });
+
+                res.json({
+                    status: {
+                        questionId: id.toString(),
+                        voteId: createdVote.id,
+                    },
+                });
+            }
         }
     } catch (error) {
-        res.json({ status: null, error: error });
+        res.json({ result: 'success', error: String(error) });
     }
 };
 
