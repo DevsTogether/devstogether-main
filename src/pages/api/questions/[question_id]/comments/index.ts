@@ -3,10 +3,15 @@ import type { NextApiRequest, NextApiResponse } from 'next';
 
 const handler = async (req: NextApiRequest, res: NextApiResponse) => {
     const prisma = new PrismaClient();
+    const { question_id } = req.query;
 
-    const questions = await prisma.question.findMany();
+    const comments = await prisma.comment.findMany({
+        where: {
+            questionId: question_id.toString() 
+        }
+    });
 
-    res.json(questions);
+    res.json(comments);
 };
 
 export default handler;

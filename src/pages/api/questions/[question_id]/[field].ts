@@ -4,17 +4,17 @@ import type { NextApiRequest, NextApiResponse } from 'next';
 
 const handler = async (req: NextApiRequest, res: NextApiResponse) => {
     const prisma = new PrismaClient();
-    const { id, field }: { [key: string]: string | string[] } = req.query;
+    const { question_id, field }: { [key: string]: string | string[] } = req.query;
     const select: any = {};
     select[field.toString()] = true;
 
-    const response = await prisma.response.findUnique({
+    const question = await prisma.question.findUnique({
         where: {
-            id: id.toString(),
+            id: question_id.toString(),
         },
         select: select,
     });
-    res.send(response);
+    res.send(question);
 };
 
 export default handler;

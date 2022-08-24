@@ -4,12 +4,12 @@ import type { NextApiRequest, NextApiResponse } from 'next';
 const handler = async (req: NextApiRequest, res: NextApiResponse) => {
     const prisma = new PrismaClient();
     const method = req.method;
-    const { id } = req.query;
+    const { question_id } = req.query;
 
     if (method === 'GET') {
         const question = await prisma.question.findUnique({
             where: {
-                id: id.toString(),
+                id: question_id.toString(),
             },
         });
 
@@ -31,7 +31,7 @@ const handler = async (req: NextApiRequest, res: NextApiResponse) => {
 
         await prisma.question.update({
             where: {
-                id: id.toString(),
+                id: question_id.toString(),
             },
             data: {
                 title: body.title,
@@ -45,11 +45,11 @@ const handler = async (req: NextApiRequest, res: NextApiResponse) => {
         try {
             await prisma.report.delete({
                 where: {
-                    id: id.toString(),
+                    id: question_id.toString(),
                 },
             });
 
-            res.json({ status: id });
+            res.json({ status: question_id });
         } catch (error) {
             res.json({ status: null, error: error });
         }
