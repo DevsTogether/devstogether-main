@@ -16,7 +16,7 @@ const handler = async (req: NextApiRequest, res: NextApiResponse) => {
 
         res.send(user);
     } else if (method === 'UPDATE') {
-        const body: User = JSON.parse(req.body);
+        const body: User = req.body;
 
         await prisma.user.update({
             where: {

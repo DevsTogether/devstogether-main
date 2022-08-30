@@ -14,8 +14,8 @@ const handler = async (req: NextApiRequest, res: NextApiResponse) => {
         });
 
         res.json(response);
-    } else if (method === 'POST') {
-        const body: Response = JSON.parse(req.body);
+    } else if (method === 'PUT') {
+        const body: Response = req.body;
 
         await prisma.response.create({
             data: {
@@ -24,7 +24,7 @@ const handler = async (req: NextApiRequest, res: NextApiResponse) => {
             },
         });
     } else if (method === 'UPDATE') {
-        const body: Response = JSON.parse(req.body);
+        const body: Response = req.body;
 
         await prisma.response.update({
             where: {

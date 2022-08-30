@@ -7,7 +7,7 @@ const handler = async (req: NextApiRequest, res: NextApiResponse) => {
     const { id } = req.query;
 
     try {
-        if (method === 'POST') {
+        if (method === 'PUT') {
             const vote = await prisma.vote.findFirst({
                 select: {
                     point: true,

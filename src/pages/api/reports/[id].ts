@@ -14,8 +14,8 @@ const handler = async (req: NextApiRequest, res: NextApiResponse) => {
         });
 
         res.send(report);
-    } else if (method === 'POST') {
-        const body: Report = JSON.parse(req.body);
+    } else if (method === 'PUT') {
+        const body: Report = req.body;
 
         await prisma.report.create({
             data: {
