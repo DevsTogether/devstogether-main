@@ -1,5 +1,7 @@
 import Button from '@mui/material/Button';
 import { Menu } from './styles';
+import Link from 'next/link'
+
 
 function Header(): JSX.Element {
     return (
@@ -14,8 +16,13 @@ function Header(): JSX.Element {
 
                 <nav>
                     <div className="buttons">
-                        <Button className="a2" variant="contained" color="success">Sigin</Button>
-                        <Button className="a" variant="outlined" color="success">Logout</Button>
+                    <Link href="/signup">
+                        <Button className="a2" variant="outlined" color="success">SignUp</Button>
+                    </Link>
+                    <Link href="/sign">
+                        <Button className="a" variant="contained" color="success">SignIn</Button>
+                    </Link>
+
                     </div>
                 </nav>
             </header >

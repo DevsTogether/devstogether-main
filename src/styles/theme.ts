@@ -1,9 +1,10 @@
 const theme = {
     colors: {
       background: '#2D3237',
-      text: 'E5E5E5',
-      primary: '#47AE2E'
+      text: '#CAD1D8',
+      primary: '#47AE2E',
+      links: '#1976D2'
     }
   }
-  
+
   export default theme

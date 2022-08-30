@@ -1,4 +1,5 @@
 import styled from "styled-components"
+import theme from "@src/styles/theme"
 
 export const Menu = styled.div`
 
@@ -42,7 +43,7 @@ export const Menu = styled.div`
   }
   
     h3 {
-      color: #47AE2E;
+      color: ${theme.colors.primary};
       font-size: 20px;
       font-weight: 700;
       @media (max-width: 548px) { //quando a tela for pequena
@@ -76,16 +77,16 @@ export const Menu = styled.div`
   
        .a:hover
         {
-        color: #2D3237;
-        background: #47AE2E;
+        color:  ${theme.colors.background};
+        background:  ${theme.colors.primary};
         box-shadow: 0 0 10px #47AE2E, 0 0 40px #47AE2E, 0 0 80px #47AE2E;
         transition-delay: 1s;
         }
 
         .a2:hover
         {
-        color: #2D3237;
-        background: #47AE2E;
+        color:  ${theme.colors.background};
+        background:  ${theme.colors.primary};
         box-shadow: 0 0 10px #47AE2E, 0 0 40px #47AE2E, 0 0 80px #47AE2E;
         transition-delay: 1s;
         }

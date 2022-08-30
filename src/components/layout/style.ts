@@ -14,12 +14,12 @@ z-index:11;
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-bottom: 18%;
+    margin-bottom: 15%;
 }
 
 img {
-   margin-top: 05%;
-   margin-bottom: 05%;
+   margin-top: 12%;
+   margin-bottom: 09%;
 }
 
 
@@ -39,6 +39,20 @@ img {
 
 .button2 {
     margin-left: 20px;
+}
+
+hr {
+  border: 0;
+  width: 100%;
+  margin-left: 10px;
+  border-top: 1px solid #4D5A65;
+}
+
+ 
+.img2 {
+    margin-left: 15px;
+    margin-right: 15px;
+    height: 50px;
 }
 
 `

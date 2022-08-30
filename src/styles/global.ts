@@ -1,4 +1,5 @@
-import { createGlobalStyle } from 'styled-components'
+import { createGlobalStyle } from 'styled-components';
+import theme from './theme';
 
 export default createGlobalStyle`
   * {
@@ -8,7 +9,7 @@ export default createGlobalStyle`
   }
 
   body {
-    background-color: #2D3237;
+    background-color:  ${theme.colors.background};
     position:absolute;
    	top:0;
 	  left:0;

@@ -1,4 +1,5 @@
 import styled from "styled-components"
+import theme from "@src/styles/theme"
 
 export const Rodapé = styled.div`
 footer {
@@ -6,7 +7,7 @@ footer {
   flex-direction: row-reverse;
   justify-content: space-between;
   align-items: center;
-  background-color: #2D3237;
+  background-color: ${theme.colors.background};
   width: 100%;
   align-items: flex-end;
   margin: auto;
@@ -84,7 +85,7 @@ display: flex;
 align-items: center;
 justify-content: space-between;
 padding-right: 10%;
-color: #1976D2; 
+color: ${theme.colors.links}; 
 
 @media (max-width: 737px) { //quando a tela for pequena
         display: flex;
