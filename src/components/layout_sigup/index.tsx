@@ -2,6 +2,7 @@ import Button from '@mui/material/Button';
 import TextField from '@mui/material/TextField';
 import { signIn } from "next-auth/react";
 import { Container } from './styles';
+import Link from 'next/link'
 
 function SignUp(): JSX.Element {
     return (
@@ -29,7 +30,9 @@ function SignUp(): JSX.Element {
 
                 <div className='buttons'>
                     <div className='button1'>
-                        <Button sx={{ width: '55ch' }} variant="contained" color="success">Success</Button>
+                        <Link href="/signup/index2">
+                            <Button sx={{ width: '55ch' }} variant="contained" color="success">Success</Button>
+                        </Link>
                     </div>
                 </div><br></br>
 

@@ -1,11 +1,10 @@
-/* eslint-disable @next/next/no-img-element */
 import Footer from '@components/footer';
 import Header from '@components/header/index';
-import Layout from '@src/components/layout_sigin';
+import Layout from '@src/components/layout_sigup2';
 import GlobalStyles from '@src/styles/global';
 import theme from '@styles/theme';
 
-export default function Home() {
+function SignUp(): JSX.Element {
     return (
         <>
             <GlobalStyles />
@@ -14,10 +13,9 @@ export default function Home() {
                 <Layout />
             </main>
             <Footer />
-
         </>
 
     );
-};
+}
 
-
+export default SignUp;
