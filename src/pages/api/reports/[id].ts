@@ -1,10 +1,17 @@
 import { PrismaClient, Report } from '@prisma/client';
+import Auth from '@server/src/classes/Auth';
 import type { NextApiRequest, NextApiResponse } from 'next';
 
 const handler = async (req: NextApiRequest, res: NextApiResponse) => {
     const prisma = new PrismaClient();
+    const auth = new Auth();
     const method = req.method;
     const { id } = req.query;
+
+    //const session = await auth.getSession(req, res);
+
+    /* res.json(session);
+    res.end(); */
 
     if (method === 'GET') {
         const report = await prisma.report.findUnique({
@@ -13,7 +20,7 @@ const handler = async (req: NextApiRequest, res: NextApiResponse) => {
             },
         });
 
-        res.send(report);
+        res.json(report);
     } else if (method === 'PUT') {
         const body: Report = req.body;
 

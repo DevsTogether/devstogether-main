@@ -1,18 +1,12 @@
-import { PrismaClient } from '@prisma/client';
+import Level from '@server/src/classes/Level';
 import type { NextApiRequest, NextApiResponse } from 'next';
 
 const handler = async (req: NextApiRequest, res: NextApiResponse) => {
-    const prisma = new PrismaClient();
+    const level = new Level();
     const { id } = req.query;
 
-    const level = await prisma.level.findUnique({
-        where: {
-            id: Number(id),
-        },
-    });
-
-    res.setHeader('Cache-Control', 's-maxage=1800, stale-while-revalidate');
-    res.json(level);
+    res.setHeader('Cache-Control', 's-maxage=60, stale-while-revalidate'); 
+    res.json(await level.getLevel({id: Number(id)}));
 };
 
 export default handler;

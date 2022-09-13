@@ -1,12 +1,11 @@
 // Next.js API route support: https://nextjs.org/docs/api-routes/introduction
+import Auth from '@server/src/classes/Auth';
 import type { NextApiHandler, NextApiRequest, NextApiResponse } from 'next';
 
 const handler: NextApiHandler = async (req: NextApiRequest, res: NextApiResponse) => {
-    res.status(200).json({
-        projectName: 'DevsTogether',
-        detailsUrl:
-            'https://www.notion.so/TCC-4cf7e32955ee4b0bbbc3a2887e9f226e',
-    });
+    const auth = new Auth();
+    
+    res.json(await auth.getSession(req, res) || "sem sessão");
 };
 
 export default handler;

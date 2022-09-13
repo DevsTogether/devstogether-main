@@ -54,12 +54,12 @@ model User {
   emailVerified   DateTime?
   image           String?
   bio             String?
-  reputation      Int?              @default(0)
+  reputation      Int               @default(0)
   helpedUsers     Int?              @default(0)
-  restrictions    Json?
+  restrictions    Json              @default("[]")
   createdAt       DateTime?         @default(now())
-  banned          Boolean?          @default(false)
-  active          Boolean?          @default(true)
+  banned          Boolean           @default(false)
+  active          Boolean           @default(true)
   specialization  String?
   accounts        Account[]
   sessions        Session[]
@@ -79,7 +79,7 @@ model User {
 }
 
 model Role {
-  id    Int    @id @unique @default(autoincrement())
+  id    Int     @id @unique
   name  String
   roles Json?
   User  User[]

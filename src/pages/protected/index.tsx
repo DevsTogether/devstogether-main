@@ -39,7 +39,9 @@ const ProtectedPage: NextPage = () => {
     return (
         <>
             Not signed in <br />
-            <button onClick={() => signIn()}>Sign in</button>
+            <button onClick={() => signIn('google')}>Sign in - google</button>
+            <button onClick={() => signIn('facebook')}>Sign in - facebook</button>
+            <button onClick={() => signIn('github')}>Sign in - github</button>
         </>
     );
 };

@@ -14,7 +14,7 @@ const handler = async (req: NextApiRequest, res: NextApiResponse) => {
         });
 
         res.json(question);
-    } else if (method === 'PUT') {
+    } else if (method === 'POST') {
         const body: Question = req.body;
 
         await prisma.question.create({
@@ -26,7 +26,7 @@ const handler = async (req: NextApiRequest, res: NextApiResponse) => {
                 userId: '', //pegar da sessão
             },
         });
-    } else if (method === 'UPDATE') {
+    } else if (method === 'PUT') {
         const body: Question = req.body;
 
         await prisma.question.update({
