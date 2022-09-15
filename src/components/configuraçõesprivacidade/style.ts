@@ -118,43 +118,72 @@ label #cancel{
   }
 }
 
-.Conteudo {
+.Conteudo1 {
    display: flex;
    flex-direction: column;
    justify-content: space-around;
    margin-left: 20%;
-   margin-right: 40%;
+   color: white;
+   margin-bottom: 90px;
+}
+
+.titulo {
+  font-size: 20px;
+  margin-bottom: 100px;
+}
+
+.Conteudo2 {
+   display: flex;
+   flex-direction: column;
+   justify-content: space-around;
+   margin-left: 20%;
+   margin-bottom: 90px;
+   color: white;
+
+}
+
+.Conteudo3 {
+   display: flex;
+   flex-direction: column;
+   justify-content: space-around;
+   margin-left: 20%;
+   margin-bottom: 90px;
    color: white;
 }
 
-.volume {
-  margin-top: 30px;
-  margin-bottom: 80px;
+.Conteudo4 {
+   display: flex;
+   flex-direction: column;
+   justify-content: space-around;
+   margin-left: 20%;
+   margin-bottom: 90px;
+   color: white;
 }
 
 .botaosair {
   display: flex;
   justify-content: flex-end;
-  margin-right: 40px;
+  margin-right: 100px;
 }
 
 h1 {
   margin-top: 30px;
-  margin-bottom: 50px;
 }
 
 h2 {
-  margin-bottom: 25px;
-}
-
-h3 {
   margin-bottom: 10px;
 }
 
-img {
-  margin-right: 10px;
-  height: 40%;
+h4 {
+  color: gray;
 }
+
+.switch {
+  display: flex;
+  margin-left: 70%;
+  
+}
+
 /* Don't Forget to Subscribe our Channel[CodingNepal] */
 
  

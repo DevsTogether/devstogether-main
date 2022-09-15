@@ -1,12 +1,19 @@
-import React from "react";
+import Footer from '@components/footer';
+import Header from '@components/header/index';
+import Layout from '@src/components/configuraçõesprivacidade/config2';
+import GlobalStyles from '@src/styles/global';
+import theme from '@styles/theme';
 
-function Configinterface1(): JSX.Element {
+function Privacidade(): JSX.Element {
     return (
-    <div>
-    <h1>Interface 1</h1>
-    
-    </div>
-  );
+        <>
+            <GlobalStyles />
+            <main>
+                <Layout />
+            </main>
+        </>
+
+    );
 }
 
-export default Configinterface1;
+export default Privacidade;
