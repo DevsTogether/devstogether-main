@@ -1,13 +1,13 @@
 import Footer from '@components/footer';
 import Header from '@components/Headerlogin';
-import Layout from '@src/components/Entrada';
+import Layout from '@src/components/Sobre';
 import GlobalStyles from '@src/styles/global';
 import theme from '@styles/theme';
 
-function Cards(): JSX.Element {
+function Sobre(): JSX.Element {
     return (
         <>
-          <GlobalStyles />
+            <GlobalStyles />
             <Header />
             <main>
                 <Layout />
@@ -18,4 +18,4 @@ function Cards(): JSX.Element {
     );
 }
 
-export default Cards;
+export default Sobre;

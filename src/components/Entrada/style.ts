@@ -17,7 +17,7 @@ export const Container = styled.div`
 .container .card1{
 	position: relative;
 	width: 400px;/*A largura dos cards*/
-	height: 600px;/*altura dos cards*/
+	height: 550px;/*altura dos cards*/
     margin-left: 10%auto;
 	box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.5);
     border-radius: 15px;
@@ -88,7 +88,7 @@ export const Container = styled.div`
 .container2 .card2{
 	position: relative;
 	width: 400px;/*A largura dos cards*/
-	height: 600px;/*altura dos cards*/
+	height: 550px;/*altura dos cards*/
 	margin-left: 30px;
 	box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.5);
     border-radius: 15px;
