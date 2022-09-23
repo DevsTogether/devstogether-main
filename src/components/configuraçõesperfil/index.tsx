@@ -1,8 +1,10 @@
 import Avatar from '@mui/material/Avatar';
+import Button from '@mui/material/Button';
 import { SelectChangeEvent } from '@mui/material/Select';
 import TextField from '@mui/material/TextField';
 import * as React from 'react';
 import { Menu } from './style';
+
 
 function Configuração(): JSX.Element {
 
@@ -62,9 +64,9 @@ function Configuração(): JSX.Element {
               <div className='informações'>
                 <p>Nome de Usuário<br />Marcos</p>
                 <div className='buttoncolumn'>
-                  <button>editar</button><br />
-                  <button>editar</button><br />
-                  <button>editar</button><br />
+                  <button className='botões'>editar</button><br />
+                  <button className='botões'>editar</button><br />
+                  <button className='botões'>editar</button><br />
                 </div>
               </div>
             </div>
@@ -81,18 +83,52 @@ function Configuração(): JSX.Element {
           <h3>Conexões</h3><br />
           <div className='Container_Conexões'>
             <div className='Subcontainer_Conexões1'>
-
+              <img src='/logo' />
             </div>
 
             <div className='Subcontainer_Conexões2'>
-
+              <img src='' />
             </div>
 
             <div className='Subcontainer_Conexões3'>
-
+              <img src='' />
             </div>
+
+            <div className='Subcontainer_Conexões4'>
+              <img src='' />
+            </div>
+
+            <div className='Subcontainer_Conexões5'>
+              <img src='' />
+            </div>
+          </div><br />
+
+          <div className='Container_Conexões'>
+            <img src='awfaw' />
+
           </div>
-          <hr />
+          <hr /><br />
+
+          <TextField sx={{ width: '90ch', height: '10ch' }} className="input" id="outlined-basic" label="Email" variant="outlined" color="success" focused />
+
+          <TextField sx={{ width: '90ch', height: '10ch' }} className="input" id="outlined-basic" label="Email" variant="outlined" color="success" focused />
+
+          <TextField sx={{ width: '90ch', height: '10ch' }} className="input" id="outlined-basic" label="Email" variant="outlined" color="success" focused />
+
+          <h1>Senhas e Autentificação</h1><br />
+          <Button variant="contained">Contained</Button>
+
+          <hr /><br />
+
+          <h3>Remoção de Contas</h3>
+          <p>Desativar conta e reaorfneaopfnaeoingoaewbnoigwaprngangp</p><br />
+          <Button variant="outlined" color="error">
+            Error
+          </Button>
+
+          <Button variant="outlined" color="error">
+            Error
+          </Button>
         </div>
 
       </Menu>

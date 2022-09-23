@@ -185,7 +185,7 @@ label #cancel{
 
 }
 
-button {
+.botões {
   background: #5F6A75;
   border: none;
   color: white;
@@ -217,33 +217,33 @@ hr {
 
 .Container_Conexões {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     width: 90%;
     height: 60px;
     background: black;
-    border-radius: 15px;
+    border-radius: 5px;
 }
 
 .Subcontainer_Conexões1 {
    display: flex;
     flex-direction: column;
-    width: 12%;
+    width: 10%;
     margin-top: 10px;
     margin-bottom: 10px;
     margin-left: 20px;
-    height: 700px;
-    border-radius: 3px;
+    height: 40px;
+    border-radius: 2px;
     background: gray;
 }
 
 .Subcontainer_Conexões2 {
    display: flex;
     flex-direction: column;
-    width: 12%;
+    width: 10%;
     margin-top: 10px;
     margin-bottom: 10px;
     margin-left: 20px;
-    height: 700px;
+    height: 40px;
     border-radius: 3px;
     background: gray;
 }
@@ -251,11 +251,35 @@ hr {
 .Subcontainer_Conexões3 {
    display: flex;
     flex-direction: column;
-    width: 12%;
+    width: 10%;
     margin-top: 10px;
     margin-bottom: 10px;
     margin-left: 20px;
-    height: 700px;
+    height: 40px;
+    border-radius: 3px;
+    background: gray;
+}
+
+.Subcontainer_Conexões4 {
+   display: flex;
+    flex-direction: column;
+    width: 10%;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-left: 20px;
+    height: 40px;
+    border-radius: 3px;
+    background: gray;
+}
+
+.Subcontainer_Conexões5 {
+   display: flex;
+    flex-direction: column;
+    width: 10%;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-left: 20px;
+    height: 40px;
     border-radius: 3px;
     background: gray;
 }
