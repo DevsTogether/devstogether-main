@@ -1,6 +1,6 @@
 import Footer from '@components/footer';
 import Header from '@components/header/index';
-import Layout from '@src/components/configuraçõesprivacidade/config2';
+import Layout from '@src/components/configuraçõesprivacidade';
 import GlobalStyles from '@src/styles/global';
 import theme from '@styles/theme';
 

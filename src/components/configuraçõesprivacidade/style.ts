@@ -1,5 +1,4 @@
 import styled from "styled-components"
-import theme from "@src/styles/theme"
 
 export const Menu = styled.div`
 *{
@@ -9,14 +8,17 @@ export const Menu = styled.div`
 }
 
 body {
-  background: 353E46;
+  background: #353E46;
+  font-size: 15px
 }
+
 .sidebar {
   position: fixed;
-  width: 300px;
+  width: 250px;
   height: 100%;
   background: #2D3237;
   transition: all .5sease;
+  font-size: 12px;
 }
 .sidebar header{
   font-size: 30px;
@@ -28,12 +30,12 @@ body {
   font-family: 'Montserrat', sans-serif;
 }
 .sidebar a{
-  display: block;
-  height: 65px;
+  display: flex;
+  height: 80px;
   width: 100%;
   color: white;
   line-height: 65px;
-  padding-left: 60px;
+  padding-left: 10px;
   box-sizing: border-box;
   border-left: 5px solid transparent;
   font-family: 'Open Sans', sans-serif;
@@ -44,8 +46,9 @@ a.active,a:hover{
   color: #F8F8F8;
 }
 .sidebar a i{
-  font-size: 23px;
+  font-size: 20px;
   margin-right: 16px;
+
 }
 .sidebar a span{
   letter-spacing: 1px;
@@ -124,12 +127,12 @@ label #cancel{
    justify-content: space-around;
    margin-left: 20%;
    color: white;
-   margin-bottom: 90px;
+   margin-bottom: 10px;
 }
 
 .titulo {
-  font-size: 20px;
-  margin-bottom: 100px;
+  font-size: 31px;
+  margin-bottom: 50px;
 }
 
 .Conteudo2 {
@@ -137,7 +140,7 @@ label #cancel{
    flex-direction: column;
    justify-content: space-around;
    margin-left: 20%;
-   margin-bottom: 90px;
+   margin-bottom: 1px;
    color: white;
 
 }
@@ -147,7 +150,7 @@ label #cancel{
    flex-direction: column;
    justify-content: space-around;
    margin-left: 20%;
-   margin-bottom: 90px;
+   margin-bottom: 10px;
    color: white;
 }
 
@@ -156,7 +159,7 @@ label #cancel{
    flex-direction: column;
    justify-content: space-around;
    margin-left: 20%;
-   margin-bottom: 90px;
+   margin-bottom: 10px;
    color: white;
 }
 
@@ -167,7 +170,8 @@ label #cancel{
 }
 
 h1 {
-  margin-top: 30px;
+  margin-top: 20px;
+  font-size: 30px;
 }
 
 h2 {
@@ -176,6 +180,10 @@ h2 {
 
 h4 {
   color: gray;
+}
+
+img {
+  margin-right: 10px;
 }
 
 .switch {

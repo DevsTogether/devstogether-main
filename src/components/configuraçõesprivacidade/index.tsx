@@ -18,6 +18,7 @@ function Configuração(): JSX.Element {
     <>
 
       <Menu>
+        <body>
         {/* Menu lateral aonde o usuário irá navegar */}
         <input type="checkbox" id="check" />
         <label htmlFor="check">
@@ -59,10 +60,6 @@ function Configuração(): JSX.Element {
           </div>
           <h2>Ultilizar dados para melhorar a experiencia</h2> 
           <h4>Esta configuração nos permite a coleta de dados para melhorar a sua experiência</h4>
-
-         <div className='switch'>
-          <Switch {...label} defaultChecked />
-          </div>
         </div>
 
         <div className='Conteudo2'>
@@ -81,6 +78,7 @@ function Configuração(): JSX.Element {
         </div>
 
         <Button variant="outlined" sx={{ ml: 50 }}>Outlined</Button>
+        </body>
       </Menu>
     </>
 
