@@ -5,7 +5,7 @@ export const Container = styled.div`
 .container{
 	position: relative;
 	display: flex;
-	justify-content: left;
+	justify-content: center;
     flex-direction: row; 
 	align-items: center;
 	flex-wrap: wrap;
@@ -16,9 +16,9 @@ export const Container = styled.div`
 
 .container .card1{
 	position: relative;
-	width: 200px;/*A largura dos cards*/
-	height: 550px;/*altura dos cards*/
-    margin-left: 3%auto;
+	width: 250px;/*A largura dos cards*/
+	height: 450px;/*altura dos cards*/
+    margin-left: 70px;
 	box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.5);
     border-radius: 15px;
     background: rgba(255, 255, 255, 0.1); 
@@ -26,14 +26,12 @@ export const Container = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
-    border-top: 1px solid rgba(255, 255, 255, 0.5);
-    border-left: 1px solid rgba(255, 255, 255, 0.5);
 }
 .container .card1 .content{
 	padding: 20px;
 	text-align: center;
-	transform: translateY(100px);
-	opacity: 0;
+	transform: translateY(10px);
+	opacity: 1;
 	transition: 0.5s;
 }
 
@@ -87,9 +85,9 @@ export const Container = styled.div`
 
 .container2 .card2{
 	position: relative;
-	width: 200px;/*A largura dos cards*/
-	height: 550px;/*altura dos cards*/
-	margin-left: 30px;
+	width: 250px;/*A largura dos cards*/
+	height: 450px;/*altura dos cards*/
+	margin-left: 60px;
 	box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.5);
     border-radius: 15px;
     background: rgba(255, 255, 255, 0.1); 
@@ -97,14 +95,12 @@ export const Container = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
-    border-top: 1px solid rgba(255, 255, 255, 0.5);
-    border-left: 1px solid rgba(255, 255, 255, 0.5);
 }
 .container2 .card2 .content2{
 	padding: 20px;
 	text-align: center;
-	transform: translateY(100px);
-	opacity: 0;
+	transform: translateY(10px);
+	opacity: 1;
 	transition: 0.5s;
 }
 
@@ -145,6 +141,29 @@ export const Container = styled.div`
 	font-weight: 500;
 	box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
 
+}
+
+h1 {
+	color: white;
+	margin-left: 5%;
+	
+}
+
+p {
+	font-size: 20px;
+	color: white;
+}
+
+.video {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	margin-top: 5%;
+	margin-bottom: 5%;
+}
+
+img {
+	height: 200px;
 }
 
 `

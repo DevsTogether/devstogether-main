@@ -32,8 +32,8 @@ export const Container = styled.div`
 .container .card1 .content{
 	padding: 20px;
 	text-align: center;
-	transform: translateY(100px);
-	opacity: 0;
+	transform: translateY(80px);
+	opacity: 1;
 	transition: 0.5s;
 }
 
@@ -103,8 +103,8 @@ export const Container = styled.div`
 .container2 .card2 .content2{
 	padding: 20px;
 	text-align: center;
-	transform: translateY(100px);
-	opacity: 0;
+	transform: translateY(80px);
+	opacity: 1;
 	transition: 0.5s;
 }
 
