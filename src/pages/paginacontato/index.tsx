@@ -1,6 +1,6 @@
 import Footer from '@components/footer';
 import Header from '@components/Headerlogin';
-import Layout from '@src/components/Sobre';
+import Layout from '@src/components/Contatos';
 import GlobalStyles from '@src/styles/global';
 import theme from '@styles/theme';
 

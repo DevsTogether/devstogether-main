@@ -14,7 +14,7 @@ function HeaderLogin(): JSX.Element {
 
 
                 <nav>
-                    <Avatar alt="Remy Sharp" src="/static/images/avatar/1.jpg" />
+                    <Avatar sx={{ width: '30px', height: '30px' }} alt="Remy Sharp" src="/static/images/avatar/1.jpg" />
                 </nav>
             </header >
         </Menu >
