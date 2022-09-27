@@ -1,6 +1,3 @@
-
-class Tag {
-        
-}
+class Tag {}
 
 export default Tag;

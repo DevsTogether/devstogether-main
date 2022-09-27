@@ -7,8 +7,8 @@ const handler = async (req: NextApiRequest, res: NextApiResponse) => {
 
     const comments = await prisma.comment.findMany({
         where: {
-            responseId: response_id.toString() 
-        }
+            responseId: response_id.toString(),
+        },
     });
 
     res.json(comments);

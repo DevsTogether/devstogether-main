@@ -1,6 +1,3 @@
-
-class Report {
-        
-}
+class Report {}
 
 export default Report;

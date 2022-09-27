@@ -1,6 +1,3 @@
-
-class Medal {
-        
-}
+class Medal {}
 
 export default Medal;

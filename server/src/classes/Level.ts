@@ -1,4 +1,4 @@
-import { prisma } from "@server/PrismaClient";
+import { prisma } from '@server/PrismaClient';
 
 export interface ILevel {
     id: number;
@@ -13,24 +13,30 @@ class Level {
         return roles;
     }
 
-    async getLevel({id}: {id: number}): Promise<ILevel | null> {
+    async getLevel({ id }: { id: number }): Promise<ILevel | null> {
         const level = await prisma.level.findUnique({
             where: {
                 id: Number(id),
             },
         });
-    
+
         return level;
     }
-    
-    async addLevel({ name, minReputation }: { name: string, minReputation: number }): Promise<ILevel> {
+
+    async addLevel({
+        name,
+        minReputation,
+    }: {
+        name: string;
+        minReputation: number;
+    }): Promise<ILevel> {
         const role = await prisma.level.create({
             data: {
                 name: name,
-                reputationRequired: minReputation
-            }
+                reputationRequired: minReputation,
+            },
         });
-        
+
         return role;
     }
 }

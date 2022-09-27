@@ -11,12 +11,12 @@ const handler = async (req: NextApiRequest, res: NextApiResponse) => {
             const vote = await prisma.vote.findFirst({
                 select: {
                     point: true,
-                    id: true
+                    id: true,
                 },
                 where: {
                     userId: 'cl6berue50018icvx4oelm5bn', //pegar da sessão,
                     questionId: id.toString(),
-                }
+                },
             });
 
             if (vote?.id) {
@@ -26,8 +26,8 @@ const handler = async (req: NextApiRequest, res: NextApiResponse) => {
                             id: true,
                         },
                         where: {
-                            id: vote?.id
-                        }
+                            id: vote?.id,
+                        },
                     });
 
                     res.json({
@@ -39,16 +39,16 @@ const handler = async (req: NextApiRequest, res: NextApiResponse) => {
                 } else {
                     const updatedVote = await prisma.vote.update({
                         select: {
-                            id: true
+                            id: true,
                         },
                         where: {
-                            id: vote.id
+                            id: vote.id,
                         },
                         data: {
-                            point: 1
-                        }
+                            point: 1,
+                        },
                     });
-                    
+
                     res.json({
                         status: {
                             questionId: id.toString(),
@@ -59,13 +59,13 @@ const handler = async (req: NextApiRequest, res: NextApiResponse) => {
             } else {
                 const createdVote = await prisma.vote.create({
                     select: {
-                        id: true
+                        id: true,
                     },
                     data: {
                         point: 1,
                         questionId: id.toString(),
                         userId: 'cl6berue50018icvx4oelm5bn', //pegar da sessão,
-                    }
+                    },
                 });
 
                 res.json({

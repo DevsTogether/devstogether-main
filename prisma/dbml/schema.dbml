@@ -70,6 +70,7 @@ Table User {
   Call Call [not null]
   CallParticipant CallParticipant [not null]
   Vote Vote [not null]
+  Response Response [not null]
 }
 
 Table Role {
@@ -171,6 +172,8 @@ Table Response {
   Question Question [not null]
   questionId String [not null]
   Vote Vote [not null]
+  User User [not null]
+  userId String [not null]
 }
 
 Table Tag {
@@ -259,6 +262,8 @@ Ref: Vote.questionId > Question.id
 Ref: Vote.responseId > Response.id
 
 Ref: Response.questionId > Question.id
+
+Ref: Response.userId > User.id
 
 Ref: QuestionTag.tagId > Tag.id
 

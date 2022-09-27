@@ -17,12 +17,12 @@ export const authOptions: NextAuthOptions = {
             clientSecret: process.env.GOOGLE_SECRET,
         }),
         GitHubProvider({
-            clientId: process.env.GITHUB_CLIENT_ID || "",
-            clientSecret: process.env.GITHUB_CLIENT_SECRET || "",
+            clientId: process.env.GITHUB_CLIENT_ID || '',
+            clientSecret: process.env.GITHUB_CLIENT_SECRET || '',
         }),
         FacebookProvider({
-            clientId: process.env.FACEBOOK_CLIENT_ID || "",
-            clientSecret: process.env.FACEBOOK_CLIENT_SECRET || "",
+            clientId: process.env.FACEBOOK_CLIENT_ID || '',
+            clientSecret: process.env.FACEBOOK_CLIENT_SECRET || '',
         }),
         EmailProvider({
             server: {
@@ -44,7 +44,15 @@ export const authOptions: NextAuthOptions = {
     ],
     callbacks: {
         //@ts-ignore
-        session: async ({ session, token, user }: {session: any, token: any, user: User}) => {
+        session: async ({
+            session,
+            token,
+            user,
+        }: {
+            session: any;
+            token: any;
+            user: User;
+        }) => {
             session.user = user;
             return session;
         },
@@ -57,6 +65,6 @@ export const authOptions: NextAuthOptions = {
         strategy: 'database',
         maxAge: 30 * 24 * 60 * 60,
     },
-}
+};
 
 export default NextAuth(authOptions);

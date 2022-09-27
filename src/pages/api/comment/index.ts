@@ -4,16 +4,16 @@ import type { NextApiRequest, NextApiResponse } from 'next';
 import { Session } from 'next-auth';
 
 interface createCommentRequest {
-    content: string
-    questionId?: string,
-    responseId?: string,
+    content: string;
+    questionId?: string;
+    responseId?: string;
 }
 
 const handler = async (req: NextApiRequest, res: NextApiResponse) => {
-    console.time("res");
+    console.time('res');
     const method = req.method;
 
-    if (method === "POST") {
+    if (method === 'POST') {
         const body: createCommentRequest = req.body;
         const auth = new Auth();
         const commentController = new Comment();
@@ -27,25 +27,25 @@ const handler = async (req: NextApiRequest, res: NextApiResponse) => {
         if (
             (body?.questionId || body?.responseId) &&
             body?.content &&
-            await auth.can({
+            (await auth.can({
                 action: 'create-comment',
                 user: session.user,
-            })
+            }))
         ) {
             const commentId = await commentController.createComment({
                 content: body.content,
                 subject: {
-                    id: (body?.questionId ?? body?.responseId ?? ""),
-                    type: body?.questionId ? "question" : "response"
+                    id: body?.questionId ?? body?.responseId ?? '',
+                    type: body?.questionId ? 'question' : 'response',
                 },
-                userId: session.user.id
+                userId: session.user.id,
             });
 
             res.json({ id: commentId });
             return;
         }
 
-        res.json({ "error": "unable to create comment" });
+        res.json({ error: 'unable to create comment' });
     }
 };
 

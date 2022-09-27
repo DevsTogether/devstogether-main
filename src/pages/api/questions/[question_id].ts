@@ -1,4 +1,5 @@
 import { PrismaClient, Question } from '@prisma/client';
+import Auth from '@server/src/classes/Auth';
 import type { NextApiRequest, NextApiResponse } from 'next';
 
 const handler = async (req: NextApiRequest, res: NextApiResponse) => {
@@ -16,31 +17,42 @@ const handler = async (req: NextApiRequest, res: NextApiResponse) => {
         res.json(question);
     } else if (method === 'POST') {
         const body: Question = req.body;
+        const auth = new Auth();
+        const session = await auth.getSession(req, res);
 
-        await prisma.question.create({
-            data: {
-                title: body.title,
-                content: body.content,
-                reward: 11,
-                visits: 0,
-                userId: '', //pegar da sessão
-            },
-        });
+        if (session) {
+            const createdQuestion = await prisma.question.create({
+                select: { id: true },
+                data: {
+                    title: body.title,
+                    content: body.content,
+                    reward: 11,
+                    visits: 0,
+                    userId: session.user.id,
+                },
+            });
+
+            res.json(createdQuestion);
+        }
     } else if (method === 'PUT') {
         const body: Question = req.body;
+        const auth = new Auth();
+        const session = await auth.getSession(req, res);
 
-        await prisma.question.update({
-            where: {
-                id: question_id.toString(),
-            },
-            data: {
-                title: body.title,
-                content: body.content,
-                reward: 11,
-                visits: 0,
-                userId: '', //pegar da sessão
-            },
-        });
+        if (session) {
+            const updatedQuestion = await prisma.question.update({
+                where: {
+                    id: question_id.toString(),
+                },
+                data: {
+                    title: body.title,
+                    content: body.content,
+                    reward: 11,
+                    visits: 0,
+                },
+            });
+        }
+
     } else if (method === 'DELETE') {
         try {
             await prisma.report.delete({

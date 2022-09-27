@@ -1,6 +1,3 @@
-
-class Role {
-        
-}
+class Role {}
 
 export default Role;

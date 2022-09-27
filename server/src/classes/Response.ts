@@ -1,6 +1,3 @@
-
-class Response {
-        
-}
+class Response {}
 
 export default Response;

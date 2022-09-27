@@ -3,7 +3,7 @@ import { prisma } from '@server/PrismaClient';
 export interface ICreateCommentRequest {
     userId: string;
     subject: {
-        type: "question" | "response";
+        type: 'question' | 'response';
         id: string;
     };
     content: string;
@@ -29,26 +29,35 @@ export interface IComment {
 
 class Comment {
     async getComment(id: string): Promise<IComment | null> {
-        return (await prisma.comment.findUnique({ where: { id: id.toString() } }));
+        return await prisma.comment.findUnique({
+            where: { id: id.toString() },
+        });
     }
 
-    async createComment({ userId, subject, content }: ICreateCommentRequest): Promise<string> {
+    async createComment({
+        userId,
+        subject,
+        content,
+    }: ICreateCommentRequest): Promise<string> {
         const createdComment = await prisma.comment.create({
             select: {
-                id: true
+                id: true,
             },
             data: {
                 userId: userId,
                 content: content,
-                questionId: subject.type === "question" ? subject.id : null,
-                responseId: subject.type === "response" ? subject.id : null,
+                questionId: subject.type === 'question' ? subject.id : null,
+                responseId: subject.type === 'response' ? subject.id : null,
             },
         });
 
         return createdComment.id;
     }
 
-    async updateComment({ commentId, content }: IUpdateCommentRequest): Promise<string> {
+    async updateComment({
+        commentId,
+        content,
+    }: IUpdateCommentRequest): Promise<string> {
         const updateComment = await prisma.comment.update({
             select: { id: true },
             where: { id: commentId },
@@ -59,7 +68,12 @@ class Comment {
     }
 
     async deleteComment({ commentId }: IDeleteCommentRequest): Promise<string> {
-        return (await prisma.comment.delete({ select: { id: true }, where: { id: commentId } })).id;
+        return (
+            await prisma.comment.delete({
+                select: { id: true },
+                where: { id: commentId },
+            })
+        ).id;
     }
 }
 
