@@ -49,8 +49,7 @@ Table User {
   image String
   bio String
   reputation Int [not null, default: 0]
-  helpedUsers Int [default: 0]
-  restrictions Json [not null, default: '[]']
+  helpedUsers Int [not null, default: 0]
   createdAt DateTime [default: `now()`]
   banned Boolean [not null, default: false]
   active Boolean [not null, default: true]
@@ -68,7 +67,6 @@ Table User {
   Reports Report [not null]
   Comments Comment [not null]
   Call Call [not null]
-  CallParticipant CallParticipant [not null]
   Vote Vote [not null]
   Response Response [not null]
 }
@@ -217,22 +215,12 @@ Table Comment {
 Table Call {
   id String [pk, unique]
   start DateTime
-  ending DateTime
   expires DateTime
   isOpen Boolean [not null, default: false]
   question Question
   questionId String
   userId String [not null]
   User User [not null]
-  CallParticipant CallParticipant [not null]
-}
-
-Table CallParticipant {
-  id String [pk, unique]
-  Call Call
-  callId String
-  User User
-  userId String
 }
 
 Ref: Account.userId > User.id [delete: Cascade]
@@ -280,7 +268,3 @@ Ref: Comment.questionId > Question.id
 Ref: Call.questionId > Question.id
 
 Ref: Call.userId > User.id
-
-Ref: CallParticipant.callId > Call.id
-
-Ref: CallParticipant.userId > User.id

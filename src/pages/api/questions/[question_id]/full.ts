@@ -28,7 +28,7 @@ const handler = async (req: NextApiRequest, res: NextApiResponse) => {
                                 select: {
                                     id: true,
                                     name: true,
-                                    image: true
+                                    image: true,
                                 },
                             },
                         },
@@ -38,8 +38,8 @@ const handler = async (req: NextApiRequest, res: NextApiResponse) => {
                             id: true,
                             name: true,
                             image: true,
-                        }
-                    }
+                        },
+                    },
                 },
             },
             User: {

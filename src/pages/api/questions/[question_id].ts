@@ -52,7 +52,6 @@ const handler = async (req: NextApiRequest, res: NextApiResponse) => {
                 },
             });
         }
-
     } else if (method === 'DELETE') {
         try {
             await prisma.report.delete({
