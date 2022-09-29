@@ -8,10 +8,9 @@ import { Menu } from './style';
 function Perfil(): JSX.Element {
     return (
         <Menu>
-
             <div className="Avatar">
-            <Avatar alt="Travis Howard" src="/static/images/avatar/2.jpg" />
-            <h2>Matheus Alves</h2>
+                <Avatar alt="Travis Howard" src="/static/images/avatar/2.jpg" />
+                <h2>Matheus Alves</h2>
             </div>
             <div className='chips_usuario'>
                 <Chip icon={<FaceIcon />} label="With Icon" />
@@ -29,11 +28,11 @@ function Perfil(): JSX.Element {
                 <p>3</p>
             </div>
 
-           <div className='sobremim'>
-            <h3>Sobre Mim</h3><br />
-            <p>ajhwfoiwnaoigfnawoeingoinewaoingoieanogineaoingoieang<br />
-                akwnfgoiwanoigfnowianegomeaogmoieamoigfeaoimfoimeaoimfie
-            </p>
+            <div className='sobremim'>
+                <h3>Sobre Mim</h3><br />
+                <p>ajhwfoiwnaoigfnawoeingoinewaoingoieanogineaoingoieang<br />
+                    akwnfgoiwanoigfnowianegomeaogmoieamoigfeaoimfoimeaoimfie
+                </p>
             </div>
 
             <div className="links">
@@ -44,10 +43,10 @@ function Perfil(): JSX.Element {
             </div>
 
             <div className="icones">
-                <Chip icon={<FaceIcon />} label="With Icon" /><br/>
-                <Chip icon={<FaceIcon />} label="With Icon" /><br/>
-                <Chip icon={<FaceIcon />} label="With Icon" /><br/>
-                <Chip icon={<FaceIcon />} label="With Icon" /><br/>
+                <Chip icon={<FaceIcon />} label="With Icon" /><br />
+                <Chip icon={<FaceIcon />} label="With Icon" /><br />
+                <Chip icon={<FaceIcon />} label="With Icon" /><br />
+                <Chip icon={<FaceIcon />} label="With Icon" /><br />
             </div>
         </Menu >
     );

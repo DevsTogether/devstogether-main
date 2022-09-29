@@ -14,7 +14,7 @@ function Layout(): JSX.Element {
     return (
 
         <Container>
-            <Box sx={{ width: '40%', bgcolor: '#353E46', height: '70%', ml: '40%' }}>
+            <Box sx={{ width: '40%', bgcolor: '#353E46', height: '70%' }}>
                 <Tabs value={value} onChange={handleChange} centered textColor="secondary"
                     indicatorColor="secondary"
                     aria-label="secondary tabs example">

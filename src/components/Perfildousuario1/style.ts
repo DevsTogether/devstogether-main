@@ -7,7 +7,6 @@ align-items: center;
 flex-direction: row;
 justify-content: space-between;
 width: 50%;
-margin-left: 30%;
 height: 100%;
 
 .button {
