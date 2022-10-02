@@ -12,24 +12,29 @@ height: 100%;
 
 p { 
    color: gray;
-   margin-left: 25px;
+   margin-left: 5%;
 }
 
 .trofeu {
     height: 70px;
 }
 
-.Emblemas1 {
+h5 {
+    width: 150%;
+    margin-left: 10%;
+}
+
+.Faca_pergunta {
+    width: 200%;
+    margin-left: 150%;
+}
+ 
+.votos {
     display: flex;
     flex-direction: row;
-    background-color: #A9A9A9;
-    color: white;
-    width: 500px;
-    height: 100px;
-    margin-left: 100px;
     margin-bottom: 5%;
-    border: white;
-} 
+    margin-top: 5%;
+}
 
 & img {
     padding-top: 20px;
@@ -42,7 +47,7 @@ p {
     justify-content: space-between;
     background-color: '#353E46';
     color: white;
-    width: 500px;
+    width: 600px;
     height: 100px;
     margin-left: 100px;
     margin-bottom: 5%;
@@ -56,7 +61,7 @@ p {
     justify-content: space-between;
     background-color: '#353E46';
     color: white;
-    width: 500px;
+    width: 600px;
     height: 100px;
     margin-left: 100px;
     margin-bottom: 5%;
@@ -70,7 +75,7 @@ p {
     justify-content: space-between;
     background-color: '#353E46';
     color: white;
-    width: 500px;
+    width: 600px;
     height: 100px;
     margin-left: 100px;
     margin-bottom: 5%;
@@ -84,7 +89,7 @@ p {
     justify-content: space-between;
     background-color: '#353E46';
     color: white;
-    width: 500px;
+    width: 600px;
     height: 100px;
     margin-left: 100px;
     margin-bottom: 5%;

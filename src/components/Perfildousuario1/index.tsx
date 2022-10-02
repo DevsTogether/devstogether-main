@@ -4,6 +4,7 @@ import Tab from '@mui/material/Tab';
 import Tabs from '@mui/material/Tabs';
 import * as React from 'react';
 import { Container } from './style';
+import { botao } from "./style";
 
 function Layout(): JSX.Element {
     const [value, setValue] = React.useState(0);
@@ -12,9 +13,9 @@ function Layout(): JSX.Element {
         setValue(newValue);
     };
     return (
-
+<>
         <Container>
-            <Box sx={{ width: '40%', bgcolor: '#353E46', height: '70%' }}>
+            <Box sx={{ width: '80%', bgcolor: '#353E46', height: '70%' }} align="center">
                 <Tabs value={value} onChange={handleChange} centered textColor="secondary"
                     indicatorColor="secondary"
                     aria-label="secondary tabs example">
@@ -25,8 +26,10 @@ function Layout(): JSX.Element {
                 </Tabs><br />
 
                 <div className='Emblemas1'>
-                    <h3>Emblemas</h3>
-                    <p>Responda perguntas, ajude outros desenvolvedores e desbloqueie emblemas!</p>
+                    <div align="left">
+                        <h3>Emblemas</h3>
+                        <p>Responda perguntas, ajude outros desenvolvedores e desbloqueie emblemas!</p>
+                    </div>
                 </div>
 
                 <div className='Emblemas2'>
@@ -61,14 +64,11 @@ function Layout(): JSX.Element {
                     </div>
                     <img className="trofeu" src="/trofeuicon.png" align="right" />
                 </div>
+
             </Box>
 
-
-            <div className='button'>
-                <Button sx={{ mr: 30, top: 2 }} variant="contained">Contained</Button>
-            </div>
         </Container>
-
+        </>
     );
 }
 

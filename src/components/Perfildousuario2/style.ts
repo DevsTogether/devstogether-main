@@ -19,17 +19,22 @@ p {
     height: 70px;
 }
 
-.Emblemas1 {
+h4 {
+    margin-bottom: 4%;
+    width: 150%;
+}
+
+.Faca_pergunta {
+    width: 200%;
+    margin-left: 70%;
+}
+ 
+.votos {
     display: flex;
     flex-direction: row;
-    background-color: #A9A9A9;
-    color: white;
-    width: 500px;
-    height: 100px;
-    margin-left: 100px;
     margin-bottom: 5%;
-    border: white;
-} 
+    margin-top: 5%;
+}
 
 & img {
     padding-top: 20px;
@@ -43,7 +48,7 @@ p {
     background-color: '#353E46';
     color: white;
     width: 500px;
-    height: 100px;
+    height: 150px;
     margin-left: 100px;
     margin-bottom: 5%;
     border: 1px solid;
@@ -57,7 +62,7 @@ p {
     background-color: '#353E46';
     color: white;
     width: 500px;
-    height: 100px;
+    height: 150px;
     margin-left: 100px;
     margin-bottom: 5%;
     border: 1px solid;
@@ -71,7 +76,7 @@ p {
     background-color: '#353E46';
     color: white;
     width: 500px;
-    height: 100px;
+    height: 150px;
     margin-left: 100px;
     margin-bottom: 5%;
     border: 1px solid;
@@ -85,7 +90,7 @@ p {
     background-color: '#353E46';
     color: white;
     width: 500px;
-    height: 100px;
+    height: 150px;
     margin-left: 100px;
     margin-bottom: 5%;
     border: 1px solid;
