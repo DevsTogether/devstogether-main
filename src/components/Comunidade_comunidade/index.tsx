@@ -1,79 +1,143 @@
-import Box from '@mui/material/Box';
+import FaceIcon from '@mui/icons-material/Face';
+import Chip from '@mui/material/Chip';
 import Button from '@mui/material/Button';
-import Modal from '@mui/material/Modal';
-import React from 'react';
 
 
-const style = {
-  position: 'absolute' as 'absolute',
-  top: '50%',
-  left: '50%',
-  ml: 50,
-  transform: 'translate(-50%, -50%)',
-  width: 400,
-  bgcolor: 'background.paper',
-  border: '2px solid #000',
-  boxShadow: 24,
-  p: 4,
-};
+import { Container, Desafios, Drawer, Perguntas } from './style';
 
-export default function BasicModal() {
-  const [open, setOpen] = React.useState(false);
-  const handleOpen = () => setOpen(true);
-  const handleClose = () => setOpen(false);
-
-  const [formats, setFormats] = React.useState(() => ['bold', 'italic']);
-
-  const handleFormat = (
-    event: React.MouseEvent<HTMLElement>,
-    newFormats: string[],
-  ) => {
-    setFormats(newFormats);
-  };
-
-  const [value, setValue] = React.useState('Controlled');
-
-  const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-    setValue(event.target.value);
-  };
-
-
+function Comunidade(): JSX.Element {
   return (
-    <div className='Container' align="center">
-      <Button onClick={handleOpen} sx={{ mt: 40, mb: 40 }} color="success">Open modal</Button>
-      <Modal
-        open={open}
-        onClose={handleClose}
-        aria-labelledby="modal-modal-title"
-        aria-describedby="modal-modal-description"
-      >
-
-        <Box
-          sx={{
-            width: 800,
-            height: 400,
-            ml: 45,
-            mt: 20,
-            backgroundColor: '#2D3237',
-            '&:hover': {
-              backgroundColor: 'gray',
-              opacity: [0.9, 0.8, 0.7],
-            },
-          }}
-        >
-          <div className='caixas'>
-            <div className='caixa1'>
-              <img src='/model3.png' />
+    <>
+      <Container>
+        <Drawer>
+          <h3>Linguagem</h3>
+          <hr />
+          <h4><img src='/boloicon.png' />Todas Linguagens</h4>
+          <h4><img src='/boloicon.png' />Python</h4>
+          <h4><img src='/boloicon.png' />C++</h4>
+          <h4><img src='/boloicon.png' />Java</h4>
+          <h4><img src='/boloicon.png' />Python</h4>
+          <h4><img src='/boloicon.png' />C++</h4>
+          <h4><img src='/boloicon.png' />Java</h4>
+          <h4><img src='/boloicon.png' />Python</h4>
+          <h4><img src='/boloicon.png' />C++</h4>
+          <h4><img src='/boloicon.png' />Java</h4>
+          <h4><img src='/boloicon.png' />Python</h4>
+          <h4><img src='/boloicon.png' />C++</h4>
+          <h4><img src='/boloicon.png' />Java</h4>
+        </Drawer>
+        <Perguntas>
+          <div className='dificuldade'>
+          <img src='/iniciar_chamada.png' />
+          <div className='botao'>
+            <h1>Tem alguma dificuldade?</h1>  
+            <Button variant="contained" sx={{mr: 20}}>Contained</Button>
             </div>
-
-            <div className='caixa2'>
-              <img src='/model3_.png' />
-            </div>
-
           </div>
 
-        </Box>
-      </Modal>
-    </div>
+          <hr/>
+
+          <div className='perguntas1'>
+            <div>
+               <div className='votos'>
+                <p>1 Voto</p>
+                <p>256 Votos</p>
+              </div>
+              <h4>O que faz o display flex no CSS</h4>
+              <Chip icon={<FaceIcon />} label="With Icon" />
+            </div>
+            <p className='Faca_pergunta'>data: 20/12/2026</p>
+            
+          </div>
+
+          <hr/>
+
+          <div className='perguntas1'>
+            <div>
+               <div className='votos'>
+                <p>1 Voto</p>
+                <p>256 Votos</p>
+              </div>
+              <h4>O que faz o display flex no CSS</h4>
+              <Chip icon={<FaceIcon />} label="With Icon" />
+            </div>
+            <p className='Faca_pergunta'>data: 20/12/2026</p>
+            
+          </div>
+
+          <hr/>
+
+          <div className='perguntas1'>
+            <div>
+               <div className='votos'>
+                <p>1 Voto</p>
+                <p>256 Votos</p>
+              </div>
+              <h4>O que faz o display flex no CSS</h4>
+              <Chip icon={<FaceIcon />} label="With Icon" />
+            </div>
+            <p className='Faca_pergunta'>data: 20/12/2026</p>
+            
+          </div>
+
+          <hr/>
+
+          <div className='perguntas1'>
+            <div>
+               <div className='votos'>
+                <p>1 Voto</p>
+                <p>256 Votos</p>
+              </div>
+              <h4>O que faz o display flex no CSS</h4>
+              <Chip icon={<FaceIcon />} label="With Icon" />
+            </div>
+            <p className='Faca_pergunta'>data: 20/12/2026</p>
+            
+          </div>
+
+
+        </Perguntas>
+
+        <Desafios>
+          <h3>Desafios para fazer:</h3>
+          <hr/>
+       <div>
+        <div className='desafios1'>
+          <h4>Pode contar comigo</h4>
+          <p>Realize 10 chamadas</p>
+        </div>
+        </div>
+        <hr/>
+
+        <div>
+        <div className='desafios1'>
+          <h4>Pode contar comigo</h4>
+          <p>Realize 10 chamadas</p>
+        </div>
+        </div>
+        <hr/>
+
+        <div>
+        <div className='desafios1'>
+          <h4>Pode contar comigo</h4>
+          <p>Realize 10 chamadas</p>
+        </div>
+        </div>
+        <hr/>
+
+        <div>
+        <div className='desafios1'>
+          <h4>Pode contar comigo</h4>
+          <p>Realize 10 chamadas</p>
+        </div>
+        </div>
+        <hr/>
+        </Desafios>
+      </Container>
+
+
+    </>
   );
 }
+
+export default Comunidade;
