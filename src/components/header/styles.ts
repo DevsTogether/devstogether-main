@@ -1,7 +1,8 @@
-import styled from "styled-components"
 import theme from "@src/styles/theme"
+import styled from "styled-components"
 
 export const Menu = styled.div`
+width: 100%;
 
   header {
     display: flex;
@@ -9,16 +10,8 @@ export const Menu = styled.div`
     align-items: center;
     flex-wrap: wrap;
     padding: 1%;
-    @media (max-width: 548px) { //quando a tela for pequena
-    display: flex;
-    padding: 5%;
-    margin-left: 0%;
-    @media (max-width: 389px) { //quando a tela for pequena
-    margin-left: 0%;
-    
-    }
+  
   }
-}
   
   .menu {
      display: flex;

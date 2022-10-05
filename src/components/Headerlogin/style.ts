@@ -1,5 +1,5 @@
-import styled from "styled-components"
 import theme from "@src/styles/theme"
+import styled from "styled-components"
 
 export const Menu = styled.div`
 
@@ -9,15 +9,6 @@ export const Menu = styled.div`
     align-items: center;
     flex-wrap: wrap;
     padding: 1%;
-    @media (max-width: 548px) { //quando a tela for pequena
-    display: flex;
-    padding: 5%;
-    margin-left: 0%;
-    @media (max-width: 389px) { //quando a tela for pequena
-    margin-left: 0%;
-    
-    }
-  }
 }
   
   .menu {
@@ -25,14 +16,15 @@ export const Menu = styled.div`
      justify-content: space-between;
      position: relative;
      align-items: center;
-     @media (max-width: 293px) { //quando a tela for pequena
-      display: none;
-        }
    
   }
 
   img {
     margin-left: 18%;
+    @media (max-width: 389px) { //quando a tela for pequena
+    margin-left: 10%;
+    
+    }
     
   }
     
@@ -46,15 +38,18 @@ export const Menu = styled.div`
       color: ${theme.colors.primary};
       font-size: 20px;
       font-weight: 700;
-      @media (max-width: 548px) { //quando a tela for pequena
-      display: none;
-      }
+     
     }
     nav {
       display: flex;
       justify-content: flex-end;
       align-items: center;
       margin-right: 3%;
+
+      @media (max-width: 546px) { //quando a tela for pequena
+      display: none;
+    
+    }
       
   }
   

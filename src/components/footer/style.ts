@@ -1,7 +1,12 @@
-import styled from "styled-components"
 import theme from "@src/styles/theme"
+import styled from "styled-components"
 
 export const Rodapé = styled.div`
+@media (max-width: 737px) { //quando a tela for pequena
+    margin-left: 25%;
+    
+    }
+
 footer {
   display: flex;
   flex-direction: row-reverse;
@@ -13,7 +18,7 @@ footer {
   margin: auto;
   bottom: 0;
    @media (max-width: 737px) { //quando a tela for pequena
-     width: 20%;
+     width: 100%;
      align-items: center;
      }
   
@@ -96,7 +101,9 @@ color: ${theme.colors.links};
 
 a {
   display: flex;
-  align-items: row;
   padding: 22px;
+  @media (max-width: 389px) { //quando a tela for pequena
+    justify-content: center;
+    }
 }
 `

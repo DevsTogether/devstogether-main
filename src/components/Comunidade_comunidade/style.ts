@@ -1,5 +1,5 @@
-import styled from 'styled-components';
 import theme from '@src/styles/theme';
+import styled from 'styled-components';
 
 export const Container = styled.div`
 display: flex;
@@ -14,11 +14,20 @@ export const Perguntas = styled.div`
 width: 60%;
 display: flex;
 flex-direction: column;
-justify-content: center;
+justify-content: start;
 border: 2px solid #4D5A65;
 margin: 10px;
 color: ${theme.colors.text};
 border-radius: 10px;
+@media (max-width: 712px) {
+    width: 80%;
+	margin-left: 50px;	
+}
+
+@media (max-width: 322px) {
+    width: 100%;
+	margin-left: 30px;	
+}
 
 .dificuldade {
 	display: flex;
@@ -30,6 +39,7 @@ border-radius: 10px;
 	flex-direction: column;
 	margin-top: 40px;
 
+
 }
 
 h1 {
@@ -39,6 +49,9 @@ h1 {
 
 img {
 	height: 200px;
+	@media (max-width: 712px) {
+    height: 100px;	
+}
 }
 
 .perguntas1 {
@@ -57,11 +70,6 @@ img {
 .voto2 {
 	margin-left: 10px;
 }
-
-.Faca_pergunta {
-	
-}
-
 
 hr {
   margin-top: 5%;
@@ -109,12 +117,26 @@ color: ${theme.colors.text};
 border: 2px solid #4D5A65;
 border-radius: 10px;
 margin-right: 1%;
+@media (max-width: 930px) {
+   display: none;	
+}
+
 
 
 .desafios1 {
 	margin-left: 10px;
 }
 
+.separador {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+}
+
+h3 {
+	margin-left: 10px;
+	margin-top: 20px;
+}
 hr {
   margin-top: 5%;
   margin-bottom: 5%;
