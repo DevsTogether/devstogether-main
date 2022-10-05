@@ -135,10 +135,11 @@ model Integration {
 
 model Question {
   id        String        @id @unique @default(cuid())
+  closed    Boolean       @default(false)
   title     String
   content   String
   visits    Int           @default(0)
-  reward    Int?
+  reward    Int           @default(0)
   type      String?       @default("default")
   tags      QuestionTag[]
   createdAt DateTime?     @default(now())
