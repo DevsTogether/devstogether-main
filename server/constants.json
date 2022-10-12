@@ -1,0 +1,8 @@
+{
+    "USER_ROLES": {
+        "MEMBER": 2,
+        "MODERATOR": 1,
+        "ADMIN": 0
+    },
+    "MIN_REPUTATION_TO_CREATE_COMMENT": 0
+}

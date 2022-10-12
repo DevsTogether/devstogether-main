@@ -3,7 +3,9 @@ generator client {
 }
 
 generator dbml {
-  provider = "prisma-dbml-generator"
+  provider   = "prisma-dbml-generator"
+  output     = "../docs/dbml"
+  outputName = "schema.dbml"
 }
 
 datasource db {
@@ -47,38 +49,38 @@ model VerificationToken {
 }
 
 model User {
-  id              String            @id @default(cuid())
-  name            String?
-  username        String?
-  email           String?           @unique
-  emailVerified   DateTime?
-  image           String?
-  bio             String?
-  reputation      Int?              @default(0)
-  helpedUsers     Int?              @default(0)
-  restrictions    Json?
-  createdAt       DateTime?         @default(now())
-  banned          Boolean?          @default(false)
-  specialization  String?
-  accounts        Account[]
-  sessions        Session[]
-  level           Level?            @relation(fields: [levelId], references: [id])
-  role            Role?             @relation(fields: [roleId], references: [id])
-  levelId         Int
-  roleId          Int
-  languages       UserLanguage[]
-  medals          UserMedal[]
-  integrations    Integration[]
-  Questions       Question[]
-  Reports         Report[]
-  Comments        Comment[]
-  Call            Call[]
-  CallParticipant CallParticipant[]
-  Vote            Vote[]
+  id             String         @id @default(cuid())
+  name           String?
+  username       String?
+  email          String?        @unique
+  emailVerified  DateTime?
+  image          String?
+  bio            String?
+  reputation     Int            @default(0)
+  helpedUsers    Int            @default(0)
+  createdAt      DateTime?      @default(now())
+  banned         Boolean        @default(false)
+  active         Boolean        @default(true)
+  specialization String?
+  accounts       Account[]
+  sessions       Session[]
+  level          Level?         @relation(fields: [levelId], references: [id])
+  role           Role?          @relation(fields: [roleId], references: [id])
+  levelId        Int            @default(1)
+  roleId         Int            @default(3)
+  languages      UserLanguage[]
+  medals         UserMedal[]
+  integrations   Integration[]
+  Questions      Question[]
+  Reports        Report[]
+  Comments       Comment[]
+  Call           Call[]
+  Vote           Vote[]
+  Response       Response[]
 }
 
 model Role {
-  id    Int    @id @unique @default(autoincrement())
+  id    Int    @id @unique
   name  String
   roles Json?
   User  User[]
@@ -116,7 +118,7 @@ model Medal {
 }
 
 model UserMedal {
-  id         Int       @id @default(autoincrement())
+  id         Int       @id @unique @default(autoincrement())
   User       User      @relation(fields: [userId], references: [id])
   userId     String
   medal      Medal     @relation(fields: [medalId], references: [id])
@@ -133,23 +135,25 @@ model Integration {
 
 model Question {
   id        String        @id @unique @default(cuid())
+  closed    Boolean       @default(false)
   title     String
   content   String
   visits    Int           @default(0)
-  reward    Int?
-  type      String?
+  reward    Int           @default(0)
+  type      String?       @default("default")
   tags      QuestionTag[]
   createdAt DateTime?     @default(now())
   updatedAt DateTime?
   User      User?         @relation(fields: [userId], references: [id])
   userId    String?
   Comment   Comment[]
+  Responses Response[]
   Call      Call[]
   Vote      Vote[]
 }
 
 model Vote {
-  id         String    @id @unique @default(cuid())
+  id         String    @unique @default(cuid())
   point      Int?
   User       User      @relation(fields: [userId], references: [id])
   userId     String
@@ -158,6 +162,8 @@ model Vote {
   Response   Response? @relation(fields: [responseId], references: [id])
   responseId String?
   createdAt  DateTime? @default(now())
+
+  @@id([id, userId])
 }
 
 model Response {
@@ -166,18 +172,22 @@ model Response {
   createdAt  DateTime? @default(now())
   updatedAt  DateTime?
   comments   Comment[]
+  Question   Question  @relation(fields: [questionId], references: [id])
   questionId String
   Vote       Vote[]
+  User       User      @relation(fields: [userId], references: [id])
+  userId     String
 }
 
 model Tag {
   id          Int           @id @unique @default(autoincrement())
+  name        String        @unique
   about       String?
   QuestionTag QuestionTag[]
 }
 
 model QuestionTag {
-  id         Int       @id @default(autoincrement())
+  id         Int       @id @unique @default(autoincrement())
   tag        Tag?      @relation(fields: [tagId], references: [id])
   tagId      Int?
   question   Question? @relation(fields: [questionId], references: [id])
@@ -208,22 +218,12 @@ model Comment {
 }
 
 model Call {
-  id              String            @id @unique @default(cuid())
-  start           DateTime?
-  ending          DateTime?
-  expires         DateTime?
-  isOpen          Boolean           @default(false)
-  question        Question?         @relation(fields: [questionId], references: [id])
-  questionId      String?
-  userId          String
-  User            User              @relation(fields: [userId], references: [id])
-  CallParticipant CallParticipant[]
-}
-
-model CallParticipant {
-  id     String  @id @unique @default(cuid())
-  Call   Call?   @relation(fields: [callId], references: [id])
-  callId String?
-  User   User?   @relation(fields: [userId], references: [id])
-  userId String?
+  id         String    @id @unique @default(cuid())
+  start      DateTime?
+  expires    DateTime?
+  isOpen     Boolean   @default(false)
+  question   Question? @relation(fields: [questionId], references: [id])
+  questionId String?
+  userId     String
+  User       User      @relation(fields: [userId], references: [id])
 }

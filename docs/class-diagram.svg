@@ -1,0 +1,509 @@
+<svg version="1.1" baseProfile="full" width="4766.0" height="216.0" viewbox="0 0 4766 216" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:ev="http://www.w3.org/2001/xml-events">
+<desc >#.interface: fill=lightblue
+#.enumeration: fill=lightgreen
+#.type: fill=lightgray
+[Auth||+getSession(): Promise&lt;Session \| null&gt;;+can(): Promise&lt;boolean&gt;;+getUnauthorizedResponse(): { error: string; }]
+[&lt;interface&gt;ICan|+user: User \| undefined;+userId: string \| undefined;+context: unknown;+action: &quot;see-public-reports&quot; \| &quot;see-private-reports&quot; \| &quot;create-question&quot; \| &quot;create-comment&quot;|]
+[Comment||+getComment(): Promise&lt;IComment \| null&gt;;+createComment(): Promise&lt;string&gt;;+updateComment(): Promise&lt;string&gt;;+deleteComment(): Promise&lt;string&gt;]
+[&lt;interface&gt;ICreateCommentRequest|+userId: string;+subject: { type: &quot;question&quot; \| &quot;response&quot;; id: string; };+content: string|]
+[&lt;interface&gt;IUpdateCommentRequest|+commentId: string;+content: string|]
+[&lt;interface&gt;IDeleteCommentRequest|+commentId: string|]
+[&lt;interface&gt;IComment|+id: string;+content: string;+createdAt: Date \| null;+updatedAt: Date \| null;+questionId: string \| null;+responseId: string \| null;+userId: string \| null|]
+[Level||+getAllLevels(): Promise&lt;ILevel\[\]&gt;;+getLevel(): Promise&lt;ILevel \| null&gt;;+addLevel(): Promise&lt;ILevel&gt;]
+[&lt;interface&gt;ILevel|+id: number;+name: string \| null;+reputationRequired: number \| null|]
+[Medal||]
+[Question||]
+[Report||]
+[Response||]
+[Role||]
+[Tag||]
+[User||]
+[Vote||]
+[&lt;interface&gt;updateCommentRequest|+content: string|]
+[&lt;interface&gt;createCommentRequest|+content: string;+questionId: string \| undefined;+responseId: string \| undefined|]</desc>
+<g stroke-width="1.0" text-align="left" font="12pt Helvetica, Arial, sans-serif" font-size="12pt" font-family="Helvetica" font-weight="normal" font-style="normal">
+<g transform="translate(0.5, 0.5)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" stroke-width="3.0" stroke-linejoin="round" stroke-linecap="round" stroke="#33322E">
+<g stroke="transparent" fill="transparent">
+<rect x="0.0" y="0.0" height="216.0" width="4766.0" stroke="none"></rect>
+</g>
+<g transform="translate(8, 8)" fill="#33322E">
+<g transform="translate(20, 20)">
+<g data-name="Auth">
+<g fill="#eee8d5" stroke="#33322E" data-name="Auth">
+<rect x="0.0" y="23.0" height="115.0" width="362.0" data-name="Auth"></rect>
+<path d="M0.0 54.0 L362.0 54.0" fill="none" data-name="Auth"></path>
+<path d="M0.0 62.0 L362.0 62.0" fill="none" data-name="Auth"></path>
+</g>
+<g transform="translate(0, 23)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="Auth">
+<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="Auth">
+<a id=".Auth" xlink:href=""><text x="173.0" y="13.5" stroke="none" text-anchor="middle" data-name="Auth">Auth</text></a>
+
+</g>
+</g>
+<g transform="translate(0, 54)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="Auth">
+<g transform="translate(8, 8)" fill="#33322E" data-name="Auth">
+
+</g>
+</g>
+<g transform="translate(0, 62)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="Auth">
+<g transform="translate(8, 8)" fill="#33322E" text-align="left" data-name="Auth">
+<text x="0.0" y="13.5" stroke="none" data-name="Auth">+getSession(): Promise&lt;Session | null&gt;</text>
+<text x="0.0" y="28.5" stroke="none" data-name="Auth">+can(): Promise&lt;boolean&gt;</text>
+<text x="0.0" y="43.5" stroke="none" data-name="Auth">+getUnauthorizedResponse(): { error: string</text>
+<text x="0.0" y="58.5" stroke="none" data-name="Auth">}</text>
+
+</g>
+</g>
+</g>
+<g data-name="ICan">
+<g fill="lightblue" stroke="#33322E" data-name="ICan">
+<rect x="402.0" y="23.0" height="115.0" width="724.0" data-name="ICan"></rect>
+<path d="M402.0 54.0 L1126.0 54.0" fill="none" data-name="ICan"></path>
+<path d="M402.0 130.0 L1126.0 130.0" fill="none" data-name="ICan"></path>
+</g>
+<g transform="translate(402, 23)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="ICan">
+<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="ICan">
+<a id="../server/src/classes/Auth.ts.ICan" xlink:href="../server/src/classes/Auth.ts"><text x="354.0" y="13.5" stroke="none" text-anchor="middle" data-name="ICan">ICan</text></a>
+
+</g>
+</g>
+<g transform="translate(402, 54)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="ICan">
+<g transform="translate(8, 8)" fill="#33322E" text-align="left" data-name="ICan">
+<text x="0.0" y="13.5" stroke="none" data-name="ICan">+user: User | undefined</text>
+<text x="0.0" y="28.5" stroke="none" data-name="ICan">+userId: string | undefined</text>
+<text x="0.0" y="43.5" stroke="none" data-name="ICan">+context: unknown</text>
+<text x="0.0" y="58.5" stroke="none" data-name="ICan">+action: &quot;see-public-reports&quot; | &quot;see-private-reports&quot; | &quot;create-question&quot; | &quot;create-comment&quot;</text>
+
+</g>
+</g>
+<g transform="translate(402, 130)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="ICan">
+<g transform="translate(8, 8)" fill="#33322E" data-name="ICan">
+
+</g>
+</g>
+</g>
+<g data-name="Comment">
+<g fill="#eee8d5" stroke="#33322E" data-name="Comment">
+<rect x="1166.0" y="23.0" height="115.0" width="355.0" data-name="Comment"></rect>
+<path d="M1166.0 54.0 L1521.0 54.0" fill="none" data-name="Comment"></path>
+<path d="M1166.0 62.0 L1521.0 62.0" fill="none" data-name="Comment"></path>
+</g>
+<g transform="translate(1166, 23)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="Comment">
+<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="Comment">
+<a id=".Comment" xlink:href=""><text x="169.5" y="13.5" stroke="none" text-anchor="middle" data-name="Comment">Comment</text></a>
+
+</g>
+</g>
+<g transform="translate(1166, 54)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="Comment">
+<g transform="translate(8, 8)" fill="#33322E" data-name="Comment">
+
+</g>
+</g>
+<g transform="translate(1166, 62)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="Comment">
+<g transform="translate(8, 8)" fill="#33322E" text-align="left" data-name="Comment">
+<text x="0.0" y="13.5" stroke="none" data-name="Comment">+getComment(): Promise&lt;IComment | null&gt;</text>
+<text x="0.0" y="28.5" stroke="none" data-name="Comment">+createComment(): Promise&lt;string&gt;</text>
+<text x="0.0" y="43.5" stroke="none" data-name="Comment">+updateComment(): Promise&lt;string&gt;</text>
+<text x="0.0" y="58.5" stroke="none" data-name="Comment">+deleteComment(): Promise&lt;string&gt;</text>
+
+</g>
+</g>
+</g>
+<g data-name="ICreateCommentRequest">
+<g fill="lightblue" stroke="#33322E" data-name="ICreateCommentRequest">
+<rect x="1561.0" y="15.0" height="130.0" width="329.0" data-name="ICreateCommentRequest"></rect>
+<path d="M1561.0 46.0 L1890.0 46.0" fill="none" data-name="ICreateCommentRequest"></path>
+<path d="M1561.0 137.0 L1890.0 137.0" fill="none" data-name="ICreateCommentRequest"></path>
+</g>
+<g transform="translate(1561, 15)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="ICreateCommentRequest">
+<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="ICreateCommentRequest">
+<a id="../server/src/classes/Comment.ts.ICreateCommentRequest" xlink:href="../server/src/classes/Comment.ts"><text x="156.5" y="13.5" stroke="none" text-anchor="middle" data-name="ICreateCommentRequest">ICreateCommentRequest</text></a>
+
+</g>
+</g>
+<g transform="translate(1561, 46)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="ICreateCommentRequest">
+<g transform="translate(8, 8)" fill="#33322E" text-align="left" data-name="ICreateCommentRequest">
+<text x="0.0" y="13.5" stroke="none" data-name="ICreateCommentRequest">+userId: string</text>
+<text x="0.0" y="28.5" stroke="none" data-name="ICreateCommentRequest">+subject: { type: &quot;question&quot; | &quot;response&quot;</text>
+<text x="0.0" y="43.5" stroke="none" data-name="ICreateCommentRequest">id: string</text>
+<text x="0.0" y="58.5" stroke="none" data-name="ICreateCommentRequest">}</text>
+<text x="0.0" y="73.5" stroke="none" data-name="ICreateCommentRequest">+content: string</text>
+
+</g>
+</g>
+<g transform="translate(1561, 137)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="ICreateCommentRequest">
+<g transform="translate(8, 8)" fill="#33322E" data-name="ICreateCommentRequest">
+
+</g>
+</g>
+</g>
+<g data-name="IUpdateCommentRequest">
+<g fill="lightblue" stroke="#33322E" data-name="IUpdateCommentRequest">
+<rect x="1930.0" y="38.0" height="85.0" width="219.0" data-name="IUpdateCommentRequest"></rect>
+<path d="M1930.0 69.0 L2149.0 69.0" fill="none" data-name="IUpdateCommentRequest"></path>
+<path d="M1930.0 115.0 L2149.0 115.0" fill="none" data-name="IUpdateCommentRequest"></path>
+</g>
+<g transform="translate(1930, 38)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="IUpdateCommentRequest">
+<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="IUpdateCommentRequest">
+<a id="../server/src/classes/Comment.ts.IUpdateCommentRequest" xlink:href="../server/src/classes/Comment.ts"><text x="101.5" y="13.5" stroke="none" text-anchor="middle" data-name="IUpdateCommentRequest">IUpdateCommentRequest</text></a>
+
+</g>
+</g>
+<g transform="translate(1930, 69)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="IUpdateCommentRequest">
+<g transform="translate(8, 8)" fill="#33322E" text-align="left" data-name="IUpdateCommentRequest">
+<text x="0.0" y="13.5" stroke="none" data-name="IUpdateCommentRequest">+commentId: string</text>
+<text x="0.0" y="28.5" stroke="none" data-name="IUpdateCommentRequest">+content: string</text>
+
+</g>
+</g>
+<g transform="translate(1930, 115)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="IUpdateCommentRequest">
+<g transform="translate(8, 8)" fill="#33322E" data-name="IUpdateCommentRequest">
+
+</g>
+</g>
+</g>
+<g data-name="IDeleteCommentRequest">
+<g fill="lightblue" stroke="#33322E" data-name="IDeleteCommentRequest">
+<rect x="2189.0" y="45.0" height="70.0" width="213.0" data-name="IDeleteCommentRequest"></rect>
+<path d="M2189.0 76.0 L2402.0 76.0" fill="none" data-name="IDeleteCommentRequest"></path>
+<path d="M2189.0 107.0 L2402.0 107.0" fill="none" data-name="IDeleteCommentRequest"></path>
+</g>
+<g transform="translate(2189, 45)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="IDeleteCommentRequest">
+<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="IDeleteCommentRequest">
+<a id="../server/src/classes/Comment.ts.IDeleteCommentRequest" xlink:href="../server/src/classes/Comment.ts"><text x="98.5" y="13.5" stroke="none" text-anchor="middle" data-name="IDeleteCommentRequest">IDeleteCommentRequest</text></a>
+
+</g>
+</g>
+<g transform="translate(2189, 76)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="IDeleteCommentRequest">
+<g transform="translate(8, 8)" fill="#33322E" text-align="left" data-name="IDeleteCommentRequest">
+<text x="0.0" y="13.5" stroke="none" data-name="IDeleteCommentRequest">+commentId: string</text>
+
+</g>
+</g>
+<g transform="translate(2189, 107)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="IDeleteCommentRequest">
+<g transform="translate(8, 8)" fill="#33322E" data-name="IDeleteCommentRequest">
+
+</g>
+</g>
+</g>
+<g data-name="IComment">
+<g fill="lightblue" stroke="#33322E" data-name="IComment">
+<rect x="2442.0" y="0.0" height="160.0" width="212.0" data-name="IComment"></rect>
+<path d="M2442.0 31.0 L2654.0 31.0" fill="none" data-name="IComment"></path>
+<path d="M2442.0 152.0 L2654.0 152.0" fill="none" data-name="IComment"></path>
+</g>
+<g transform="translate(2442, 0)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="IComment">
+<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="IComment">
+<a id="../server/src/classes/Comment.ts.IComment" xlink:href="../server/src/classes/Comment.ts"><text x="98.0" y="13.5" stroke="none" text-anchor="middle" data-name="IComment">IComment</text></a>
+
+</g>
+</g>
+<g transform="translate(2442, 31)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="IComment">
+<g transform="translate(8, 8)" fill="#33322E" text-align="left" data-name="IComment">
+<text x="0.0" y="13.5" stroke="none" data-name="IComment">+id: string</text>
+<text x="0.0" y="28.5" stroke="none" data-name="IComment">+content: string</text>
+<text x="0.0" y="43.5" stroke="none" data-name="IComment">+createdAt: Date | null</text>
+<text x="0.0" y="58.5" stroke="none" data-name="IComment">+updatedAt: Date | null</text>
+<text x="0.0" y="73.5" stroke="none" data-name="IComment">+questionId: string | null</text>
+<text x="0.0" y="88.5" stroke="none" data-name="IComment">+responseId: string | null</text>
+<text x="0.0" y="103.5" stroke="none" data-name="IComment">+userId: string | null</text>
+
+</g>
+</g>
+<g transform="translate(2442, 152)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="IComment">
+<g transform="translate(8, 8)" fill="#33322E" data-name="IComment">
+
+</g>
+</g>
+</g>
+<g data-name="Level">
+<g fill="#eee8d5" stroke="#33322E" data-name="Level">
+<rect x="2694.0" y="30.0" height="100.0" width="291.0" data-name="Level"></rect>
+<path d="M2694.0 61.0 L2985.0 61.0" fill="none" data-name="Level"></path>
+<path d="M2694.0 69.0 L2985.0 69.0" fill="none" data-name="Level"></path>
+</g>
+<g transform="translate(2694, 30)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="Level">
+<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="Level">
+<a id=".Level" xlink:href=""><text x="137.5" y="13.5" stroke="none" text-anchor="middle" data-name="Level">Level</text></a>
+
+</g>
+</g>
+<g transform="translate(2694, 61)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="Level">
+<g transform="translate(8, 8)" fill="#33322E" data-name="Level">
+
+</g>
+</g>
+<g transform="translate(2694, 69)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="Level">
+<g transform="translate(8, 8)" fill="#33322E" text-align="left" data-name="Level">
+<text x="0.0" y="13.5" stroke="none" data-name="Level">+getAllLevels(): Promise&lt;ILevel[]&gt;</text>
+<text x="0.0" y="28.5" stroke="none" data-name="Level">+getLevel(): Promise&lt;ILevel | null&gt;</text>
+<text x="0.0" y="43.5" stroke="none" data-name="Level">+addLevel(): Promise&lt;ILevel&gt;</text>
+
+</g>
+</g>
+</g>
+<g data-name="ILevel">
+<g fill="lightblue" stroke="#33322E" data-name="ILevel">
+<rect x="3025.0" y="30.0" height="100.0" width="291.0" data-name="ILevel"></rect>
+<path d="M3025.0 61.0 L3316.0 61.0" fill="none" data-name="ILevel"></path>
+<path d="M3025.0 122.0 L3316.0 122.0" fill="none" data-name="ILevel"></path>
+</g>
+<g transform="translate(3025, 30)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="ILevel">
+<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="ILevel">
+<a id="../server/src/classes/Level.ts.ILevel" xlink:href="../server/src/classes/Level.ts"><text x="137.5" y="13.5" stroke="none" text-anchor="middle" data-name="ILevel">ILevel</text></a>
+
+</g>
+</g>
+<g transform="translate(3025, 61)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="ILevel">
+<g transform="translate(8, 8)" fill="#33322E" text-align="left" data-name="ILevel">
+<text x="0.0" y="13.5" stroke="none" data-name="ILevel">+id: number</text>
+<text x="0.0" y="28.5" stroke="none" data-name="ILevel">+name: string | null</text>
+<text x="0.0" y="43.5" stroke="none" data-name="ILevel">+reputationRequired: number | null</text>
+
+</g>
+</g>
+<g transform="translate(3025, 122)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="ILevel">
+<g transform="translate(8, 8)" fill="#33322E" data-name="ILevel">
+
+</g>
+</g>
+</g>
+<g data-name="Medal">
+<g fill="#eee8d5" stroke="#33322E" data-name="Medal">
+<rect x="3356.0" y="57.0" height="47.0" width="64.0" data-name="Medal"></rect>
+<path d="M3356.0 88.0 L3420.0 88.0" fill="none" data-name="Medal"></path>
+<path d="M3356.0 96.0 L3420.0 96.0" fill="none" data-name="Medal"></path>
+</g>
+<g transform="translate(3356, 57)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="Medal">
+<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="Medal">
+<a id=".Medal" xlink:href=""><text x="24.0" y="13.5" stroke="none" text-anchor="middle" data-name="Medal">Medal</text></a>
+
+</g>
+</g>
+<g transform="translate(3356, 88)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="Medal">
+<g transform="translate(8, 8)" fill="#33322E" data-name="Medal">
+
+</g>
+</g>
+<g transform="translate(3356, 96)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="Medal">
+<g transform="translate(8, 8)" fill="#33322E" data-name="Medal">
+
+</g>
+</g>
+</g>
+<g data-name="Question">
+<g fill="#eee8d5" stroke="#33322E" data-name="Question">
+<rect x="3460.0" y="57.0" height="47.0" width="87.0" data-name="Question"></rect>
+<path d="M3460.0 88.0 L3547.0 88.0" fill="none" data-name="Question"></path>
+<path d="M3460.0 96.0 L3547.0 96.0" fill="none" data-name="Question"></path>
+</g>
+<g transform="translate(3460, 57)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="Question">
+<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="Question">
+<a id=".Question" xlink:href=""><text x="35.5" y="13.5" stroke="none" text-anchor="middle" data-name="Question">Question</text></a>
+
+</g>
+</g>
+<g transform="translate(3460, 88)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="Question">
+<g transform="translate(8, 8)" fill="#33322E" data-name="Question">
+
+</g>
+</g>
+<g transform="translate(3460, 96)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="Question">
+<g transform="translate(8, 8)" fill="#33322E" data-name="Question">
+
+</g>
+</g>
+</g>
+<g data-name="Report">
+<g fill="#eee8d5" stroke="#33322E" data-name="Report">
+<rect x="3587.0" y="57.0" height="47.0" width="69.0" data-name="Report"></rect>
+<path d="M3587.0 88.0 L3656.0 88.0" fill="none" data-name="Report"></path>
+<path d="M3587.0 96.0 L3656.0 96.0" fill="none" data-name="Report"></path>
+</g>
+<g transform="translate(3587, 57)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="Report">
+<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="Report">
+<a id=".Report" xlink:href=""><text x="26.5" y="13.5" stroke="none" text-anchor="middle" data-name="Report">Report</text></a>
+
+</g>
+</g>
+<g transform="translate(3587, 88)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="Report">
+<g transform="translate(8, 8)" fill="#33322E" data-name="Report">
+
+</g>
+</g>
+<g transform="translate(3587, 96)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="Report">
+<g transform="translate(8, 8)" fill="#33322E" data-name="Report">
+
+</g>
+</g>
+</g>
+<g data-name="Response">
+<g fill="#eee8d5" stroke="#33322E" data-name="Response">
+<rect x="3696.0" y="57.0" height="47.0" width="96.0" data-name="Response"></rect>
+<path d="M3696.0 88.0 L3792.0 88.0" fill="none" data-name="Response"></path>
+<path d="M3696.0 96.0 L3792.0 96.0" fill="none" data-name="Response"></path>
+</g>
+<g transform="translate(3696, 57)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="Response">
+<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="Response">
+<a id=".Response" xlink:href=""><text x="40.0" y="13.5" stroke="none" text-anchor="middle" data-name="Response">Response</text></a>
+
+</g>
+</g>
+<g transform="translate(3696, 88)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="Response">
+<g transform="translate(8, 8)" fill="#33322E" data-name="Response">
+
+</g>
+</g>
+<g transform="translate(3696, 96)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="Response">
+<g transform="translate(8, 8)" fill="#33322E" data-name="Response">
+
+</g>
+</g>
+</g>
+<g data-name="Role">
+<g fill="#eee8d5" stroke="#33322E" data-name="Role">
+<rect x="3832.0" y="57.0" height="47.0" width="52.0" data-name="Role"></rect>
+<path d="M3832.0 88.0 L3884.0 88.0" fill="none" data-name="Role"></path>
+<path d="M3832.0 96.0 L3884.0 96.0" fill="none" data-name="Role"></path>
+</g>
+<g transform="translate(3832, 57)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="Role">
+<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="Role">
+<a id=".Role" xlink:href=""><text x="18.0" y="13.5" stroke="none" text-anchor="middle" data-name="Role">Role</text></a>
+
+</g>
+</g>
+<g transform="translate(3832, 88)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="Role">
+<g transform="translate(8, 8)" fill="#33322E" data-name="Role">
+
+</g>
+</g>
+<g transform="translate(3832, 96)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="Role">
+<g transform="translate(8, 8)" fill="#33322E" data-name="Role">
+
+</g>
+</g>
+</g>
+<g data-name="Tag">
+<g fill="#eee8d5" stroke="#33322E" data-name="Tag">
+<rect x="3924.0" y="57.0" height="47.0" width="46.0" data-name="Tag"></rect>
+<path d="M3924.0 88.0 L3970.0 88.0" fill="none" data-name="Tag"></path>
+<path d="M3924.0 96.0 L3970.0 96.0" fill="none" data-name="Tag"></path>
+</g>
+<g transform="translate(3924, 57)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="Tag">
+<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="Tag">
+<a id=".Tag" xlink:href=""><text x="15.0" y="13.5" stroke="none" text-anchor="middle" data-name="Tag">Tag</text></a>
+
+</g>
+</g>
+<g transform="translate(3924, 88)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="Tag">
+<g transform="translate(8, 8)" fill="#33322E" data-name="Tag">
+
+</g>
+</g>
+<g transform="translate(3924, 96)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="Tag">
+<g transform="translate(8, 8)" fill="#33322E" data-name="Tag">
+
+</g>
+</g>
+</g>
+<g data-name="User">
+<g fill="#eee8d5" stroke="#33322E" data-name="User">
+<rect x="4010.0" y="57.0" height="47.0" width="53.0" data-name="User"></rect>
+<path d="M4010.0 88.0 L4063.0 88.0" fill="none" data-name="User"></path>
+<path d="M4010.0 96.0 L4063.0 96.0" fill="none" data-name="User"></path>
+</g>
+<g transform="translate(4010, 57)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="User">
+<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="User">
+<a id=".User" xlink:href=""><text x="18.5" y="13.5" stroke="none" text-anchor="middle" data-name="User">User</text></a>
+
+</g>
+</g>
+<g transform="translate(4010, 88)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="User">
+<g transform="translate(8, 8)" fill="#33322E" data-name="User">
+
+</g>
+</g>
+<g transform="translate(4010, 96)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="User">
+<g transform="translate(8, 8)" fill="#33322E" data-name="User">
+
+</g>
+</g>
+</g>
+<g data-name="Vote">
+<g fill="#eee8d5" stroke="#33322E" data-name="Vote">
+<rect x="4103.0" y="57.0" height="47.0" width="52.0" data-name="Vote"></rect>
+<path d="M4103.0 88.0 L4155.0 88.0" fill="none" data-name="Vote"></path>
+<path d="M4103.0 96.0 L4155.0 96.0" fill="none" data-name="Vote"></path>
+</g>
+<g transform="translate(4103, 57)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="Vote">
+<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="Vote">
+<a id=".Vote" xlink:href=""><text x="18.0" y="13.5" stroke="none" text-anchor="middle" data-name="Vote">Vote</text></a>
+
+</g>
+</g>
+<g transform="translate(4103, 88)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="Vote">
+<g transform="translate(8, 8)" fill="#33322E" data-name="Vote">
+
+</g>
+</g>
+<g transform="translate(4103, 96)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="Vote">
+<g transform="translate(8, 8)" fill="#33322E" data-name="Vote">
+
+</g>
+</g>
+</g>
+<g data-name="updateCommentRequest">
+<g fill="lightblue" stroke="#33322E" data-name="updateCommentRequest">
+<rect x="4195.0" y="45.0" height="70.0" width="212.0" data-name="updateCommentRequest"></rect>
+<path d="M4195.0 76.0 L4407.0 76.0" fill="none" data-name="updateCommentRequest"></path>
+<path d="M4195.0 107.0 L4407.0 107.0" fill="none" data-name="updateCommentRequest"></path>
+</g>
+<g transform="translate(4195, 45)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="updateCommentRequest">
+<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="updateCommentRequest">
+<a id=".updateCommentRequest" xlink:href=""><text x="98.0" y="13.5" stroke="none" text-anchor="middle" data-name="updateCommentRequest">updateCommentRequest</text></a>
+
+</g>
+</g>
+<g transform="translate(4195, 76)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="updateCommentRequest">
+<g transform="translate(8, 8)" fill="#33322E" text-align="left" data-name="updateCommentRequest">
+<text x="0.0" y="13.5" stroke="none" data-name="updateCommentRequest">+content: string</text>
+
+</g>
+</g>
+<g transform="translate(4195, 107)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="updateCommentRequest">
+<g transform="translate(8, 8)" fill="#33322E" data-name="updateCommentRequest">
+
+</g>
+</g>
+</g>
+<g data-name="createCommentRequest">
+<g fill="lightblue" stroke="#33322E" data-name="createCommentRequest">
+<rect x="4447.0" y="30.0" height="100.0" width="263.0" data-name="createCommentRequest"></rect>
+<path d="M4447.0 61.0 L4710.0 61.0" fill="none" data-name="createCommentRequest"></path>
+<path d="M4447.0 122.0 L4710.0 122.0" fill="none" data-name="createCommentRequest"></path>
+</g>
+<g transform="translate(4447, 30)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="createCommentRequest">
+<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="createCommentRequest">
+<a id=".createCommentRequest" xlink:href=""><text x="123.5" y="13.5" stroke="none" text-anchor="middle" data-name="createCommentRequest">createCommentRequest</text></a>
+
+</g>
+</g>
+<g transform="translate(4447, 61)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="createCommentRequest">
+<g transform="translate(8, 8)" fill="#33322E" text-align="left" data-name="createCommentRequest">
+<text x="0.0" y="13.5" stroke="none" data-name="createCommentRequest">+content: string</text>
+<text x="0.0" y="28.5" stroke="none" data-name="createCommentRequest">+questionId: string | undefined</text>
+<text x="0.0" y="43.5" stroke="none" data-name="createCommentRequest">+responseId: string | undefined</text>
+
+</g>
+</g>
+<g transform="translate(4447, 122)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="createCommentRequest">
+<g transform="translate(8, 8)" fill="#33322E" data-name="createCommentRequest">
+
+</g>
+</g>
+</g>
+</g>
+</g>
+</g>
+</g>
+</svg>

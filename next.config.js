@@ -10,6 +10,10 @@ const nextConfig = {
         );
         config.resolve.alias['@src'] = path.join(__dirname, 'src/');
         config.resolve.alias['@server'] = path.join(__dirname, 'server/');
+        config.resolve.alias['@server_src'] = path.join(
+            __dirname,
+            'server/src/'
+        );
         config.resolve.alias['@public'] = path.join(__dirname, 'public/');
         config.resolve.alias['@api'] = path.join(__dirname, 'src/pages/api/');
         config.resolve.alias['@pages'] = path.join(__dirname, 'src/pages/');

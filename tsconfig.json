@@ -18,6 +18,7 @@
         "paths": {
             "@src/*": ["src/*"],
             "@server/*": ["server/*"],
+            "@server_src/*": ["server/src/*"],
             "@public/*": ["public/*"],
             "@api/*": ["src/pages/api/*"],
             "@pages/*": ["src/pages/*"],
@@ -32,7 +33,7 @@
         "next-env.d.ts",
         "**/*.ts",
         "**/*.tsx",
-        "src/pages/api/auth/[...nextauth].js"
+        "src/pages/api/auth/[...nextauth].ts"
     ],
     "exclude": ["node_modules"]
 }

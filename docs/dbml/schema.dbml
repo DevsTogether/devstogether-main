@@ -48,18 +48,18 @@ Table User {
   emailVerified DateTime
   image String
   bio String
-  reputation Int [default: 0]
-  helpedUsers Int [default: 0]
-  restrictions Json
+  reputation Int [not null, default: 0]
+  helpedUsers Int [not null, default: 0]
   createdAt DateTime [default: `now()`]
-  banned Boolean [default: false]
+  banned Boolean [not null, default: false]
+  active Boolean [not null, default: true]
   specialization String
   accounts Account [not null]
   sessions Session [not null]
   level Level
   role Role
-  levelId Int [not null]
-  roleId Int [not null]
+  levelId Int [not null, default: 1]
+  roleId Int [not null, default: 3]
   languages UserLanguage [not null]
   medals UserMedal [not null]
   integrations Integration [not null]
@@ -67,12 +67,12 @@ Table User {
   Reports Report [not null]
   Comments Comment [not null]
   Call Call [not null]
-  CallParticipant CallParticipant [not null]
   Vote Vote [not null]
+  Response Response [not null]
 }
 
 Table Role {
-  id Int [pk, increment, unique]
+  id Int [pk, unique]
   name String [not null]
   roles Json
   User User [not null]
@@ -112,7 +112,7 @@ Table Medal {
 }
 
 Table UserMedal {
-  id Int [pk, increment]
+  id Int [pk, increment, unique]
   User User [not null]
   userId String [not null]
   medal Medal [not null]
@@ -133,19 +133,20 @@ Table Question {
   content String [not null]
   visits Int [not null, default: 0]
   reward Int
-  type String
+  type String [default: 'default']
   tags QuestionTag [not null]
   createdAt DateTime [default: `now()`]
   updatedAt DateTime
   User User
   userId String
   Comment Comment [not null]
+  Responses Response [not null]
   Call Call [not null]
   Vote Vote [not null]
 }
 
 Table Vote {
-  id String [pk, unique]
+  id String [unique, not null]
   point Int
   User User [not null]
   userId String [not null]
@@ -154,6 +155,10 @@ Table Vote {
   Response Response
   responseId String
   createdAt DateTime [default: `now()`]
+
+  indexes {
+    (id, userId) [pk]
+  }
 }
 
 Table Response {
@@ -162,18 +167,22 @@ Table Response {
   createdAt DateTime [default: `now()`]
   updatedAt DateTime
   comments Comment [not null]
+  Question Question [not null]
   questionId String [not null]
   Vote Vote [not null]
+  User User [not null]
+  userId String [not null]
 }
 
 Table Tag {
   id Int [pk, increment, unique]
+  name String [unique, not null]
   about String
   QuestionTag QuestionTag [not null]
 }
 
 Table QuestionTag {
-  id Int [pk, increment]
+  id Int [pk, increment, unique]
   tag Tag
   tagId Int
   question Question
@@ -206,22 +215,12 @@ Table Comment {
 Table Call {
   id String [pk, unique]
   start DateTime
-  ending DateTime
   expires DateTime
   isOpen Boolean [not null, default: false]
   question Question
   questionId String
   userId String [not null]
   User User [not null]
-  CallParticipant CallParticipant [not null]
-}
-
-Table CallParticipant {
-  id String [pk, unique]
-  Call Call
-  callId String
-  User User
-  userId String
 }
 
 Ref: Account.userId > User.id [delete: Cascade]
@@ -250,6 +249,10 @@ Ref: Vote.questionId > Question.id
 
 Ref: Vote.responseId > Response.id
 
+Ref: Response.questionId > Question.id
+
+Ref: Response.userId > User.id
+
 Ref: QuestionTag.tagId > Tag.id
 
 Ref: QuestionTag.questionId > Question.id
@@ -265,7 +268,3 @@ Ref: Comment.questionId > Question.id
 Ref: Call.questionId > Question.id
 
 Ref: Call.userId > User.id
-
-Ref: CallParticipant.callId > Call.id
-
-Ref: CallParticipant.userId > User.id
