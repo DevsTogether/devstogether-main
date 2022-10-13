@@ -129,10 +129,11 @@ Table Integration {
 
 Table Question {
   id String [pk, unique]
+  closed Boolean [not null, default: false]
   title String [not null]
   content String [not null]
   visits Int [not null, default: 0]
-  reward Int
+  reward Int [not null, default: 0]
   type String [default: 'default']
   tags QuestionTag [not null]
   createdAt DateTime [default: `now()`]

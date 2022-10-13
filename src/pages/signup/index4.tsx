@@ -1,10 +1,9 @@
 import Footer from '@components/footer';
 import Header from '@components/header/index';
-import Layout from '@src/components/Sobre nós';
+import Layout from '@src/components/layout_sigup4';
 import GlobalStyles from '@src/styles/global';
-import theme from '@styles/theme';
 
-function Cards(): JSX.Element {
+function SignUp(): JSX.Element {
     return (
         <>
             <GlobalStyles />
@@ -14,8 +13,7 @@ function Cards(): JSX.Element {
             </main>
             <Footer />
         </>
-
     );
 }
 
-export default Cards;
+export default SignUp;

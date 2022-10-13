@@ -3,7 +3,7 @@
 import type { NextPage } from 'next';
 
 const page: NextPage = () => {
-    return;
+    return <></>;
 };
 
 export default page;

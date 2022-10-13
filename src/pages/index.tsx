@@ -1,11 +1,9 @@
-/* eslint-disable @next/next/no-img-element */
 import Footer from '@components/footer';
-import Header from '@components/header/index';
-import Layout from '@src/components/layout_sigin';
+import Header from '@components/Headerlogin';
+import Layout from '@src/components/Entrada';
 import GlobalStyles from '@src/styles/global';
-import theme from '@styles/theme';
 
-export default function Home() {
+function Cards(): JSX.Element {
     return (
         <>
             <GlobalStyles />
@@ -14,10 +12,8 @@ export default function Home() {
                 <Layout />
             </main>
             <Footer />
-
         </>
-
     );
-};
+}
 
-
+export default Cards;
