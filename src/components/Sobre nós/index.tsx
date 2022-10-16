@@ -2,14 +2,19 @@ import { Container } from './style';
 
 function Layout(): JSX.Element {
     return (
-
         <Container>
-
             <h1>O que é o projeto Devstogether</h1>
 
-            <div className='video'>
-                <video src='wsinfw'></video>
-                <p>O projeto Devstogether tem o objetivo de que desenvolvedores ajudem e sejam ajudadados de forma<br />prática e dinâmica, compartilhando experiências com outros desenvolvedores e contribuindo na comunidade de desenvolvedores</p>
+            <div className="video">
+                <video src="wsinfw"></video>
+                <p>
+                    O projeto Devstogether tem o objetivo de que desenvolvedores
+                    ajudem e sejam ajudadados de forma
+                    <br />
+                    prática e dinâmica, compartilhando experiências com outros
+                    desenvolvedores e contribuindo na comunidade de
+                    desenvolvedores
+                </p>
             </div>
 
             <h1 align="center">Nosso time é composto por quatro integrantes</h1>
@@ -17,17 +22,16 @@ function Layout(): JSX.Element {
             <div className="container">
                 <div className="card1">
                     <div className="content">
-                        <img src='/iniciar_chamada.png' />
+                        <img src="/iniciar_chamada.png" />
                         <h3>Matheus</h3>
                         <a href="#">Entrar</a>
                     </div>
                 </div>
 
-
                 <div className="container2">
                     <div className="card2">
                         <div className="content2">
-                            <img src='/Entrar_comunidade.png' />
+                            <img src="/Entrar_comunidade.png" />
                             <h3>Marcos</h3>
                             <a href="#">Entrar</a>
                         </div>
@@ -37,17 +41,16 @@ function Layout(): JSX.Element {
                 <div className="container">
                     <div className="card1">
                         <div className="content">
-                            <img src='/iniciar_chamada.png' />
+                            <img src="/iniciar_chamada.png" />
                             <h3>Wayne</h3>
                             <a href="#">Entrar</a>
                         </div>
                     </div>
 
-
                     <div className="container2">
                         <div className="card2">
                             <div className="content2">
-                                <img src='/Entrar_comunidade.png' />
+                                <img src="/Entrar_comunidade.png" />
                                 <h3>Victor</h3>
                                 <a href="#">Entrar</a>
                             </div>
@@ -56,7 +59,6 @@ function Layout(): JSX.Element {
                 </div>
             </div>
         </Container>
-
     );
 }
 

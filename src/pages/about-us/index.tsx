@@ -14,7 +14,6 @@ function Cards(): JSX.Element {
             </main>
             <Footer />
         </>
-
     );
 }
 

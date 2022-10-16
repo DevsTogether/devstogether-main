@@ -6,7 +6,6 @@ import Tabs from '@mui/material/Tabs';
 import * as React from 'react';
 import { Container } from './style';
 
-
 function Layout(): JSX.Element {
     const [value, setValue] = React.useState(0);
 
@@ -16,66 +15,73 @@ function Layout(): JSX.Element {
     return (
         <>
             <Container>
-                <Box sx={{ width: '80%', bgcolor: '#353E46', height: '70%' }} align="center">
-                    <Tabs value={value} onChange={handleChange} centered textColor="secondary"
+                <Box
+                    sx={{ width: '80%', bgcolor: '#353E46', height: '70%' }}
+                    align="center"
+                >
+                    <Tabs
+                        value={value}
+                        onChange={handleChange}
+                        centered
+                        textColor="secondary"
                         indicatorColor="secondary"
-                        aria-label="secondary tabs example">
+                        aria-label="secondary tabs example"
+                    >
                         <Tab label="Item One" />
                         <Tab label="Item Two" />
                         <Tab label="Item Three" />
                         <Tab label="Item Three" />
-                    </Tabs><br />
+                    </Tabs>
+                    <br />
 
-                    <div className='Emblemas2'>
+                    <div className="Emblemas2">
                         <div>
-                            <div className='votos'>
+                            <div className="votos">
                                 <p>1 Voto</p>
                                 <p>256 Votos</p>
                             </div>
                             <h4>O que faz o display flex no CSS</h4>
                             <Chip icon={<FaceIcon />} label="With Icon" />
-                            <p className='Faca_pergunta'>data: 20/12/2026</p>
+                            <p className="Faca_pergunta">data: 20/12/2026</p>
                         </div>
                     </div>
 
-                    <div className='Emblemas3'>
+                    <div className="Emblemas3">
                         <div>
-                            <div className='votos'>
+                            <div className="votos">
                                 <p>1 Voto</p>
                                 <p>256 Votos</p>
                             </div>
                             <h4>O que faz o display flex no CSS</h4>
                             <Chip icon={<FaceIcon />} label="With Icon" />
-                            <p className='Faca_pergunta'>data: 20/12/2026</p>
+                            <p className="Faca_pergunta">data: 20/12/2026</p>
                         </div>
                     </div>
 
-                    <div className='Emblemas4'>
+                    <div className="Emblemas4">
                         <div>
-                            <div className='votos'>
+                            <div className="votos">
                                 <p>1 Voto</p>
                                 <p>256 Votos</p>
                             </div>
                             <h4>O que faz o display flex no CSS</h4>
                             <Chip icon={<FaceIcon />} label="With Icon" />
-                            <p className='Faca_pergunta'>data: 20/12/2026</p>
+                            <p className="Faca_pergunta">data: 20/12/2026</p>
                         </div>
                     </div>
 
-                    <div className='Emblemas5'>
+                    <div className="Emblemas5">
                         <div>
-                            <div className='votos'>
+                            <div className="votos">
                                 <p>1 Voto</p>
                                 <p>256 Votos</p>
                             </div>
                             <h4>O que faz o display flex no CSS</h4>
                             <Chip icon={<FaceIcon />} label="With Icon" />
-                            <p className='Faca_pergunta'>data: 20/12/2026</p>
+                            <p className="Faca_pergunta">data: 20/12/2026</p>
                         </div>
                     </div>
-
                 </Box>
-
             </Container>
         </>
     );

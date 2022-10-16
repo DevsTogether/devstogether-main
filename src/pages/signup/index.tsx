@@ -14,7 +14,6 @@ function SignUp(): JSX.Element {
             </main>
             <Footer />
         </>
-
     );
 }
 

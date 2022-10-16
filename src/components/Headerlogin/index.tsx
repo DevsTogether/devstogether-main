@@ -1,7 +1,6 @@
 import Avatar from '@mui/material/Avatar';
 import { Menu } from './style';
 
-
 function HeaderLogin(): JSX.Element {
     return (
         <Menu>
@@ -12,12 +11,15 @@ function HeaderLogin(): JSX.Element {
                     <h3>Devstogether</h3>
                 </div>
 
-
                 <nav>
-                    <Avatar sx={{ width: '30px', height: '30px' }} alt="Remy Sharp" src="/static/images/avatar/1.jpg" />
+                    <Avatar
+                        sx={{ width: '30px', height: '30px' }}
+                        alt="Remy Sharp"
+                        src="/static/images/avatar/1.jpg"
+                    />
                 </nav>
-            </header >
-        </Menu >
+            </header>
+        </Menu>
     );
 }
 

@@ -7,14 +7,13 @@ import theme from '@styles/theme';
 function Cards(): JSX.Element {
     return (
         <>
-          <GlobalStyles />
+            <GlobalStyles />
             <Header />
             <main>
                 <Layout />
             </main>
             <Footer />
         </>
-
     );
 }
 

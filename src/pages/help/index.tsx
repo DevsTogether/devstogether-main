@@ -14,7 +14,6 @@ function Sobre(): JSX.Element {
             </main>
             <Footer />
         </>
-
     );
 }
 

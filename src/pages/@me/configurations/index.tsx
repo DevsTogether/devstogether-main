@@ -12,7 +12,6 @@ function SignUp(): JSX.Element {
                 <Layout />
             </main>
         </>
-
     );
 }
 

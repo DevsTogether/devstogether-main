@@ -9,8 +9,8 @@ export default createGlobalStyle`
   }
 
   body {
-    background-color:  ${theme.colors.background};
-    position:absolute;
+    background-color:  ${theme.colors.darkBackground};
+    position: absolute;
    	top:0;
 	  left:0;
 	  z-index:11;
@@ -30,4 +30,4 @@ a {
     box-sizing: border-box;
 }
 
-`
+`;

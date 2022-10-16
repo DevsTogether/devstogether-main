@@ -11,7 +11,7 @@ function Sobre(): JSX.Element {
             <GlobalStyles />
             <Header />
             <Container>
-                <main className='container'>
+                <main className="container">
                     <Perfil />
                     <Layout />
                 </main>
@@ -21,14 +21,13 @@ function Sobre(): JSX.Element {
     );
 }
 
-
 export const Container = styled.div`
-.container {
-    display: flex;
-    width: 100%;
-    
-    flex-direction:row;
-}    
-`
+    .container {
+        display: flex;
+        width: 100%;
+
+        flex-direction: row;
+    }
+`;
 
 export default Sobre;

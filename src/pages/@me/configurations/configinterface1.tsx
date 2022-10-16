@@ -12,7 +12,6 @@ function Privacidade(): JSX.Element {
                 <Layout />
             </main>
         </>
-
     );
 }
 

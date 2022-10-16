@@ -9,15 +9,12 @@ function Layout(): JSX.Element {
     return (
         <>
             <Container>
-
                 <div>
                     <h1>Ajuda</h1>
                 </div>
 
-                <div className='div_input' align="center">
-                    <input>
-
-                    </input>
+                <div className="div_input" align="center">
+                    <input></input>
                 </div>
 
                 <div>
@@ -35,8 +32,9 @@ function Layout(): JSX.Element {
                         </AccordionSummary>
                         <AccordionDetails>
                             <Typography>
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
-                                malesuada lacus ex, sit amet blandit leo lobortis eget.
+                                Lorem ipsum dolor sit amet, consectetur
+                                adipiscing elit. Suspendisse malesuada lacus ex,
+                                sit amet blandit leo lobortis eget.
                             </Typography>
                         </AccordionDetails>
                     </Accordion>
@@ -50,8 +48,9 @@ function Layout(): JSX.Element {
                         </AccordionSummary>
                         <AccordionDetails>
                             <Typography>
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
-                                malesuada lacus ex, sit amet blandit leo lobortis eget.
+                                Lorem ipsum dolor sit amet, consectetur
+                                adipiscing elit. Suspendisse malesuada lacus ex,
+                                sit amet blandit leo lobortis eget.
                             </Typography>
                         </AccordionDetails>
                     </Accordion>
@@ -65,16 +64,15 @@ function Layout(): JSX.Element {
                         </AccordionSummary>
                         <AccordionDetails>
                             <Typography>
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
-                                malesuada lacus ex, sit amet blandit leo lobortis eget.
+                                Lorem ipsum dolor sit amet, consectetur
+                                adipiscing elit. Suspendisse malesuada lacus ex,
+                                sit amet blandit leo lobortis eget.
                             </Typography>
                         </AccordionDetails>
                     </Accordion>
                 </div>
-
             </Container>
         </>
-
     );
 }
 

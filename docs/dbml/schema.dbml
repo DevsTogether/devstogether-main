@@ -54,6 +54,7 @@ Table User {
   banned Boolean [not null, default: false]
   active Boolean [not null, default: true]
   specialization String
+  metadata Json [not null, default: '{}']
   accounts Account [not null]
   sessions Session [not null]
   level Level
