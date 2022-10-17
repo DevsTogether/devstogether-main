@@ -1,5 +1,5 @@
 import Footer from '@components/footer';
-import Header from '@components/Headerlogin';
+import Header from '@components/Header';
 import Layout from '@src/components/Entrada';
 import GlobalStyles from '@src/styles/global';
 
@@ -7,7 +7,7 @@ function Cards(): JSX.Element {
     return (
         <>
             <GlobalStyles />
-            <Header />
+            <Header/>
             <main>
                 <Layout />
             </main>

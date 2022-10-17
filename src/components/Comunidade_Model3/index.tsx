@@ -37,7 +37,7 @@ export default function BasicModal() {
     };
 
     return (
-        <div className="Container" align="center">
+        <div className="Container" "center" >
             <Button
                 onClick={handleOpen}
                 sx={{ mt: 40, mb: 40 }}
@@ -74,13 +74,13 @@ export default function BasicModal() {
                             backgroundColor: '#02020221',
                         }}
                     >
-                        <div align="center">
+                        <div "center">
                             <img
                                 className="imagem"
-                                align="center"
+                                "center"
                                 src="/model3.png"
                             />
-                            <h3 align="center">Esperar resposta escrita </h3>
+                            <h3 "center">Esperar resposta escrita </h3>
                         </div>
                     </Box>
 
@@ -95,13 +95,13 @@ export default function BasicModal() {
                             backgroundColor: '#02020221',
                         }}
                     >
-                        <div align="center">
-                            <img align="center" src="/model3_.png" />
-                            <h3 align="center">Resolver em tempo real</h3>
-                        </div>
-                    </Box>
-                </Box>
-            </Modal>
-        </div>
+                        <div "center">
+                            <img "center" src="/model3_.png" />
+                            <h3 "center">Resolver em tempo real</h3>
+                        </div >
+                    </Box >
+                </Box >
+            </Modal >
+        </div >
     );
 }

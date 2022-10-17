@@ -1,9 +1,9 @@
 import Footer from '@components/footer';
-import Header from '@components/Header';
-import Layout from '@src/components/Comunidade_Model2';
+import Header from '@src/components/Header/index';
+import Layout from '@src/components/layout_sigin';
 import GlobalStyles from '@src/styles/global';
 
-function Cards(): JSX.Element {
+function SignUp(): JSX.Element {
     return (
         <>
             <GlobalStyles />
@@ -16,4 +16,4 @@ function Cards(): JSX.Element {
     );
 }
 
-export default Cards;
+export default SignUp;

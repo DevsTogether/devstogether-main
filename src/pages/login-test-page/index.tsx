@@ -36,6 +36,7 @@ const page: NextPage = () => {
             </main>
         );
     }
+    
     return (
         <>
             Not signed in <br />

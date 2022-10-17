@@ -1,8 +1,7 @@
 import Footer from '@components/footer';
-import Header from '@components/Headerlogin';
+import Header from '@components/Header';
 import Layout from '@src/components/Ajuda';
 import GlobalStyles from '@src/styles/global';
-import theme from '@styles/theme';
 
 function Sobre(): JSX.Element {
     return (

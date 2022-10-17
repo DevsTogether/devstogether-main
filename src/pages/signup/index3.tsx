@@ -1,8 +1,7 @@
 import Footer from '@components/footer';
-import Header from '@components/header/index';
+import Header from '@src/components/Header/index';
 import Layout from '@src/components/layout_sigup3';
 import GlobalStyles from '@src/styles/global';
-import theme from '@styles/theme';
 
 function SignUp(): JSX.Element {
     return (

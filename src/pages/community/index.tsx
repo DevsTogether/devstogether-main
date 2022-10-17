@@ -1,5 +1,5 @@
 import Footer from '@components/footer';
-import Header from '@components/Headerlogin';
+import Header from '@components/Header';
 import Layout from '@src/components/Comunidade_comunidade';
 import GlobalStyles from '@src/styles/global';
 

@@ -1,6 +1,4 @@
-import FaceIcon from '@mui/icons-material/Face';
 import Box from '@mui/material/Box';
-import Chip from '@mui/material/Chip';
 import Tab from '@mui/material/Tab';
 import Tabs from '@mui/material/Tabs';
 import * as React from 'react';
@@ -17,7 +15,7 @@ function Layout(): JSX.Element {
             <Container>
                 <Box
                     sx={{ width: '80%', bgcolor: '#353E46', height: '70%' }}
-                    align="center"
+                    "center"
                 >
                     <Tabs
                         value={value}
@@ -36,8 +34,8 @@ function Layout(): JSX.Element {
 
                     <div className="Emblemas2">
                         <div>
-                            <p align="left">1 voto</p>
-                            <h5 align="left">
+                            <p "left">1 voto</p>
+                            <h5 "left">
                                 O que faz o display flex no CSS
                             </h5>
                             <p>Descrição da Pergunta: </p>
@@ -47,38 +45,38 @@ function Layout(): JSX.Element {
 
                     <div className="Emblemas3">
                         <div>
-                            <p align="left">1 voto</p>
-                            <h5 align="left">
+                            <p "left">1 voto</p>
+                            <h5 "left">
                                 O que faz o display flex no CSS
                             </h5>
                             <p>Descrição da Pergunta: </p>
                             <p className="Faca_pergunta">data: 20/12/2026</p>
-                        </div>
-                    </div>
+                        </div >
+                    </div >
 
                     <div className="Emblemas4">
                         <div>
-                            <p align="left">1 voto</p>
-                            <h5 align="left">
+                            <p "left">1 voto</p>
+                            <h5 "left">
                                 O que faz o display flex no CSS
                             </h5>
                             <p>Descrição da Pergunta: </p>
                             <p className="Faca_pergunta">data: 20/12/2026</p>
-                        </div>
-                    </div>
+                        </div >
+                    </div >
 
                     <div className="Emblemas5">
                         <div>
-                            <p align="left">1 voto</p>
-                            <h5 align="left">
+                            <p "left">1 voto</p>
+                            <h5 "left">
                                 O que faz o display flex no CSS
                             </h5>
                             <p>Descrição da Pergunta: </p>
                             <p className="Faca_pergunta">data: 20/12/2026</p>
-                        </div>
-                    </div>
-                </Box>
-            </Container>
+                        </div >
+                    </div >
+                </Box >
+            </Container >
         </>
     );
 }

@@ -1,8 +1,7 @@
 import Footer from '@components/footer';
-import Header from '@components/header/index';
+import Header from '@src/components/Header/index';
 import Layout from '@src/components/Sobre nós';
 import GlobalStyles from '@src/styles/global';
-import theme from '@styles/theme';
 
 function Cards(): JSX.Element {
     return (

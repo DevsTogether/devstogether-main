@@ -7,7 +7,7 @@ function Layout(): JSX.Element {
     return (
         <Container>
             <div className="container">
-                <div className="Imagem_titulo" align="center">
+                <div className="Imagem_titulo">
                     <img src="/logo3.png" />
                 </div>
 
@@ -66,7 +66,7 @@ function Layout(): JSX.Element {
                     />
                 </div>
             </div>
-        </Container>
+        </Container >
     );
 }
 

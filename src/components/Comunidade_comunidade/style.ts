@@ -15,7 +15,7 @@ export const Perguntas = styled.div`
     display: flex;
     flex-direction: column;
     justify-content: start;
-    border: 2px solid #4d5a65;
+    border: 1px solid #4d5a65;
     margin: 10px;
     color: ${theme.colors.text};
     border-radius: 10px;
@@ -35,18 +35,15 @@ export const Perguntas = styled.div`
     }
 
     .botao {
-        display: flex;
-        flex-direction: column;
-        margin-top: 40px;
+        margin: 2rem 0rem;
     }
 
     h1 {
         margin-bottom: 20px;
-        top: 300px;
     }
 
     img {
-        height: 200px;
+        height: 90%;
         @media (max-width: 712px) {
             height: 100px;
         }
@@ -73,7 +70,7 @@ export const Perguntas = styled.div`
         margin-bottom: 5%;
         border: 0;
         width: 100%;
-        border-top: 2px solid #4d5a65;
+        border-top: 1px solid #4d5a65;
     }
 `;
 
@@ -95,7 +92,7 @@ export const Drawer = styled.div`
         margin-bottom: 5%;
         border: 0;
         width: 100%;
-        border-top: 2px solid #4d5a65;
+        border-top: 1px solid #4d5a65;
     }
 
     img {
@@ -108,7 +105,7 @@ export const Desafios = styled.div`
     flex-direction: column;
     width: 20%;
     color: ${theme.colors.text};
-    border: 2px solid #4d5a65;
+    border: 1px solid #4d5a65;
     border-radius: 10px;
     margin-right: 1%;
     @media (max-width: 930px) {
@@ -134,6 +131,6 @@ export const Desafios = styled.div`
         margin-bottom: 5%;
         border: 0;
         width: 100%;
-        border-top: 2px solid #4d5a65;
+        border-top: 1px solid #4d5a65;
     }
 `;

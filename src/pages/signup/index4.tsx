@@ -1,5 +1,5 @@
 import Footer from '@components/footer';
-import Header from '@components/header/index';
+import Header from '@src/components/Header/index';
 import Layout from '@src/components/layout_sigup4';
 import GlobalStyles from '@src/styles/global';
 

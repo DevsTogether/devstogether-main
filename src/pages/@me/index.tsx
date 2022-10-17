@@ -1,5 +1,5 @@
 import Footer from '@components/footer';
-import Header from '@components/Headerlogin';
+import Header from '@components/Header';
 import Perfil from '@src/components/Perfilcomponente';
 import Layout from '@src/components/Perfildousuario1';
 import GlobalStyles from '@src/styles/global';

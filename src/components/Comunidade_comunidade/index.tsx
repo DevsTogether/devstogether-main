@@ -66,11 +66,11 @@ function Comunidade(): JSX.Element {
                 </Drawer>
                 <Perguntas>
                     <div className="dificuldade">
-                        <img src="/iniciar_chamada.png" />
+                        <img src="/community_problem.svg" />
                         <div className="botao">
                             <h1>Tem alguma dificuldade?</h1>
                             <Button variant="contained" sx={{ mr: 20 }}>
-                                Contained
+                                faça uma pergunta
                             </Button>
                         </div>
                     </div>
@@ -151,7 +151,7 @@ function Comunidade(): JSX.Element {
                             <p>Realize 10 chamadas</p>
                         </div>
 
-                        <div className="progress" align="center">
+                        <div className="progress">
                             <Slider
                                 sx={{ width: 100, top: '50%', mr: 5 }}
                                 defaultValue={50}
@@ -168,7 +168,7 @@ function Comunidade(): JSX.Element {
                             <p>Realize 10 chamadas</p>
                         </div>
 
-                        <div className="progress" align="center">
+                        <div className="progress">
                             <Slider
                                 sx={{ width: 100, top: '50%', mr: 5 }}
                                 defaultValue={50}
@@ -185,7 +185,7 @@ function Comunidade(): JSX.Element {
                             <p>Realize 10 chamadas</p>
                         </div>
 
-                        <div className="progress" align="center">
+                        <div className="progress">
                             <Slider
                                 sx={{ width: 100, top: '50%', mr: 5 }}
                                 defaultValue={50}
@@ -202,7 +202,7 @@ function Comunidade(): JSX.Element {
                             <p>Realize 10 chamadas</p>
                         </div>
 
-                        <div className="progress" align="center">
+                        <div className="progress">
                             <Slider
                                 sx={{ width: 100, top: '50%', mr: 5 }}
                                 defaultValue={50}
@@ -219,7 +219,7 @@ function Comunidade(): JSX.Element {
                             <p>Realize 10 chamadas</p>
                         </div>
 
-                        <div className="progress" align="center">
+                        <div className="progress">
                             <Slider
                                 sx={{ width: 100, top: '50%', mr: 5 }}
                                 defaultValue={50}
@@ -236,7 +236,7 @@ function Comunidade(): JSX.Element {
                             <p>Realize 10 chamadas</p>
                         </div>
 
-                        <div className="progress" align="center">
+                        <div className="progress">
                             <Slider
                                 sx={{ width: 100, top: '50%', mr: 5 }}
                                 defaultValue={50}
@@ -253,7 +253,7 @@ function Comunidade(): JSX.Element {
                             <p>Realize 10 chamadas</p>
                         </div>
 
-                        <div className="progress" align="center">
+                        <div className="progress">
                             <Slider
                                 sx={{ width: 100, top: '50%', mr: 5 }}
                                 defaultValue={50}
@@ -270,7 +270,7 @@ function Comunidade(): JSX.Element {
                             <p>Realize 10 chamadas</p>
                         </div>
 
-                        <div className="progress" align="center">
+                        <div className="progress">
                             <Slider
                                 sx={{ width: 100, top: '50%', mr: 5 }}
                                 defaultValue={50}
@@ -287,7 +287,7 @@ function Comunidade(): JSX.Element {
                             <p>Realize 10 chamadas</p>
                         </div>
 
-                        <div className="progress" align="center">
+                        <div className="progress">
                             <Slider
                                 sx={{ width: 100, top: '50%', mr: 5 }}
                                 defaultValue={50}
@@ -304,7 +304,7 @@ function Comunidade(): JSX.Element {
                             <p>Realize 10 chamadas</p>
                         </div>
 
-                        <div className="progress" align="center">
+                        <div className="progress">
                             <Slider
                                 sx={{ width: 100, top: '50%', mr: 5 }}
                                 defaultValue={50}
@@ -321,7 +321,7 @@ function Comunidade(): JSX.Element {
                             <p>Realize 10 chamadas</p>
                         </div>
 
-                        <div className="progress" align="center">
+                        <div className="progress">
                             <Slider
                                 sx={{ width: 100, top: '50%', mr: 5 }}
                                 defaultValue={50}

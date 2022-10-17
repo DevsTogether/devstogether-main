@@ -12,9 +12,9 @@ export const Container = styled.div`
         gap: 20px;
 		width: 400px;
         height: 600px;
+        background-color: #3c4144;
         box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.7);
         border-radius: 4px;
-        background: '#3c4144';
 		padding: 2rem;
         display: flex;
         align-items: center;

@@ -31,157 +31,157 @@ export default function RowAndColumnGap() {
         <>
             <Container>
                 <div className="container">
-                    <div className="Imagem_titulo" align="center">
-                        <img src="/logo3.png" />
-                        <h1>Sign Up</h1>
+                    <div className="Imagem_titulo" "center">
+                    <img src="/logo3.png" />
+                    <h1>Sign Up</h1>
+                    <br />
+                    <p>
+                        Para entrar primeiro prove suas habilidades.
                         <br />
-                        <p>
-                            Para entrar primeiro prove suas habilidades.
-                            <br />
-                            Escolha uma linguagem para começar.
-                        </p>
-                    </div>
-
-                    <title>Devstogether</title>
-                    <div style={{ width: '100%' }}>
-                        <Box
-                            sx={{
-                                display: 'grid',
-                                columnGap: 3,
-                                rowGap: 1,
-                                gridTemplateColumns: 'repeat(4, 1fr)',
-                                mr: 20,
-                                ml: 20,
-                            }}
-                        >
-                            <Button
-                                variant="outlined"
-                                startIcon={<DeleteIcon />}
-                            >
-                                Outlined
-                            </Button>
-                            <Button
-                                variant="outlined"
-                                startIcon={<DeleteIcon />}
-                            >
-                                Outlined
-                            </Button>
-                            <Button
-                                variant="outlined"
-                                startIcon={<DeleteIcon />}
-                            >
-                                Outlined
-                            </Button>
-                            <Button
-                                variant="outlined"
-                                startIcon={<DeleteIcon />}
-                            >
-                                Outlined
-                            </Button>
-
-                            <Button
-                                variant="outlined"
-                                startIcon={<DeleteIcon />}
-                            >
-                                Outlined
-                            </Button>
-                            <Button
-                                variant="outlined"
-                                startIcon={<DeleteIcon />}
-                            >
-                                Outlined
-                            </Button>
-                            <Button
-                                variant="outlined"
-                                startIcon={<DeleteIcon />}
-                            >
-                                Outlined
-                            </Button>
-                            <Button
-                                variant="outlined"
-                                startIcon={<DeleteIcon />}
-                            >
-                                Outlined
-                            </Button>
-
-                            <Button
-                                variant="outlined"
-                                startIcon={<DeleteIcon />}
-                            >
-                                Outlined
-                            </Button>
-                            <Button
-                                variant="outlined"
-                                startIcon={<DeleteIcon />}
-                            >
-                                Outlined
-                            </Button>
-                            <Button
-                                variant="outlined"
-                                startIcon={<DeleteIcon />}
-                            >
-                                Outlined
-                            </Button>
-                            <Button
-                                variant="outlined"
-                                startIcon={<DeleteIcon />}
-                            >
-                                Outlined
-                            </Button>
-
-                            <Button
-                                variant="outlined"
-                                startIcon={<DeleteIcon />}
-                            >
-                                Outlined
-                            </Button>
-                            <Button
-                                variant="outlined"
-                                startIcon={<DeleteIcon />}
-                            >
-                                Outlined
-                            </Button>
-                            <Button
-                                variant="outlined"
-                                startIcon={<DeleteIcon />}
-                            >
-                                Outlined
-                            </Button>
-                            <Button
-                                variant="outlined"
-                                startIcon={<DeleteIcon />}
-                            >
-                                Outlined
-                            </Button>
-
-                            <Button
-                                variant="outlined"
-                                startIcon={<DeleteIcon />}
-                            >
-                                Outlined
-                            </Button>
-                            <Button
-                                variant="outlined"
-                                startIcon={<DeleteIcon />}
-                            >
-                                Outlined
-                            </Button>
-                            <Button
-                                variant="outlined"
-                                startIcon={<DeleteIcon />}
-                            >
-                                Outlined
-                            </Button>
-                            <Button
-                                variant="outlined"
-                                startIcon={<DeleteIcon />}
-                            >
-                                Outlined
-                            </Button>
-                        </Box>
-                    </div>
+                        Escolha uma linguagem para começar.
+                    </p>
                 </div>
-            </Container>
+
+                <title>Devstogether</title>
+                <div style={{ width: '100%' }}>
+                    <Box
+                        sx={{
+                            display: 'grid',
+                            columnGap: 3,
+                            rowGap: 1,
+                            gridTemplateColumns: 'repeat(4, 1fr)',
+                            mr: 20,
+                            ml: 20,
+                        }}
+                    >
+                        <Button
+                            variant="outlined"
+                            startIcon={<DeleteIcon />}
+                        >
+                            Outlined
+                        </Button>
+                        <Button
+                            variant="outlined"
+                            startIcon={<DeleteIcon />}
+                        >
+                            Outlined
+                        </Button>
+                        <Button
+                            variant="outlined"
+                            startIcon={<DeleteIcon />}
+                        >
+                            Outlined
+                        </Button>
+                        <Button
+                            variant="outlined"
+                            startIcon={<DeleteIcon />}
+                        >
+                            Outlined
+                        </Button>
+
+                        <Button
+                            variant="outlined"
+                            startIcon={<DeleteIcon />}
+                        >
+                            Outlined
+                        </Button>
+                        <Button
+                            variant="outlined"
+                            startIcon={<DeleteIcon />}
+                        >
+                            Outlined
+                        </Button>
+                        <Button
+                            variant="outlined"
+                            startIcon={<DeleteIcon />}
+                        >
+                            Outlined
+                        </Button>
+                        <Button
+                            variant="outlined"
+                            startIcon={<DeleteIcon />}
+                        >
+                            Outlined
+                        </Button>
+
+                        <Button
+                            variant="outlined"
+                            startIcon={<DeleteIcon />}
+                        >
+                            Outlined
+                        </Button>
+                        <Button
+                            variant="outlined"
+                            startIcon={<DeleteIcon />}
+                        >
+                            Outlined
+                        </Button>
+                        <Button
+                            variant="outlined"
+                            startIcon={<DeleteIcon />}
+                        >
+                            Outlined
+                        </Button>
+                        <Button
+                            variant="outlined"
+                            startIcon={<DeleteIcon />}
+                        >
+                            Outlined
+                        </Button>
+
+                        <Button
+                            variant="outlined"
+                            startIcon={<DeleteIcon />}
+                        >
+                            Outlined
+                        </Button>
+                        <Button
+                            variant="outlined"
+                            startIcon={<DeleteIcon />}
+                        >
+                            Outlined
+                        </Button>
+                        <Button
+                            variant="outlined"
+                            startIcon={<DeleteIcon />}
+                        >
+                            Outlined
+                        </Button>
+                        <Button
+                            variant="outlined"
+                            startIcon={<DeleteIcon />}
+                        >
+                            Outlined
+                        </Button>
+
+                        <Button
+                            variant="outlined"
+                            startIcon={<DeleteIcon />}
+                        >
+                            Outlined
+                        </Button>
+                        <Button
+                            variant="outlined"
+                            startIcon={<DeleteIcon />}
+                        >
+                            Outlined
+                        </Button>
+                        <Button
+                            variant="outlined"
+                            startIcon={<DeleteIcon />}
+                        >
+                            Outlined
+                        </Button>
+                        <Button
+                            variant="outlined"
+                            startIcon={<DeleteIcon />}
+                        >
+                            Outlined
+                        </Button>
+                    </Box>
+                </div>
+            </div>
+        </Container>
         </>
     );
 }

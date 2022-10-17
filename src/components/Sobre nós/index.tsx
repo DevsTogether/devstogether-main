@@ -17,7 +17,7 @@ function Layout(): JSX.Element {
                 </p>
             </div>
 
-            <h1 align="center">Nosso time é composto por quatro integrantes</h1>
+            <h1 "center">Nosso time é composto por quatro integrantes</h1>
 
             <div className="container">
                 <div className="card1">
@@ -58,7 +58,7 @@ function Layout(): JSX.Element {
                     </div>
                 </div>
             </div>
-        </Container>
+        </Container >
     );
 }
 

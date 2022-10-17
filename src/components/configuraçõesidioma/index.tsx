@@ -1,15 +1,11 @@
-import Avatar from '@mui/material/Avatar';
-import Button from '@mui/material/Button';
-import TextField from '@mui/material/TextField';
-import { Menu } from './style';
-import * as React from 'react';
-import { Theme, useTheme } from '@mui/material/styles';
-import OutlinedInput from '@mui/material/OutlinedInput';
-import MenuItem from '@mui/material/MenuItem';
-import FormControl from '@mui/material/FormControl';
-import Select, { SelectChangeEvent } from '@mui/material/Select';
 import Chip from '@mui/material/Chip';
 import InputLabel from '@mui/material/InputLabel';
+import MenuItem from '@mui/material/MenuItem';
+import OutlinedInput from '@mui/material/OutlinedInput';
+import Select, { SelectChangeEvent } from '@mui/material/Select';
+import { Theme, useTheme } from '@mui/material/styles';
+import * as React from 'react';
+import { Menu } from './style';
 
 const ITEM_HEIGHT = 48;
 const ITEM_PADDING_TOP = 8;
@@ -74,35 +70,35 @@ export default function MultipleSelectChip() {
                     <a href="#" className="active">
                         <i className="fas fa-qrcode"></i>
                         <span>
-                            <img src="/conta.png" align="center" />
+                            <img src="/conta.png" "center" />
                             Minha Conta
                         </span>
                     </a>
                     <a href="">
                         <i className="fas fa-link"></i>
                         <span>
-                            <img src="/seguranca.png" align="center" />
+                            <img src="/seguranca.png" "center" />
                             Privacidade
                         </span>
                     </a>
                     <a href="#">
                         <i className="fas fa-stream"></i>
                         <span>
-                            <img src="/musica.png" align="center" />
+                            <img src="/musica.png" "center" />
                             Voz e Vídeo
                         </span>
                     </a>
                     <a href="#">
                         <i className="fas fa-calendar"></i>
                         <span>
-                            <img src="/aparencia.png" align="center" />
+                            <img src="/aparencia.png" "center" />
                             Aparência
                         </span>
                     </a>
                     <a href="#">
                         <i className="far fa-question-circle"></i>
                         <span>
-                            <img src="/idiomaicon.png" align="center" />
+                            <img src="/idiomaicon.png" "center" />
                             Idioma
                         </span>
                     </a>

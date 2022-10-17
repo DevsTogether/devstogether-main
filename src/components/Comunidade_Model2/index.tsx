@@ -38,7 +38,7 @@ export default function BasicModal() {
     };
 
     return (
-        <div className="Container" align="center">
+        <div className="Container" "center" >
             <Button
                 onClick={handleOpen}
                 sx={{ mt: 40, mb: 40 }}
@@ -65,7 +65,7 @@ export default function BasicModal() {
                         },
                     }}
                 >
-                    <div className="imagem" align="center">
+                    <div className="imagem" "center">
                         <img src="/model2.png" />
                     </div>
 
@@ -104,7 +104,7 @@ export default function BasicModal() {
                         Próxima
                     </Button>
                 </Box>
-            </Modal>
-        </div>
+            </Modal >
+        </div >
     );
 }

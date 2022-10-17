@@ -30,14 +30,14 @@ export default function FormDialog() {
     return (
         <>
             <Container>
-                <div className="titulo" align="center">
+                <div className="titulo" "center">
                     <h1>Vamos Iniciar o Teste</h1>
                 </div>
             </Container>
 
             <ThemeProvider theme={darkTheme}>
                 <CssBaseline />
-                <div className="button" align="center">
+                <div className="button" "center">
                     <Button
                         sx={{ mt: 30, mb: 50 }}
                         variant="outlined"
@@ -74,7 +74,7 @@ export default function FormDialog() {
                         </DialogActions>
                     </Dialog>
                 </div>
-            </ThemeProvider>
+            </ThemeProvider >
         </>
     );
 }

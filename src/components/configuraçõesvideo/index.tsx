@@ -47,35 +47,35 @@ export default function SelectTextFields() {
                     <a href="#" className="active">
                         <i className="fas fa-qrcode"></i>
                         <span>
-                            <img src="/conta.png" align="center" />
+                            <img src="/conta.png" "center" />
                             Minha Conta
                         </span>
                     </a>
                     <a href="">
                         <i className="fas fa-link"></i>
                         <span>
-                            <img src="/seguranca.png" align="center" />
+                            <img src="/seguranca.png" "center" />
                             Privacidade
                         </span>
                     </a>
                     <a href="#">
                         <i className="fas fa-stream"></i>
                         <span>
-                            <img src="/musica.png" align="center" />
+                            <img src="/musica.png" "center" />
                             Voz e Vídeo
                         </span>
                     </a>
                     <a href="#">
                         <i className="fas fa-calendar"></i>
                         <span>
-                            <img src="/aparencia.png" align="center" />
+                            <img src="/aparencia.png" "center" />
                             Aparência
                         </span>
                     </a>
                     <a href="#">
                         <i className="far fa-question-circle"></i>
                         <span>
-                            <img src="/idiomaicon.png" align="center" />
+                            <img src="/idiomaicon.png" "center" />
                             Idioma
                         </span>
                     </a>
