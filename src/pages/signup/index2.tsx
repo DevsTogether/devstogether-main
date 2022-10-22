@@ -1,16 +1,12 @@
-import Footer from '@components/footer';
-import Header from '@src/components/Header/index';
-import Layout from '@src/components/layout_sigup2';
-import GlobalStyles from '@src/styles/global';
+import Footer from '@src/layouts/Footer';
+import Header from '@src/layouts/Header/index';
+import Layout from '@src/layouts/layout_sigup2';
 
 function SignUp(): JSX.Element {
     return (
         <>
-            <GlobalStyles />
             <Header />
-            <main>
-                <Layout />
-            </main>
+            <Layout />
             <Footer />
         </>
     );

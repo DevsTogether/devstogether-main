@@ -1,13 +1,12 @@
 import { PrismaAdapter } from '@next-auth/prisma-adapter';
-import { PrismaClient, User } from '@prisma/client';
+import { User } from '@prisma/client';
+import { prisma } from '@server/PrismaClient';
 import NextAuth, { NextAuthOptions } from 'next-auth';
 import EmailProvider from 'next-auth/providers/email';
 import FacebookProvider from 'next-auth/providers/facebook';
 import GitHubProvider from 'next-auth/providers/github';
 import GoogleProvider from 'next-auth/providers/google';
 import { sendVerificationRequest } from './emailAuth';
-
-const prisma = new PrismaClient();
 
 export const authOptions: NextAuthOptions = {
     adapter: PrismaAdapter(prisma),
@@ -45,22 +44,23 @@ export const authOptions: NextAuthOptions = {
     callbacks: {
         //@ts-ignore
         session: async ({
-            session,
-            token,
             user,
+            session
         }: {
             session: any;
-            token: any;
             user: User;
         }) => {
             session.user = user;
             return session;
         },
-        redirect: async ({ url, baseUrl }) => {
-            return `${baseUrl}/protected`;
+        redirect: async ({ baseUrl }) => {
+            return `${baseUrl}/`;
         },
     },
-    debug: process.env.NODE_ENV === 'development',
+    pages: {
+        verifyRequest: '/signin/email', // (used for check email message)
+    },
+    debug: process.env.NODE_ENV === 'development' && process.env.NEXTAUTH_DEBUG === "true",
     session: {
         strategy: 'database',
         maxAge: 30 * 24 * 60 * 60,

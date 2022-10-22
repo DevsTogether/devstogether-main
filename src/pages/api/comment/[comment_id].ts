@@ -10,6 +10,11 @@ const handler = async (req: NextApiRequest, res: NextApiResponse) => {
     const commentController = new Comment();
     const { comment_id } = req.query;
 
+    if (!comment_id) {
+        res.json({});
+        return;
+    }
+
     if (method === 'GET') {
         const comment = await commentController.getComment(
             comment_id.toString()

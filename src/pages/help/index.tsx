@@ -1,16 +1,12 @@
-import Footer from '@components/footer';
-import Header from '@components/Header';
-import Layout from '@src/components/Ajuda';
-import GlobalStyles from '@src/styles/global';
+import Footer from '@src/layouts/Footer';
+import Header from '@src/layouts/Header';
+import Layout from '@src/layouts/Help';
 
 function Sobre(): JSX.Element {
     return (
         <>
-            <GlobalStyles />
             <Header />
-            <main>
-                <Layout />
-            </main>
+            <Layout />
             <Footer />
         </>
     );

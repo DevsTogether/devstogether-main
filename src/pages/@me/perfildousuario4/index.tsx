@@ -1,14 +1,12 @@
-import Footer from '@components/footer';
-import Header from '@components/Header';
-import Perfil from '@src/components/Perfilcomponente';
-import Layout from '@src/components/Perfildousuario4';
-import GlobalStyles from '@src/styles/global';
+import Footer from '@src/layouts/Footer';
+import Header from '@src/layouts/Header';
+import Perfil from '@src/layouts/Perfilcomponente';
+import Layout from '@src/layouts/Perfildousuario4';
 import styled from 'styled-components';
 
 function Sobre(): JSX.Element {
     return (
         <>
-            <GlobalStyles />
             <Header />
             <Container>
                 <main className="container">

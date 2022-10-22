@@ -10,7 +10,7 @@ const handler = async (req: NextApiRequest, res: NextApiResponse) => {
     if (method === 'GET') {
         const question = await prisma.question.findUnique({
             where: {
-                id: question_id.toString(),
+                id: question_id?.toString(),
             },
         });
 
@@ -42,7 +42,7 @@ const handler = async (req: NextApiRequest, res: NextApiResponse) => {
         if (session) {
             const updatedQuestion = await prisma.question.update({
                 where: {
-                    id: question_id.toString(),
+                    id: question_id?.toString(),
                 },
                 data: {
                     title: body.title,
@@ -51,12 +51,14 @@ const handler = async (req: NextApiRequest, res: NextApiResponse) => {
                     visits: 0,
                 },
             });
+
+            res.json(updatedQuestion);
         }
     } else if (method === 'DELETE') {
         try {
             await prisma.report.delete({
                 where: {
-                    id: question_id.toString(),
+                    id: question_id?.toString(),
                 },
             });
 

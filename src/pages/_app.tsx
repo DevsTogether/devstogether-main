@@ -1,11 +1,16 @@
+import GlobalStyles from '@src/styles/global';
 import { SessionProvider } from 'next-auth/react';
 import type { AppProps } from 'next/app';
 
+//@ts-ignore
 function MyApp({ Component, pageProps: { session, ...pageProps } }: AppProps) {
     return (
-        <SessionProvider session={session}>
-            <Component {...pageProps} />
-        </SessionProvider>
+        <>
+            <GlobalStyles />
+            <SessionProvider session={session}>
+                <Component {...pageProps} />
+            </SessionProvider>
+        </>
     );
 }
 

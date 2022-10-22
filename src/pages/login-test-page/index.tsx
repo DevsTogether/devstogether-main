@@ -2,7 +2,7 @@
 import type { NextPage } from 'next';
 import { signIn, signOut, useSession } from 'next-auth/react';
 
-const page: NextPage = () => {
+const Page: NextPage = () => {
     const { data: session } = useSession();
     const profilePicture: String =
         session?.user?.image ||
@@ -36,7 +36,7 @@ const page: NextPage = () => {
             </main>
         );
     }
-    
+
     return (
         <>
             Not signed in <br />
@@ -49,4 +49,4 @@ const page: NextPage = () => {
     );
 };
 
-export default page;
+export default Page;

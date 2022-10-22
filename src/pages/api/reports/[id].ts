@@ -1,10 +1,9 @@
 import { PrismaClient, Report } from '@prisma/client';
-import Auth from '@server/src/classes/Auth';
 import type { NextApiRequest, NextApiResponse } from 'next';
 
 const handler = async (req: NextApiRequest, res: NextApiResponse) => {
     const prisma = new PrismaClient();
-    const auth = new Auth();
+    //const auth = new Auth();
     const method = req.method;
     const { id } = req.query;
 
@@ -16,7 +15,7 @@ const handler = async (req: NextApiRequest, res: NextApiResponse) => {
     if (method === 'GET') {
         const report = await prisma.report.findUnique({
             where: {
-                id: id.toString(),
+                id: id?.toString(),
             },
         });
 
@@ -36,7 +35,7 @@ const handler = async (req: NextApiRequest, res: NextApiResponse) => {
     } else if (method === 'DELETE') {
         await prisma.report.delete({
             where: {
-                id: id.toString(),
+                id: id?.toString(),
             },
         });
 

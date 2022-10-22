@@ -1,10 +1,9 @@
-import Layout from '@src/components/configuraçõesvideo';
-import GlobalStyles from '@src/styles/global';
+import Layout from '@src/layouts/configuraçõesvideo';
 
 function Privacidade(): JSX.Element {
     return (
         <>
-            <GlobalStyles />
+
             <main>
                 <Layout />
             </main>

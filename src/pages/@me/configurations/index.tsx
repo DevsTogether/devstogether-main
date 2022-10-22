@@ -1,15 +1,7 @@
-import Layout from '@src/components/configuraçõesvoz';
-import GlobalStyles from '@src/styles/global';
+import Layout from '@src/layouts/configuraçõesvoz';
 
 function SignUp(): JSX.Element {
-    return (
-        <>
-            <GlobalStyles />
-            <main>
-                <Layout />
-            </main>
-        </>
-    );
+    return <Layout />;
 }
 
 export default SignUp;

@@ -1,16 +1,12 @@
-import Footer from '@components/footer';
-import Header from '@components/Header';
-import Layout from '@src/components/Entrada';
-import GlobalStyles from '@src/styles/global';
+import Layout from '@src/layouts/Entrada';
+import Footer from '@src/layouts/Footer';
+import Header from '@src/layouts/Header';
 
 function Cards(): JSX.Element {
     return (
         <>
-            <GlobalStyles />
-            <Header/>
-            <main>
-                <Layout />
-            </main>
+            <Header />
+            <Layout />
             <Footer />
         </>
     );

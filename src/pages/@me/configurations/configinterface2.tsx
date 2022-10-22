@@ -1,10 +1,9 @@
-import Layout from '@src/components/configuraçõesperfil';
-import GlobalStyles from '@src/styles/global';
+import Layout from '@src/layouts/configuraçõesperfil';
 
 function Privacidade(): JSX.Element {
     return (
         <>
-            <GlobalStyles />
+
             <main>
                 <Layout />
             </main>
