@@ -22,28 +22,23 @@ export const Container = styled.div`
     margin-bottom: 120px;
 `;
 
-export const Perguntas = styled.div`
-    width: 60%;
-    display: flex;
-    flex-direction: column;
-    justify-content: start;
-    border: 1px solid #4d5a65;
-    margin: 10px;
-    color: ${theme.colors.text};
-    border-radius: 10px;
-    @media (max-width: 712px) {
-        width: 80%;
-        margin-left: 50px;
-    }
-
-    @media (max-width: 322px) {
-        width: 100%;
-        margin-left: 30px;
+export const QuestionContainer = styled.div`
+    width: 100%;
+    
+    .container {
+        margin: 1rem;
+        padding: 1rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+        border: 1px solid #4d5a65;
+        color: ${theme.colors.text};
+        border-radius: 8px;
     }
 
     .dificuldade {
         display: flex;
-        flex-direction: row;
+        gap: 2rem;
     }
 
     .botao {
@@ -78,8 +73,8 @@ export const Perguntas = styled.div`
     }
 
     hr {
-        margin-top: 5%;
-        margin-bottom: 5%;
+        margin-top: 1rem;
+        margin-bottom: 1rem;
         border: 0;
         width: 100%;
         border-top: 1px solid #4d5a65;

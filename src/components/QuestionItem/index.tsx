@@ -1,34 +1,28 @@
-import EmojiEventsIcon from '@mui/icons-material/EmojiEvents';
-import { Chip } from "@mui/material";
+import { Box } from '@mui/system';
+import { SimpleQuestion } from 'types/types';
+import { VoteButtons } from '../VoteButtons';
+import { QuestionItemContainer } from './style';
 
 export interface QuestionItemProps {
-    votes: {
-        up: number,
-        down: number
-    };
-    title: string;
-    description: string;
-    date: Date;
-}
+    question: SimpleQuestion;
+};
 
 export default function QuestionItem(props: QuestionItemProps) {
-    const { votes, title, date, description } = props;
+    const { vote, title, date, description, tags } = props.question;
 
     return (
-        <div className="perguntas1">
-            <div>
-                <div className="votos">
-                    <p>{votes.up} upvotes</p>
-                    <p>{votes.down} downvotes</p>
-                </div>
-                <h4>{title}</h4>
-                <br />
-                <Chip
-                    icon={<EmojiEventsIcon />}
-                    label="Tag"
+        <QuestionItemContainer>
+            <div className="question-content">
+                <VoteButtons
+                    context={{ questionId: "1223", type: "question" }}
+                    number={9}
                 />
             </div>
-            <p className="Faca_pergunta">{date.toLocaleDateString()}</p>
-        </div>
+            <div className="question-tags">
+                {tags.map(tag => (
+                    <Box className="tag">{tag}</Box>
+                ))}
+            </div>
+        </QuestionItemContainer>
     );
 }
