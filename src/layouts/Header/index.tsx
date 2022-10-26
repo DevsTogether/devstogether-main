@@ -1,6 +1,7 @@
 import HeaderActions from '@src/components/HeaderActions';
 import HeaderAvatar from '@src/components/HeaderAvatar';
 import { useSession } from 'next-auth/react';
+import Link from 'next/link';
 import { Menu } from './styles';
 
 export interface HeaderProps {
@@ -17,7 +18,7 @@ function Header(props: HeaderProps): JSX.Element {
                 <div className="menu">
                     <img src="/menu.png" alt="" />
                     <img src="/logo2.png" alt="" />
-                    <h3>Devstogether</h3>
+                    <Link href="/"><h3>Devstogether</h3></Link>
                 </div>
 
                 <nav>

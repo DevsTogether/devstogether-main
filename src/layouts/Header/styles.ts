@@ -36,6 +36,7 @@ export const Menu = styled.div`
         color: ${theme.colors.primary};
         font-size: 20px;
         font-weight: 700;
+        cursor: pointer;
         @media (max-width: 548px) {
             //quando a tela for pequena
             display: none;

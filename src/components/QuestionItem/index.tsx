@@ -8,20 +8,29 @@ export interface QuestionItemProps {
 };
 
 export default function QuestionItem(props: QuestionItemProps) {
-    const { vote, title, date, description, tags } = props.question;
+    const { id, vote, title, date, description, tags, responses, views } = props.question;
 
     return (
         <QuestionItemContainer>
             <div className="question-content">
-                <VoteButtons
-                    context={{ questionId: "1223", type: "question" }}
-                    number={9}
-                />
-            </div>
-            <div className="question-tags">
-                {tags.map(tag => (
-                    <Box className="tag">{tag}</Box>
-                ))}
+                <div className="question">
+                    <VoteButtons
+                        context={{ questionId: id, type: "question" }}
+                        number={vote}
+                    />
+                    <div className="content">
+                        <div className="stats">
+                            <span>{responses} respostas</span>
+                            <span>{views} visualizações</span>
+                        </div>
+                        <p className="question-title">{title}</p>
+                        <div className="question-tags">
+                            {tags.map(tag => (
+                                <Box className="tag">{tag}</Box>
+                            ))}
+                        </div>
+                    </div>
+                </div>
             </div>
         </QuestionItemContainer>
     );

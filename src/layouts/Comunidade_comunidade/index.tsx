@@ -51,12 +51,12 @@ export default function Comunidade(props: CommunityPageProps): JSX.Element {
                         <hr />
 
                         {questions.map((question, i) => (
-                            <>
-                                <QuestionItem question={question} key={question.id} />
+                            <div key={question.id}>
+                                <QuestionItem question={question} />
                                 {i !== questions.length - 1 && (
                                     <hr />
                                 )}
-                            </>
+                            </div>
                         ))}
                     </div>
                 </QuestionContainer>

@@ -26,7 +26,9 @@ export async function getServerSideProps(context: GetServerSidePropsContext) {
             description: "descrição de uma pergunta",
             title: "Título de uma pergunta",
             vote: 2,
-            tags: ["python", "javascript"]
+            tags: ["python", "javascript"],
+            responses: 0,
+            views: 3
         }
     ];
 
