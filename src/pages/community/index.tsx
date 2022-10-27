@@ -22,8 +22,6 @@ export default function Community(props: CommunityPageProps): JSX.Element {
 export async function getServerSideProps(context: GetServerSidePropsContext) {
     const QuestionObject = new Question();
 
-    QuestionObject.
-
     const questions: SimpleQuestion[] = [
         {
             id: "123",

@@ -3,9 +3,10 @@ import styled from 'styled-components';
 export const QuestionItemContainer = styled.div`
     display: flex;
     flex-direction: column;
-    padding: 6px 12px;
+    padding: 14px 14px;
     border-radius: 4px;
     background-color: #2D3237;
+    cursor: pointer;
 
     :hover {
         background-color: #353E46;
@@ -32,6 +33,7 @@ export const QuestionItemContainer = styled.div`
 
     .question .content {
         flex-direction: column;
+        width: 100%;
         gap: 6px;
     }
 

@@ -73,11 +73,9 @@ export const QuestionContainer = styled.div`
     }
 
     hr {
-        margin-top: 1rem;
-        margin-bottom: 1rem;
         border: 0;
         width: 100%;
-        border-top: 1px solid #4d5a65;
+        border-top: .5px solid #4d5a65;
     }
 `;
 
