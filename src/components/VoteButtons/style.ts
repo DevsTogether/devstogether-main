@@ -6,8 +6,9 @@ export const VoteContainer = styled.div`
     gap: 4px;
     align-items: center;
 
-    .upvote-icon, .downvote-icon {
-        fill: #ccc;
+    .upvote-icon, .downvote-icon, .number {
+        filter: brightness(.7);
+        transition: .1 ease-in-out;
     }
 
     .downvote-icon {
@@ -19,7 +20,7 @@ export const VoteContainer = styled.div`
         font-size: 14pt;
     }
 
-    .selected {
-        fill: #fff;
+    .selected, .selected:hover, .selected:focus {
+        filter: brightness(1.4);
     }
 `;

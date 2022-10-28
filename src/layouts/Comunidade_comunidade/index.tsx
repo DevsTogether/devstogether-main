@@ -48,6 +48,7 @@ export default function Comunidade(props: CommunityPageProps): JSX.Element {
                                 </Button>
                             </div>
                         </div>
+
                         <hr />
 
                         {questions.map((question, i) => (

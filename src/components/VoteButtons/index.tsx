@@ -14,10 +14,20 @@ export interface VoteButtonsProps {
 };
 
 export function VoteButtons(props: VoteButtonsProps) {
-    const { number, onUpvote, onDownvote, context } = props;
+    const { number: numberProp, onUpvote, onDownvote, context } = props;
+
+    const [number, setNumber] = useState<number>(numberProp);
     const [upvoted, setUpvoted] = useState<boolean>(false);
     const [downvoted, setDownvoted] = useState<boolean>(false);
-    const onUpClick = async () => {
+    const onUpClick = async (e: any) => {
+        e.preventDefault();
+
+        setNumber(number => (
+            number + (
+                upvoted ? -1 : 1 + (downvoted ? 1 : 0)
+            )
+        ));
+
         setUpvoted(!upvoted);
 
         if (downvoted) setDownvoted(false);
@@ -29,7 +39,15 @@ export function VoteButtons(props: VoteButtonsProps) {
             console.log(data);
         }
     };
-    const onDownClick = async () => {
+    const onDownClick = async (e: any) => {
+        e.preventDefault();
+
+        setNumber(number => (
+            number + (
+                downvoted ? 1 : -1 - (upvoted ? 1 : 0)
+            )
+        ));
+
         setDownvoted(!downvoted);
 
         if (upvoted) setUpvoted(false);
@@ -44,9 +62,9 @@ export function VoteButtons(props: VoteButtonsProps) {
 
     return (
         <VoteContainer>
-            <Image src={voteArrowIcon} width={18} height={18} className="upvote-icon" onClick={onUpClick} />
+            <Image src={voteArrowIcon} width={18} height={18} className={`upvote-icon ${upvoted ? "selected" : ""}`} onClick={onUpClick} />
             <span className="number">{number}</span>
-            <Image src={voteArrowIcon} width={18} height={18} className="downvote-icon" onClick={onDownClick} />
+            <Image src={voteArrowIcon} width={18} height={18} className={`downvote-icon ${downvoted ? "selected" : ""}`} onClick={onDownClick} />
         </VoteContainer>
     )
 }
