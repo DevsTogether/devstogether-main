@@ -14,52 +14,50 @@ function SignUp(): JSX.Element {
 
                 <title>Devstogether</title>
 
-                <div className="textfield">
-                    <TextField
-                        sx={{ ml: 2, width: '15ch' }}
-                        className="input"
-                        id="outlined-basic"
-                        label="Email"
-                        variant="outlined"
-                        color="success"
-                        focused
-                    />
-                    <TextField
-                        sx={{ ml: 2, width: '15ch' }}
-                        className="input"
-                        id="outlined-basic"
-                        label="Email"
-                        variant="outlined"
-                        color="success"
-                        focused
-                    />
-                </div>
+                <form>
+                    <div className='input_line'>
+                        <TextField
+                            className="input"
+                            id="outlined-basic"
+                            label="Email"
+                            variant="outlined"
+                            color="success"
+                            focused
+                        />
+                        <TextField
+                            className="input"
+                            id="outlined-basic"
+                            label="Email"
+                            variant="outlined"
+                            color="success"
+                            focused
+                        />
+                    </div>
 
-                <div>
-                    <TextField
-                        sx={{ width: '49.5ch' }}
-                        className="input"
-                        id="outlined-basic"
-                        label="Email"
-                        variant="outlined"
-                        margin="dense"
-                        color="success"
-                        focused
-                    />
-                </div>
+                    <div className='input_line'>
+                        <TextField
+                            className="input"
+                            id="outlined-basic"
+                            label="Email"
+                            variant="outlined"
+                            margin="dense"
+                            color="success"
+                            focused
+                        />
+                    </div>
 
-                <div>
-                    <TextField
-                        sx={{ width: '50ch' }}
-                        className="input"
-                        id="outlined-basic"
-                        label="Email"
-                        variant="outlined"
-                        margin="dense"
-                        color="success"
-                        focused
-                    />
-                </div>
+                    <div className='input_line'>
+                        <TextField
+                            className="input"
+                            id="outlined-basic"
+                            label="Email"
+                            variant="outlined"
+                            margin="dense"
+                            color="success"
+                            focused
+                        />
+                    </div>
+                </form>
 
                 <div className="buttons">
                     <div className="button1">

@@ -11,9 +11,12 @@ export default function SimpleContainer() {
     return (
         <React.Fragment>
             <Container maxWidth="lg">
+
+
                 <Box
                     sx={{ bgcolor: '#353E46', height: '100vh', color: 'white' }}
                 >
+                    <h2>Área de atuação</h2>
                     <FormGroup
                         sx={{
                             display: 'flex',
@@ -89,6 +92,8 @@ export default function SimpleContainer() {
                             label="Disabled"
                         />
                     </FormGroup>
+
+                    <h2>Linguagens</h2>
                     <FormGroup
                         sx={{
                             display: 'flex',

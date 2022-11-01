@@ -57,24 +57,57 @@ export default function RowAndColumnGap() {
                             <Button
                                 variant="outlined"
                                 startIcon={<DeleteIcon />}
+                                color="success"
+                            >
+                                Javascript
+                            </Button>
+                            <Button
+                                variant="outlined"
+                                startIcon={<DeleteIcon />}
+                                color="success"
+                            >
+                                Python
+                            </Button>
+                            <Button
+                                variant="outlined"
+                                startIcon={<DeleteIcon />}
+                                color="success"
+                            >
+                                Java
+                            </Button>
+                            <Button
+                                variant="outlined"
+                                startIcon={<DeleteIcon />}
+                                color="success"
+                            >
+                                PHP
+                            </Button>
+
+                            <Button
+                                variant="outlined"
+                                startIcon={<DeleteIcon />}
+                                color="success"
                             >
                                 Outlined
                             </Button>
                             <Button
                                 variant="outlined"
                                 startIcon={<DeleteIcon />}
+                                color="success"
                             >
                                 Outlined
                             </Button>
                             <Button
                                 variant="outlined"
                                 startIcon={<DeleteIcon />}
+                                color="success"
                             >
                                 Outlined
                             </Button>
                             <Button
                                 variant="outlined"
                                 startIcon={<DeleteIcon />}
+                                color="success"
                             >
                                 Outlined
                             </Button>
@@ -82,49 +115,28 @@ export default function RowAndColumnGap() {
                             <Button
                                 variant="outlined"
                                 startIcon={<DeleteIcon />}
+                                color="success"
                             >
                                 Outlined
                             </Button>
                             <Button
                                 variant="outlined"
                                 startIcon={<DeleteIcon />}
+                                color="success"
                             >
                                 Outlined
                             </Button>
                             <Button
                                 variant="outlined"
                                 startIcon={<DeleteIcon />}
+                                color="success"
                             >
                                 Outlined
                             </Button>
                             <Button
                                 variant="outlined"
                                 startIcon={<DeleteIcon />}
-                            >
-                                Outlined
-                            </Button>
-
-                            <Button
-                                variant="outlined"
-                                startIcon={<DeleteIcon />}
-                            >
-                                Outlined
-                            </Button>
-                            <Button
-                                variant="outlined"
-                                startIcon={<DeleteIcon />}
-                            >
-                                Outlined
-                            </Button>
-                            <Button
-                                variant="outlined"
-                                startIcon={<DeleteIcon />}
-                            >
-                                Outlined
-                            </Button>
-                            <Button
-                                variant="outlined"
-                                startIcon={<DeleteIcon />}
+                                color="success"
                             >
                                 Outlined
                             </Button>
@@ -132,24 +144,28 @@ export default function RowAndColumnGap() {
                             <Button
                                 variant="outlined"
                                 startIcon={<DeleteIcon />}
+                                color="success"
                             >
                                 Outlined
                             </Button>
                             <Button
                                 variant="outlined"
                                 startIcon={<DeleteIcon />}
+                                color="success"
                             >
                                 Outlined
                             </Button>
                             <Button
                                 variant="outlined"
                                 startIcon={<DeleteIcon />}
+                                color="success"
                             >
                                 Outlined
                             </Button>
                             <Button
                                 variant="outlined"
                                 startIcon={<DeleteIcon />}
+                                color="success"
                             >
                                 Outlined
                             </Button>
@@ -157,24 +173,28 @@ export default function RowAndColumnGap() {
                             <Button
                                 variant="outlined"
                                 startIcon={<DeleteIcon />}
+                                color="success"
                             >
                                 Outlined
                             </Button>
                             <Button
                                 variant="outlined"
                                 startIcon={<DeleteIcon />}
+                                color="success"
                             >
                                 Outlined
                             </Button>
                             <Button
                                 variant="outlined"
                                 startIcon={<DeleteIcon />}
+                                color="success"
                             >
                                 Outlined
                             </Button>
                             <Button
                                 variant="outlined"
                                 startIcon={<DeleteIcon />}
+                                color="success"
                             >
                                 Outlined
                             </Button>

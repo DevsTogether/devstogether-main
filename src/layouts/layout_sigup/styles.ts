@@ -23,17 +23,25 @@ export const Container = styled.div`
         margin-bottom: 09%;
     }
 
+    form {
+        display: flex;
+        gap: 12px;
+        flex-direction:column;
+    }
+
     .input {
+        width: 100%;
         color: white;
+    }
+
+    .input_line {
+        gap: 16px;
+        display: flex;
+        justify-content: center;
     }
 
     .textfield {
         margin-bottom: 20px;
-        @media (max-width: 450px) {
-            //quando a tela for pequena
-            display: flex;
-            flex-direction: column;
-        }
     }
 
     .buttons {

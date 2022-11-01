@@ -50,6 +50,8 @@ export const Container = styled.div`
 
     h1 {
         font-size: 45px;
+        margin-left: 25%;
+        color: ${theme.colors.text};
     }
 
     p {
