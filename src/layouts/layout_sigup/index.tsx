@@ -1,6 +1,7 @@
 import Button from '@mui/material/Button';
 import TextField from '@mui/material/TextField';
 import OauthLoginButtons from '@src/components/OauthLoginButtons';
+import { GetStaticProps } from 'next';
 import Link from 'next/link';
 import { Container } from './styles';
 
@@ -81,6 +82,16 @@ function SignUp(): JSX.Element {
             </div>
         </Container>
     );
+}
+
+export const getSaticProps: GetStaticProps = async () => {
+
+    return {
+        props: {
+            date: new Date().toISOString(),
+        },
+        revalidate: 5,
+    }
 }
 
 export default SignUp;

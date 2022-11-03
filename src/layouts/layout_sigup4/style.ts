@@ -14,10 +14,6 @@ export const Estilobutton = styled.div`
         border-bottom: 6px solid rgba(102, 189, 80, 0.7);
     }
 
-    h2 {
-        margin-left: 15%;
-    }
-
     img {
         margin-bottom: 30px;
         margin-top: 20px;

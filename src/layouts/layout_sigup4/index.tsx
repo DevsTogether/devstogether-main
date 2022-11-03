@@ -91,9 +91,9 @@ export default function SimpleContainer() {
                             control={<Checkbox />}
                             label="Disabled"
                         />
-                    </FormGroup>
+                    </FormGroup><br />
 
-                    <h2>Linguagens</h2>
+                    <h2 className='linguagens'>Linguagens</h2>
                     <FormGroup
                         sx={{
                             display: 'flex',

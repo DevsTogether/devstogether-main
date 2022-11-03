@@ -1,4 +1,7 @@
+import CssIcon from '@mui/icons-material/Css';
 import DeleteIcon from '@mui/icons-material/Delete';
+import JavascriptIcon from '@mui/icons-material/Javascript';
+import PhpIcon from '@mui/icons-material/Php';
 import Box from '@mui/material/Box';
 import Button from '@mui/material/Button';
 import { Container } from './styles';
@@ -56,7 +59,7 @@ export default function RowAndColumnGap() {
                         >
                             <Button
                                 variant="outlined"
-                                startIcon={<DeleteIcon />}
+                                startIcon={<JavascriptIcon />}
                                 color="success"
                             >
                                 Javascript
@@ -77,7 +80,7 @@ export default function RowAndColumnGap() {
                             </Button>
                             <Button
                                 variant="outlined"
-                                startIcon={<DeleteIcon />}
+                                startIcon={<PhpIcon />}
                                 color="success"
                             >
                                 PHP
@@ -85,10 +88,10 @@ export default function RowAndColumnGap() {
 
                             <Button
                                 variant="outlined"
-                                startIcon={<DeleteIcon />}
+                                startIcon={<CssIcon />}
                                 color="success"
                             >
-                                Outlined
+                                CSS
                             </Button>
                             <Button
                                 variant="outlined"
