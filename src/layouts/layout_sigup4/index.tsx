@@ -26,20 +26,20 @@ export default function SimpleContainer() {
                         }}
                     >
                         <FormControlLabel
-                            control={<Checkbox defaultChecked />}
-                            label="Label"
+                            control={<Checkbox />}
+                            label="Front-end"
                         />
                         <FormControlLabel
                             control={<Checkbox />}
-                            label="Disabled"
-                        />
-                        <FormControlLabel
-                            control={<Checkbox defaultChecked />}
-                            label="Label"
+                            label="Back-end"
                         />
                         <FormControlLabel
                             control={<Checkbox />}
-                            label="Disabled"
+                            label="Mobile"
+                        />
+                        <FormControlLabel
+                            control={<Checkbox />}
+                            label="Fullstack"
                         />
                     </FormGroup>
                     <FormGroup
@@ -51,20 +51,20 @@ export default function SimpleContainer() {
                         }}
                     >
                         <FormControlLabel
-                            control={<Checkbox defaultChecked />}
-                            label="Label"
+                            control={<Checkbox />}
+                            label="Pentester & Cibersecurity"
                         />
                         <FormControlLabel
                             control={<Checkbox />}
-                            label="Disabled"
-                        />
-                        <FormControlLabel
-                            control={<Checkbox defaultChecked />}
-                            label="Label"
+                            label="Designer"
                         />
                         <FormControlLabel
                             control={<Checkbox />}
-                            label="Disabled"
+                            label="Game Developer"
+                        />
+                        <FormControlLabel
+                            control={<Checkbox />}
+                            label="Data Science"
                         />
                     </FormGroup>
                     <FormGroup
@@ -76,20 +76,20 @@ export default function SimpleContainer() {
                         }}
                     >
                         <FormControlLabel
-                            control={<Checkbox defaultChecked />}
-                            label="Label"
+                            control={<Checkbox />}
+                            label="Devops & Cloud Computing"
                         />
                         <FormControlLabel
                             control={<Checkbox />}
-                            label="Disabled"
-                        />
-                        <FormControlLabel
-                            control={<Checkbox defaultChecked />}
-                            label="Label"
+                            label="Estudante"
                         />
                         <FormControlLabel
                             control={<Checkbox />}
-                            label="Disabled"
+                            label="Web3"
+                        />
+                        <FormControlLabel
+                            control={<Checkbox />}
+                            label="Outro"
                         />
                     </FormGroup><br />
 
