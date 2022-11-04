@@ -1,4 +1,12 @@
+import { GetStaticPaths } from 'next';
 import { Container } from './style';
+
+export const getStaticPaths: GetStaticPaths = async () => {
+    return {
+        paths: [],
+        fallback: false,
+    }
+}
 
 function Layout(): JSX.Element {
     return (
@@ -33,6 +41,7 @@ function Layout(): JSX.Element {
                     <a href="/community" className="cta">Entrar na comunidade</a>
                 </div>
             </div>
+
         </Container>
     );
 }
