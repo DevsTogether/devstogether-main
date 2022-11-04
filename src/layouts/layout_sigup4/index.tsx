@@ -14,7 +14,7 @@ export default function SimpleContainer() {
 
 
                 <Box
-                    sx={{ bgcolor: '#353E46', height: '100vh', color: 'white' }}
+                    sx={{ bgcolor: '#353E46', height: '100%', color: 'white' }}
                 >
                     <h2>Área de atuação</h2>
                     <FormGroup
@@ -93,6 +93,7 @@ export default function SimpleContainer() {
                         />
                     </FormGroup><br />
 
+
                     <h2 className='linguagens'>Linguagens</h2>
                     <FormGroup
                         sx={{
@@ -126,7 +127,7 @@ export default function SimpleContainer() {
                                 }}
                             >
                                 <Button>
-                                    <img src="/logoJS.png" alt="" />
+                                    <img src="/javaIcon.png" alt="" />
                                 </Button>
                             </Box>
 
@@ -140,7 +141,7 @@ export default function SimpleContainer() {
                                 }}
                             >
                                 <Button>
-                                    <img src="/logoJS.png" alt="" />
+                                    <img src="/javaIcon.png" alt="" />
                                 </Button>
                             </Box>
 
@@ -154,7 +155,7 @@ export default function SimpleContainer() {
                                 }}
                             >
                                 <Button>
-                                    <img src="/logoJS.png" alt="" />
+                                    <img src="/javaIcon.png" alt="" />
                                 </Button>
                             </Box>
 
@@ -168,7 +169,7 @@ export default function SimpleContainer() {
                                 }}
                             >
                                 <Button>
-                                    <img src="/logoJS.png" alt="" />
+                                    <img src="/pythonIcon.png" alt="" />
                                 </Button>
                             </Box>
 
@@ -182,7 +183,7 @@ export default function SimpleContainer() {
                                 }}
                             >
                                 <Button>
-                                    <img src="/logoJS.png" alt="" />
+                                    <img src="/pythonIcon.png" alt="" />
                                 </Button>
                             </Box>
 
@@ -196,7 +197,7 @@ export default function SimpleContainer() {
                                 }}
                             >
                                 <Button>
-                                    <img src="/logoJS.png" alt="" />
+                                    <img src="/pythonIcon.png" alt="" />
                                 </Button>
                             </Box>
 
@@ -210,7 +211,7 @@ export default function SimpleContainer() {
                                 }}
                             >
                                 <Button>
-                                    <img src="/logoJS.png" alt="" />
+                                    <img src="/pythonIcon.png" alt="" />
                                 </Button>
                             </Box>
                         </Estilobutton>

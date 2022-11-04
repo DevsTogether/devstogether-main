@@ -17,4 +17,10 @@ flex-direction: column;
     p {
         color: ${theme.colors.text};
     }
+
+    .submeter_session {
+        margin-left: 5%auto;
+        display: flex;
+        flex-direction: row;
+    }
 `;
