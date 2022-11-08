@@ -1,6 +1,6 @@
+import Footer from '@src/components/Footer';
+import Header from '@src/components/Header/index';
 import Layout from '@src/layouts/EmailVerification';
-import Footer from '@src/layouts/Footer';
-import Header from '@src/layouts/Header/index';
 
 function EmailVerificationPage(): JSX.Element {
     return (

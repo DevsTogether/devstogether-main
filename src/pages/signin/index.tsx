@@ -1,5 +1,5 @@
-import Footer from '@src/layouts/Footer';
-import Header from '@src/layouts/Header/index';
+import Footer from '@src/components/Footer';
+import Header from '@src/components/Header/index';
 import Layout from '@src/layouts/Signin';
 import { GetServerSidePropsContext } from 'next';
 import { getCsrfToken } from "next-auth/react";

@@ -1,7 +1,7 @@
 import Question from '@server/src/classes/Question';
+import Footer from '@src/components/Footer';
+import Header from '@src/components/Header';
 import Layout from '@src/layouts/Comunidade_comunidade';
-import Footer from '@src/layouts/Footer';
-import Header from '@src/layouts/Header';
 import { GetServerSidePropsContext } from 'next';
 import { CommunityPageProps, SimpleQuestion } from 'types/types';
 

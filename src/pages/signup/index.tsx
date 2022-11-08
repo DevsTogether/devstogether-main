@@ -1,5 +1,5 @@
-import Footer from '@src/layouts/Footer';
-import Header from '@src/layouts/Header/index';
+import Footer from '@src/components/Footer';
+import Header from '@src/components/Header/index';
 import LayoutHome from '@src/layouts/layout_sigup';
 import LayoutSelectLanguages from '@src/layouts/layout_sigup2';
 import LayoutTest from '@src/layouts/layout_sigup3';
@@ -18,11 +18,11 @@ export interface SignUpForm {
 function SignUp(): JSX.Element {
     const [form, setForm] = useState<SignUpForm>();
     const [pageStep, setPageStep] = useState<number>(0);
-
     return (
         <>
             <Header />
             {
+
                 pageStep === 0 && (
                     <LayoutHome />
                 )

@@ -46,18 +46,19 @@ export default function RowAndColumnGap() {
                     </div>
 
                     <title>Devstogether</title>
-                    <div style={{ width: '100%' }}>
+                    <div style={{ width: '125%' }}>
                         <Box
                             sx={{
                                 display: 'grid',
                                 columnGap: 3,
                                 rowGap: 1,
                                 gridTemplateColumns: 'repeat(4, 1fr)',
-                                mr: 20,
-                                ml: 20,
+                                mr: 30,
+                                ml: 30,
                             }}
                         >
                             <Button
+                                sx={{ width: '100%' }}
                                 variant="outlined"
                                 startIcon={<JavascriptIcon />}
                                 color="success"

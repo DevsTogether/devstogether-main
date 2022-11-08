@@ -4,7 +4,10 @@ import styled from 'styled-components';
 export const Rodapé = styled.div`
     @media (max-width: 737px) {
         //quando a tela for pequena
-        margin-left: 25%;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }
 
     footer {
@@ -14,12 +17,11 @@ export const Rodapé = styled.div`
         align-items: center;
         background-color: ${theme.colors.darkBackground};
         width: 100%;
-        align-items: flex-end;
         margin: auto;
         bottom: 0;
         @media (max-width: 737px) {
             //quando a tela for pequena
-            width: 100%;
+            width: 100%;  
             align-items: center;
         }
     }
@@ -50,6 +52,7 @@ export const Rodapé = styled.div`
 
         & p {
             margin-left: 65px;
+            font-size: 20px;
         }
     }
 
@@ -81,7 +84,7 @@ export const Rodapé = styled.div`
         flex-direction: row;
         @media (max-width: 737px) {
             //quando a tela for pequena
-            flex-direction: column;
+            flex-direction: row;
         }
     }
 
@@ -101,6 +104,8 @@ export const Rodapé = styled.div`
             display: flex;
             align-items: center;
             width: 100%;
+            padding-right: 0%;
+            margin-left: 15%;
         }
     }
 
@@ -110,6 +115,7 @@ export const Rodapé = styled.div`
         @media (max-width: 389px) {
             //quando a tela for pequena
             justify-content: center;
+            font-size: 10px;
         }
     }
 `;
