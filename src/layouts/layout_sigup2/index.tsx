@@ -55,6 +55,7 @@ export default function RowAndColumnGap() {
                                 gridTemplateColumns: 'repeat(4, 1fr)',
                                 mr: 30,
                                 ml: 30,
+                                flexWrap: 'wrap'
                             }}
                         >
                             <Button
