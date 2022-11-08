@@ -3,6 +3,7 @@ import styled from 'styled-components';
 
 export const Container = styled.div`
     display: flex;
+    width: 100%;
     justify-content: center;
     align-items: center;
     flex-direction: column;
@@ -14,6 +15,7 @@ export const Container = styled.div`
     .container {
         display: flex;
         flex-direction: column;
+        width: 100%;
         align-items: center;
         margin-bottom: 10%;
     }
@@ -64,5 +66,13 @@ export const Container = styled.div`
         margin-left: 15px;
         margin-right: 15px;
         height: 50px;
+    }
+
+    .languages {
+        align-items: center;
+        width: 70%;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
     }
 `;

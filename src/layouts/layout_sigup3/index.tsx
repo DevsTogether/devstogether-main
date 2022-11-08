@@ -11,6 +11,7 @@ import MenuItem from '@mui/material/MenuItem';
 import Select, { SelectChangeEvent } from '@mui/material/Select';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 import TextareaAutosize from '@mui/material/TextareaAutosize';
+import Link from 'next/link';
 import * as React from 'react';
 import { Container } from './style';
 
@@ -73,30 +74,37 @@ export default function FormDialog() {
                             </DialogContent>
                             <DialogActions>
                                 <div className='submeter_session'>
-                                    <Button
-                                        sx={{ mr: 58 }}
-                                        variant="contained"
-                                        color="success"
-                                        onClick={handleClose}
-                                    >
-                                        Submeter
-                                    </Button>
+                                    <Link href="/signup/index4">
+                                        <Button
+                                            sx={{ mr: 58 }}
+                                            variant="contained"
+                                            color="success"
+                                            onClick={handleClose}
+                                        >
+                                            Submeter
+                                        </Button>
+                                    </Link>
 
                                     <p>Esse teste serve para você provar o minimo de conhecimento na linguagem selecionada, você pode tentar quantas vezes forem nescessarias para passar</p><br />
 
-                                    <InputLabel id="demo-simple-select-label">Linguagem Selecionada</InputLabel>
-                                    <Select
-                                        labelId="demo-simple-select-label"
-                                        id="demo-simple-select"
-                                        value={age}
-                                        label="Age"
-                                        onChange={handleChange}
-                                        sx={{ width: '50%' }}
-                                    >
-                                        <MenuItem value={10}><Javascript />Javascript</MenuItem>
-                                        <MenuItem value={20}>Twenty</MenuItem>
-                                        <MenuItem value={30}>Thirty</MenuItem>
-                                    </Select>
+                                    <div className='selection_language'>
+
+                                        <InputLabel id="demo-simple-select-label">Linguagem Selecionada
+                                            <Select
+                                                labelId="demo-simple-select-label"
+                                                id="demo-simple-select"
+                                                value={age}
+                                                label="Age"
+                                                onChange={handleChange}
+                                                sx={{ width: '30%', ml: 2, height: '5%' }}
+                                            >
+                                                <MenuItem value={10}><Javascript />Javascript</MenuItem>
+                                                <MenuItem value={20}>Twenty</MenuItem>
+                                                <MenuItem value={30}>Thirty</MenuItem>
+                                            </Select>
+                                        </InputLabel>
+                                    </div>
+
                                 </div>
                             </DialogActions>
                         </Dialog>

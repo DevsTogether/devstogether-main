@@ -1,12 +1,13 @@
-import styled from 'styled-components';
 import theme from '@src/styles/theme';
+import styled from 'styled-components';
 
-export const Menu = styled.div`
-    * {
-        margin: 0;
-        padding: 0;
-        text-decoration: none;
-    }
+export const Container = styled.div`
+display: flex;
+flex-direction: row;
+`;
+
+export const Drawer = styled.div`
+width: 20%;
 
     .sidebar {
         position: fixed;
@@ -122,12 +123,22 @@ export const Menu = styled.div`
             visibility: visible;
         }
     }
+`;
+
+export const Menu = styled.div`
+width: 80%;
+    * {
+        margin: 0;
+        padding: 0;
+        text-decoration: none;
+    }
 
     .Container {
         display: flex;
         flex-direction: column;
-        margin-left: 30%;
-        width: 60%;
+        margin-left: 10%;
+        margin-top: 10%;
+        width: 90%;
         height: 300px;
         background: ${theme.colors.links};
         border-radius: 15px;
@@ -199,14 +210,14 @@ export const Menu = styled.div`
     }
 
     .Bio {
-        margin-top: 15%;
-        margin-left: 32%;
+        margin-top: 20%;
+        margin-left: 10%;
         color: white;
     }
 
     .Conexões {
         margin-top: 3%;
-        margin-left: 32%;
+        margin-left: 10%;
         color: white;
     }
 
@@ -284,5 +295,10 @@ export const Menu = styled.div`
         height: 40px;
         border-radius: 3px;
         background: gray;
+    }
+    
+    img {
+        width: 40px;
+        height: 40px;
     }
 `;

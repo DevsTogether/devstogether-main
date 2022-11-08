@@ -8,23 +8,25 @@ export const Menu = styled.div`
         display: flex;
         justify-content: space-between;
         align-items: center;
+        flex-direction: row;
+        width: 100%;
         flex-wrap: wrap;
         padding: 1%;
     }
 
     .menu {
         display: flex;
-        justify-content: space-between;
         position: relative;
+        width: 100%;
         align-items: center;
-        @media (max-width: 293px) {
-            //quando a tela for pequena
-            display: none;
-        }
     }
 
-    img {
-        margin-left: 18%;
+    .img_Menu {
+        margin-left: 5%;
+    }
+
+    .img_Logo {
+        margin-left: 2%;
     }
 
     .title {
@@ -36,15 +38,13 @@ export const Menu = styled.div`
         color: ${theme.colors.primary};
         font-size: 20px;
         font-weight: 700;
+        margin-left: 1%;
         cursor: pointer;
-        @media (max-width: 548px) {
-            //quando a tela for pequena
-            display: none;
-        }
+        
     }
     nav {
         display: flex;
-        justify-content: flex-end;
-        align-items: center;
+        align-items: right;
+        margin-left: 60%;
     }
 `;

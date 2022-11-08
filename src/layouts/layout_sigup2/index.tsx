@@ -2,8 +2,8 @@ import CssIcon from '@mui/icons-material/Css';
 import DeleteIcon from '@mui/icons-material/Delete';
 import JavascriptIcon from '@mui/icons-material/Javascript';
 import PhpIcon from '@mui/icons-material/Php';
-import Box from '@mui/material/Box';
 import Button from '@mui/material/Button';
+import Link from 'next/link';
 import { Container } from './styles';
 
 /* function Item(props: BoxProps) {
@@ -46,164 +46,211 @@ export default function RowAndColumnGap() {
                     </div>
 
                     <title>Devstogether</title>
-                    <div style={{ width: '125%' }}>
-                        <Box
-                            sx={{
-                                display: 'grid',
-                                columnGap: 3,
-                                rowGap: 1,
-                                gridTemplateColumns: 'repeat(4, 1fr)',
-                                mr: 30,
-                                ml: 30,
-                                flexWrap: 'wrap'
-                            }}
-                        >
+                    <div className='languages'>
+                        <Link href="/signup/index3">
+
                             <Button
-                                sx={{ width: '100%' }}
                                 variant="outlined"
                                 startIcon={<JavascriptIcon />}
                                 color="success"
+                                sx={{ ml: 2, mb: 2, mr: 2, width: '20%' }}
                             >
                                 Javascript
                             </Button>
-                            <Button
-                                variant="outlined"
-                                startIcon={<DeleteIcon />}
-                                color="success"
-                            >
-                                Python
-                            </Button>
-                            <Button
-                                variant="outlined"
-                                startIcon={<DeleteIcon />}
-                                color="success"
-                            >
-                                Java
-                            </Button>
-                            <Button
-                                variant="outlined"
-                                startIcon={<PhpIcon />}
-                                color="success"
-                            >
-                                PHP
-                            </Button>
+                        </Link>
+                        <Button
+                            variant="outlined"
+                            startIcon={<DeleteIcon />}
+                            color="success"
+                            sx={{ ml: 2, mb: 2, mr: 2, width: '20%' }}
+                        >
+                            Python
+                        </Button>
 
-                            <Button
-                                variant="outlined"
-                                startIcon={<CssIcon />}
-                                color="success"
-                            >
-                                CSS
-                            </Button>
-                            <Button
-                                variant="outlined"
-                                startIcon={<DeleteIcon />}
-                                color="success"
-                            >
-                                Outlined
-                            </Button>
-                            <Button
-                                variant="outlined"
-                                startIcon={<DeleteIcon />}
-                                color="success"
-                            >
-                                Outlined
-                            </Button>
-                            <Button
-                                variant="outlined"
-                                startIcon={<DeleteIcon />}
-                                color="success"
-                            >
-                                Outlined
-                            </Button>
+                        <Button
+                            variant="outlined"
+                            startIcon={<DeleteIcon />}
+                            color="success"
+                            sx={{ ml: 2, mb: 2, mr: 2, width: '20%' }}
+                        >
+                            Python
+                        </Button>
 
-                            <Button
-                                variant="outlined"
-                                startIcon={<DeleteIcon />}
-                                color="success"
-                            >
-                                Outlined
-                            </Button>
-                            <Button
-                                variant="outlined"
-                                startIcon={<DeleteIcon />}
-                                color="success"
-                            >
-                                Outlined
-                            </Button>
-                            <Button
-                                variant="outlined"
-                                startIcon={<DeleteIcon />}
-                                color="success"
-                            >
-                                Outlined
-                            </Button>
-                            <Button
-                                variant="outlined"
-                                startIcon={<DeleteIcon />}
-                                color="success"
-                            >
-                                Outlined
-                            </Button>
+                        <Button
+                            variant="outlined"
+                            startIcon={<DeleteIcon />}
+                            color="success"
+                            sx={{ ml: 2, mb: 2, mr: 2, width: '20%' }}
+                        >
+                            Java
+                        </Button>
+                        <Button
+                            variant="outlined"
+                            startIcon={<PhpIcon />}
+                            color="success"
+                            sx={{ ml: 2, mb: 2, mr: 2, width: '20%' }}
+                        >
+                            PHP
+                        </Button>
 
-                            <Button
-                                variant="outlined"
-                                startIcon={<DeleteIcon />}
-                                color="success"
-                            >
-                                Outlined
-                            </Button>
-                            <Button
-                                variant="outlined"
-                                startIcon={<DeleteIcon />}
-                                color="success"
-                            >
-                                Outlined
-                            </Button>
-                            <Button
-                                variant="outlined"
-                                startIcon={<DeleteIcon />}
-                                color="success"
-                            >
-                                Outlined
-                            </Button>
-                            <Button
-                                variant="outlined"
-                                startIcon={<DeleteIcon />}
-                                color="success"
-                            >
-                                Outlined
-                            </Button>
+                        <Button
+                            variant="outlined"
+                            startIcon={<CssIcon />}
+                            color="success"
+                            sx={{ ml: 2, mb: 2, mr: 2, width: '20%' }}
+                        >
+                            CSS
+                        </Button>
+                        <Button
+                            variant="outlined"
+                            startIcon={<DeleteIcon />}
+                            color="success"
+                            sx={{ ml: 2, mb: 2, mr: 2, width: '20%' }}
+                        >
+                            Outlined
+                        </Button>
+                        <Button
+                            variant="outlined"
+                            startIcon={<DeleteIcon />}
+                            color="success"
+                            sx={{ ml: 2, mb: 2, mr: 2, width: '20%' }}
+                        >
+                            Outlined
+                        </Button>
+                        <Button
+                            variant="outlined"
+                            startIcon={<DeleteIcon />}
+                            color="success"
+                            sx={{ ml: 2, mb: 2, mr: 2, width: '20%' }}
+                        >
+                            Outlined
+                        </Button>
 
-                            <Button
-                                variant="outlined"
-                                startIcon={<DeleteIcon />}
-                                color="success"
-                            >
-                                Outlined
-                            </Button>
-                            <Button
-                                variant="outlined"
-                                startIcon={<DeleteIcon />}
-                                color="success"
-                            >
-                                Outlined
-                            </Button>
-                            <Button
-                                variant="outlined"
-                                startIcon={<DeleteIcon />}
-                                color="success"
-                            >
-                                Outlined
-                            </Button>
-                            <Button
-                                variant="outlined"
-                                startIcon={<DeleteIcon />}
-                                color="success"
-                            >
-                                Outlined
-                            </Button>
-                        </Box>
+                        <Button
+                            variant="outlined"
+                            startIcon={<DeleteIcon />}
+                            color="success"
+                            sx={{ ml: 2, mb: 2, mr: 2, width: '20%' }}
+                        >
+                            Outlined
+                        </Button>
+                        <Button
+                            variant="outlined"
+                            startIcon={<DeleteIcon />}
+                            color="success"
+                            sx={{ ml: 2, mb: 2, mr: 2, width: '20%' }}
+                        >
+                            Outlined
+                        </Button>
+                        <Button
+                            variant="outlined"
+                            startIcon={<DeleteIcon />}
+                            color="success"
+                            sx={{ ml: 2, mb: 2, mr: 2, width: '20%' }}
+                        >
+                            Outlined
+                        </Button>
+                        <Button
+                            variant="outlined"
+                            startIcon={<DeleteIcon />}
+                            color="success"
+                            sx={{ ml: 2, mb: 2, mr: 2, width: '20%' }}
+                        >
+                            Outlined
+                        </Button>
+
+                        <Button
+                            variant="outlined"
+                            startIcon={<DeleteIcon />}
+                            color="success"
+                            sx={{ ml: 2, mb: 2, mr: 2, width: '20%' }}
+                        >
+                            Outlined
+                        </Button>
+                        <Button
+                            variant="outlined"
+                            startIcon={<DeleteIcon />}
+                            color="success"
+                            sx={{ ml: 2, mb: 2, mr: 2, width: '20%' }}
+                        >
+                            Outlined
+                        </Button>
+                        <Button
+                            variant="outlined"
+                            startIcon={<DeleteIcon />}
+                            color="success"
+                            sx={{ ml: 2, mb: 2, mr: 2, width: '20%' }}
+                        >
+                            Outlined
+                        </Button>
+                        <Button
+                            variant="outlined"
+                            startIcon={<DeleteIcon />}
+                            color="success"
+                            sx={{ ml: 2, mb: 2, mr: 2, width: '20%' }}
+                        >
+                            Outlined
+                        </Button>
+
+                        <Button
+                            variant="outlined"
+                            startIcon={<DeleteIcon />}
+                            color="success"
+                            sx={{ ml: 2, mb: 2, mr: 2, width: '20%' }}
+                        >
+                            Outlined
+                        </Button>
+                        <Button
+                            variant="outlined"
+                            startIcon={<DeleteIcon />}
+                            color="success"
+                            sx={{ ml: 2, mb: 2, mr: 2, width: '20%' }}
+                        >
+                            Outlined
+                        </Button>
+                        <Button
+                            variant="outlined"
+                            startIcon={<DeleteIcon />}
+                            color="success"
+                            sx={{ ml: 2, mb: 2, mr: 2, width: '20%' }}
+                        >
+                            Outlined
+                        </Button>
+                        <Button
+                            variant="outlined"
+                            startIcon={<DeleteIcon />}
+                            color="success"
+                            sx={{ ml: 2, mb: 2, mr: 2, width: '20%' }}
+                        >
+                            Outlined
+                        </Button>
+
+                        <Button
+                            variant="outlined"
+                            startIcon={<DeleteIcon />}
+                            color="success"
+                            sx={{ ml: 2, mb: 2, mr: 2, width: '20%' }}
+                        >
+                            Outlined
+                        </Button>
+                        <Button
+                            variant="outlined"
+                            startIcon={<DeleteIcon />}
+                            color="success"
+                            sx={{ ml: 2, mb: 2, mr: 2, width: '20%' }}
+                        >
+                            Outlined
+                        </Button>
+
+                        <Button
+                            variant="outlined"
+                            startIcon={<DeleteIcon />}
+                            color="success"
+                            sx={{ ml: 2, mb: 2, mr: 2, width: '20%' }}
+                        >
+                            Outlined
+                        </Button>
+
                     </div>
                 </div>
             </Container>

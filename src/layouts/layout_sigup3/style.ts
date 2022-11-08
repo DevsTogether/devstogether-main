@@ -23,4 +23,9 @@ flex-direction: column;
         display: flex;
         flex-direction: row;
     }
+
+    .selection_language {
+        display: flex;
+        flex-direction: row;
+    }
 `;

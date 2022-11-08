@@ -16,21 +16,21 @@ function Header(props: HeaderProps): JSX.Element {
         <Menu>
             <header>
                 <div className="menu">
-                    <img src="/menu.png" alt="" />
-                    <img src="/logo2.png" alt="" />
-                    <Link href="/"><h3>Devstogether</h3></Link>
+                    <img src="/menu.png" className='img_Menu' />
+                    <img src="/logo2.png" className='img_Logo' />
+                    <Link href="/" className='title_logo'><h3>Devstogether</h3></Link>
+
+                    <nav>
+                        {logged && (
+                            <HeaderAvatar
+                                name={session?.user?.username}
+                                image={session?.user?.image}
+                            />
+                        )}
+
+                        {!logged && <HeaderActions />}
+                    </nav>
                 </div>
-
-                <nav>
-                    {logged && (
-                        <HeaderAvatar
-                            name={session?.user?.username}
-                            image={session?.user?.image}
-                        />
-                    )}
-
-                    {!logged && <HeaderActions />}
-                </nav>
             </header>
         </Menu>
     );

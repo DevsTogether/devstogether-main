@@ -1,12 +1,38 @@
 import theme from '@src/styles/theme';
 import styled from 'styled-components';
 
+export const Container = styled.div`
+display: flex;
+flex-direction: row;
+`;
+
 export const Menu = styled.div`
+width: 80%;
     * {
         margin: 0;
         padding: 0;
         text-decoration: none;
     }
+
+    .Container {
+        display: flex;
+        flex-direction: column;
+        margin-left: 25%;
+        width: 60%;
+        height: 300px;
+        background: ${theme.colors.lightBackground};
+        border-radius: 15px;
+    }
+
+    hr {
+        border: 0;
+        width: 90%;
+        border-top: 1px solid #4d5a65;
+    }
+`;
+
+export const Drawer = styled.div`
+    width: 20%;
 
     .sidebar {
         position: fixed;
@@ -123,19 +149,5 @@ export const Menu = styled.div`
         }
     }
 
-    .Container {
-        display: flex;
-        flex-direction: column;
-        margin-left: 25%;
-        width: 60%;
-        height: 300px;
-        background: ${theme.colors.lightBackground};
-        border-radius: 15px;
-    }
 
-    hr {
-        border: 0;
-        width: 90%;
-        border-top: 1px solid #4d5a65;
-    }
 `;
