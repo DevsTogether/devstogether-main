@@ -15,10 +15,12 @@ function Header(props: HeaderProps): JSX.Element {
     return (
         <Menu>
             <header>
-                <div className="menu">
-                    <img src="/menu.png" className='img_Menu' />
-                    <img src="/logo2.png" className='img_Logo' />
-                    <Link href="/" className='title_logo'><h3>Devstogether</h3></Link>
+                <div className='align'>
+                    <div className="menu">
+                        <img src="/menu.png" className='img_Menu' />
+                        <img src="/logo2.png" className='img_Logo' />
+                        <Link href="/" className='title_logo'><h3>Devstogether</h3></Link>
+                    </div>
 
                     <nav>
                         {logged && (

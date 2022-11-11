@@ -11,18 +11,22 @@ export const Menu = styled.div`
         flex-direction: row;
         width: 100%;
         flex-wrap: wrap;
-        padding: 1%;
+        padding: 1% 16px;
+    }
+
+    .align {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        width: 100%;
     }
 
     .menu {
         display: flex;
         position: relative;
+        flex-direction: row;
         width: 100%;
         align-items: center;
-    }
-
-    .img_Menu {
-        margin-left: 5%;
     }
 
     .img_Logo {
@@ -40,11 +44,10 @@ export const Menu = styled.div`
         font-weight: 700;
         margin-left: 1%;
         cursor: pointer;
-        
+
     }
     nav {
         display: flex;
         align-items: right;
-        margin-left: 60%;
     }
 `;

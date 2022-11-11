@@ -10,7 +10,7 @@ export const Container = styled.div`
 
     .container {
         gap: 20px;
-        width: 400px;
+        width: 49vmin;
         height: 600px;
         background-color: #3c4144;
         box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.7);
@@ -26,10 +26,13 @@ export const Container = styled.div`
         gap: 1rem;
         align-items: center;
         justify-content: flex-start;
+        width: 100%;
     }
 
     .image_ilustration {
-        height: 50%;
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
     }
 
     .content p {
