@@ -52,7 +52,11 @@ export const Rodapé = styled.div`
 
         & p {
             margin-left: 65px;
-            font-size: 20px;
+            font-size: .7rem;
+        }
+        
+        & img {
+            cursor: pointer;
         }
     }
 

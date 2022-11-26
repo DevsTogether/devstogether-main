@@ -20,6 +20,11 @@ export const Container = styled.div`
         align-items: center;
     }
 
+    .card-unclickable {
+        pointer-events: none;
+        opacity: .3;
+    }
+
     .content {
         display: flex;
         flex-direction: column;

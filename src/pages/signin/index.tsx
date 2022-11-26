@@ -7,8 +7,8 @@ import { getCsrfToken } from "next-auth/react";
 export interface SignInPageProps {
     csrfToken: string;
 }
-
 function SignIn({ csrfToken }: SignInPageProps): JSX.Element {
+
     return (
         <>
             <Header />
@@ -21,7 +21,9 @@ function SignIn({ csrfToken }: SignInPageProps): JSX.Element {
 export default SignIn;
 
 export async function getServerSideProps(context: GetServerSidePropsContext) {
-    const csrfToken = await getCsrfToken(context);
+    const csrfToken = await getCsrfToken(context) || null;
+
+    console.log("token: ", csrfToken);
 
     return {
         props: { csrfToken },

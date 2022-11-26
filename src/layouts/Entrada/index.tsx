@@ -1,17 +1,19 @@
-import { GetStaticPaths } from 'next';
+import { useSession } from 'next-auth/react';
+import { useEffect, useState } from 'react';
 import { Container } from './style';
 
-export const getStaticPaths: GetStaticPaths = async () => {
-    return {
-        paths: [],
-        fallback: false,
-    }
-}
 
 function Layout(): JSX.Element {
+    const [privateRoomCardActive, setPrivateRoomCardActive] = useState<boolean>(false);
+    const { status } = useSession();
+
+    useEffect(() => {
+        setPrivateRoomCardActive(status === "authenticated");
+    });
+
     return (
         <Container>
-            <div className="container">
+            <div className={`container ${privateRoomCardActive ? "" : "card-unclickable"}`}>
                 <div className="content">
                     <img
                         className="image_ilustration"
