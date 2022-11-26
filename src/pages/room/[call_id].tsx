@@ -28,30 +28,35 @@ const page: NextPage = () => {
 
     const socketInitializer = async () => {
         // We just call it because we don't need anything else out of it
-        await fetch("/api/sockets/socket");
+        //await fetch("/api/sockets/socket");
 
         socket = io();
 
         socket.on("newIncomingMessage", (msg) => {
-            const equalMsg = messages.some(({ id }) => msg.id === id);
 
-            if (equalMsg) return;
+            if (msg.author != chosenUsername) {
+                console.log("atualiza!");
 
-            setMessages((currentMsg) => [
-                ...currentMsg,
-                { id: msg.id, author: msg.author, message: msg.message },
-            ]);
-            console.log(messages);
+                const msgObj = { id: msg.id, author: msg.author, message: msg.message };
+
+                setMessages((currentMsg) => [
+                    ...currentMsg,
+                    msgObj,
+                ]);
+            }
+
         });
     };
 
     const sendMessage = async () => {
-        socket.emit("createdMessage", { id: Math.round(Math.random() * 10000), author: chosenUsername, message });
+        const msg = { id: Math.round(Math.random() * 10000), author: chosenUsername, message }
+        socket.emit("createdMessage", msg);
 
         setMessages((currentMsg) => [
             ...currentMsg,
-            { author: chosenUsername, message },
+            msg,
         ]);
+
         setMessage("");
     };
 
@@ -134,4 +139,4 @@ const page: NextPage = () => {
     );
 };
 
-export default page;
+export default page

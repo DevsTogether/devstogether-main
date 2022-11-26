@@ -6,7 +6,6 @@ import { Server } from "socket.io";
 
 export default function SocketHandler(req: NextApiRequest, res: NextApiResponse) {
     // It means that socket server was already initialised
-    //@ts-ignore
     if (res.socket.server.io) {
         console.log("Already set up");
         res.end();
