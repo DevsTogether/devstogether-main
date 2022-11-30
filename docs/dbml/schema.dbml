@@ -57,33 +57,16 @@ Table User {
   metadata Json [not null, default: '{}']
   accounts Account [not null]
   sessions Session [not null]
-  level Level
-  role Role
   levelId Int [not null, default: 1]
   roleId Int [not null, default: 3]
   languages UserLanguage [not null]
   medals UserMedal [not null]
-  integrations Integration [not null]
   Questions Question [not null]
   Reports Report [not null]
   Comments Comment [not null]
   Call Call [not null]
   Vote Vote [not null]
   Response Response [not null]
-}
-
-Table Role {
-  id Int [pk, unique]
-  name String [not null]
-  roles Json
-  User User [not null]
-}
-
-Table Level {
-  id Int [pk, increment, unique]
-  name String
-  reputationRequired Int
-  User User [not null]
 }
 
 Table Language {
@@ -121,15 +104,9 @@ Table UserMedal {
   obtainedAt DateTime
 }
 
-Table Integration {
-  id String [pk, unique]
-  integrationData Json
-  User User [not null]
-  userId String [not null]
-}
-
 Table Question {
   id String [pk, unique]
+  votation Int [not null, default: 0]
   closed Boolean [not null, default: false]
   title String [not null]
   content String [not null]
@@ -165,6 +142,7 @@ Table Vote {
 
 Table Response {
   id String [pk, unique]
+  votation Int [not null, default: 0]
   content String [not null]
   createdAt DateTime [default: `now()`]
   updatedAt DateTime
@@ -229,10 +207,6 @@ Ref: Account.userId > User.id [delete: Cascade]
 
 Ref: Session.userId > User.id [delete: Cascade]
 
-Ref: User.levelId > Level.id
-
-Ref: User.roleId > Role.id
-
 Ref: UserLanguage.userId > User.id
 
 Ref: UserLanguage.languageId > Language.id
@@ -240,8 +214,6 @@ Ref: UserLanguage.languageId > Language.id
 Ref: UserMedal.userId > User.id
 
 Ref: UserMedal.medalId > Medal.id
-
-Ref: Integration.userId > User.id
 
 Ref: Question.userId > User.id
 

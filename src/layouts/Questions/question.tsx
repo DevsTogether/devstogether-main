@@ -1,11 +1,13 @@
 import Button from '@mui/material/Button';
 import LanguageMenu from '@src/components/LanguagesMenu';
 import { VoteButtons } from '@src/components/VoteButtons';
-import { CommunityPageProps } from 'types/types';
+import { useEffect } from 'react';
 import { Container, LayoutQuestions } from './style';
 
-export default function Questions(props: CommunityPageProps): JSX.Element {
-    const { questions } = props;
+export default function Questions(props: any): JSX.Element {
+    useEffect(() => {
+        console.log(props.question)
+    }) 
 
     return (
         <>

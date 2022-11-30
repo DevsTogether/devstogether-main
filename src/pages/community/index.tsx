@@ -22,28 +22,16 @@ export default function Community(props: CommunityPageProps): JSX.Element {
 export async function getServerSideProps(context: GetServerSidePropsContext) {
     const QuestionObject = new Question();
 
-    const questions: SimpleQuestion[] = [
-        {
-            id: "123",
-            date: new Date("2022/10/25").toISOString(),
-            description: "descrição de uma pergunta",
-            title: "Título de uma pergunta",
-            vote: 2,
-            tags: ["python", "javascript"],
-            responses: 0,
-            views: 3
-        },
-        {
-            id: "1233",
-            date: new Date("2022/10/25").toISOString(),
-            description: "descrição de uma outra pergunta",
-            title: "Título de uma outra pergunta",
-            vote: 2,
-            tags: ["dinamodb", "c++"],
-            responses: 3,
-            views: 3
-        }
-    ];
+    const { page, lang } = context.query;
+
+    const questions: SimpleQuestion[] = await QuestionObject.getSimpleQuestionList(
+        Number(page || 0), 10,
+        lang ? Number(lang) : undefined
+    );
+
+    questions.forEach((val) => {
+        val.date = val.date.toLocaleString();
+    });
 
     return {
         props: {

@@ -11,8 +11,6 @@ export default function SimpleContainer() {
     return (
         <React.Fragment>
             <Container maxWidth="lg">
-
-
                 <Box
                     sx={{ bgcolor: '#353E46', height: '100%', color: 'white' }}
                 >

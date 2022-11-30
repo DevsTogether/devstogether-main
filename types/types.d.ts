@@ -9,16 +9,16 @@ export interface SimpleQuestion {
     views: number;
 };
 
+export interface Response {
+
+}
+
 export interface CompleteQuestion extends SimpleQuestion {
-    type: "write" | "live";
+    type: "write" | "live" | string;
     description: string;
     updatedAt: Date | string;
     closed: boolean;
-    user: {
-        id: string;
-        name: string;
-        photo: string;
-    }
+    responses: Array<Response>
 }
 
 export interface CommunityPageProps {
