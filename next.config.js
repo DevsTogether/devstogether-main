@@ -34,10 +34,13 @@ const nextConfig = {
     typescript: {
         ignoreBuildErrors: true,
     },
+    experimental: {
+        forceSwcTransforms: true,
+    }
 };
 
 const withBundleAnalyzer = require('@next/bundle-analyzer')({
-    enabled: process.env.ANALYZE === 'true',
+    enabled: process.env.BUNDLE_ANALYZER === 'true',
 });
 
 module.exports = withBundleAnalyzer(nextConfig);
