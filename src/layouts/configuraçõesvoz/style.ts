@@ -15,19 +15,54 @@ flex-direction: row;
     
     .Drawer {
        display: flex;
-       width: 25%;
+       width: 22%;
        height: 100vh;
        flex-direction: column;
        color: white;
        background: #2d3237;
     }
 
+    .draweritens {
+      display: flex;
+      flex-direction: column;
+      margin-top: 15%;
+      margin-left: 10%;
+    }
+
+    img {
+      height: 20px;
+      margin-right: 2.8%;
+    }
+
+
+    h3 {
+      margin-top: 5%;
+    }
+
     .Voz {
        display: flex;
        flex-direction: column;
        width: 75%;
-       height: 100vh;
+       height: 130vh;
        color: white;
        background: #353e46;
+    }
+
+    .VozItens {
+      display: flex;
+      flex-direction: column;
+      margin-top: 3%;
+      margin-left: 10%;
+    }
+
+    .checkbox {
+      display: flex;
+      flex-direction: row;
+    }
+
+    .imagem_vídeo {
+      display: flex;
+      margin-right: 20%;
+      justify-content: right;
     }
 `;
