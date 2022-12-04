@@ -1,100 +1,86 @@
 import styled from 'styled-components';
 
-export const Container = styled.div`
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-direction: row;
-    justify-content: space-between;
-    width: 100%;
-    margin-top: 10%;
-    height: 100%;
+export const PrincipalContainer = styled.div`
+   width: 100%;
+   height: 90vh;
+   display: flex;
+   flex-direction: column;
+`
+
+export const Menu = styled.div`
+display: flex;
+width: 100%;
+flex-direction: row;
+
+    
+    .Drawer {
+       display: flex;
+       width: 100%;
+       height: 100vh;
+       flex-direction: column;
+       color: white;
+       background: #2d3237;
+    }
+
+    .draweritens {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      width: 100%;
+    }
+
+    .Container {
+      display: flex;
+      flex-direction: column;
+      width: 45%;
+    }
+
+    .avatar {
+      display: flex;
+      flex-direction: row;
+      margin-bottom: 4%;
+      margin-left: 3%;
+    }
+
+    .Perguntas {
+      display: flex;
+      flex-direction: row;
+      margin-top: 2%;
+      margin-bottom: 2%;
+      margin-left: 3%;
+    }
 
     p {
-        color: gray;
-        margin-left: 25px;
+      margin-right: 3%;
     }
 
-    .trofeu {
-        height: 70px;
+    .Sobremim {
+      display: flex;
+      flex-direction: column;
+      margin-top: 2%;
+      margin-bottom: 2%;
+      width: 25%;
+      margin-left: 3%;
     }
 
-    h4 {
-        margin-bottom: 4%;
-        width: 150%;
+    h3 {
+      margin-top: 6%;
+      margin-bottom: 6%;
     }
 
-    .Faca_pergunta {
-        width: 200%;
-        margin-left: 70%;
+    .tags  {
+      display: flex;
+      flex-direction: column;
+      margin-top: 2%;
+      margin-bottom: 2%;
+      margin-left: 4%;
     }
 
-    .votos {
-        display: flex;
-        flex-direction: row;
-        margin-bottom: 5%;
-        margin-top: 5%;
+    .conquistas {
+      display: flex;
+      flex-direction: column;
     }
 
-    & img {
-        padding-top: 20px;
-        padding-left: 15px;
-        padding-right: 15px;
-    }
 
-    .Emblemas2 {
-        display: flex;
-        justify-content: space-between;
-        background-color: '#353E46';
-        color: white;
-        width: 500px;
-        height: 150px;
-        margin-left: 100px;
-        margin-bottom: 5%;
-        border: 1px solid;
-        border-color: gray;
-        border-radius: 2px;
-    }
-
-    .Emblemas3 {
-        display: flex;
-        justify-content: space-between;
-        background-color: '#353E46';
-        color: white;
-        width: 500px;
-        height: 150px;
-        margin-left: 100px;
-        margin-bottom: 5%;
-        border: 1px solid;
-        border-color: gray;
-        border-radius: 2px;
-    }
-
-    .Emblemas4 {
-        display: flex;
-        justify-content: space-between;
-        background-color: '#353E46';
-        color: white;
-        width: 500px;
-        height: 150px;
-        margin-left: 100px;
-        margin-bottom: 5%;
-        border: 1px solid;
-        border-color: gray;
-        border-radius: 2px;
-    }
-
-    .Emblemas5 {
-        display: flex;
-        justify-content: space-between;
-        background-color: '#353E46';
-        color: white;
-        width: 500px;
-        height: 150px;
-        margin-left: 100px;
-        margin-bottom: 5%;
-        border: 1px solid;
-        border-color: gray;
-        border-radius: 2px;
-    }
+  
 `;

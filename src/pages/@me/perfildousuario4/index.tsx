@@ -1,6 +1,5 @@
 import Footer from '@src/components/Footer';
 import Header from '@src/components/Header';
-import Perfil from '@src/layouts/Perfilcomponente';
 import Layout from '@src/layouts/Perfildousuario4';
 import styled from 'styled-components';
 

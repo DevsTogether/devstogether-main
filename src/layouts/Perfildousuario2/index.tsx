@@ -1,87 +1,66 @@
+import Tabs from '@components/TabsEmblemas/index';
 import FaceIcon from '@mui/icons-material/Face';
-import Box from '@mui/material/Box';
+import Avatar from '@mui/material/Avatar';
 import Chip from '@mui/material/Chip';
-import Tab from '@mui/material/Tab';
-import Tabs from '@mui/material/Tabs';
-import * as React from 'react';
-import { Container } from './style';
+import { Menu, PrincipalContainer } from './style';
+
+const label1 = { inputProps: { 'aria-label': 'Switch demo' } };
+const label = { inputProps: { 'aria-label': 'Checkbox demo' } };
 
 function Layout(): JSX.Element {
-    const [value, setValue] = React.useState(0);
-
-    const handleChange = (event: React.SyntheticEvent, newValue: number) => {
-        setValue(newValue);
-    };
     return (
         <>
-            <Container>
-                <Box sx={{ width: '80%', bgcolor: '#353E46', height: '70%' }}>
-                    <Tabs
-                        value={value}
-                        onChange={handleChange}
-                        centered
-                        textColor="secondary"
-                        indicatorColor="secondary"
-                        aria-label="secondary tabs example"
-                    >
-                        <Tab label="Item One" />
-                        <Tab label="Item Two" />
-                        <Tab label="Item Three" />
-                        <Tab label="Item Three" />
-                    </Tabs>
-                    <br />
+            <PrincipalContainer>
+                <Menu>
+                    <div className='Drawer'>
+                        <div className='draweritens'>
+                            <div className='Container'>
+                                <div className='avatar'>
+                                    <Avatar sx={{ width: 76, height: 76, mr: 3 }} alt="Travis Howard" src="/static/images/avatar/2.jpg" />
+                                    <div>
+                                        <h2>Marcos Alves</h2>
+                                        <Chip icon={<FaceIcon />} label="With Icon" />
+                                        <Chip icon={<FaceIcon />} label="With Icon" />
+                                    </div>
+                                </div>
+                                <div className='Perguntas'>
+                                    <p>Perguntas</p>
+                                    <p>Perguntas</p>
+                                    <p>Perguntas</p>
 
-                    <div className="Emblemas2">
-                        <div>
-                            <div className="votos">
-                                <p>1 Voto</p>
-                                <p>256 Votos</p>
+                                </div>
+
+                                <div className='Sobremim'>
+                                    <h3>Sobre mim</h3>
+                                    <p>ioanfoiawnfioniownfonawoingoienagioebgageuieapg
+                                        geuiagasegnruiosgnuionsdiogjnjoasgnnsjignonaskn
+                                        gioaengpisuergniosnagionasriognusriongiuosrngug
+                                    </p>
+                                </div>
+
+                                <div className='tags'>
+                                    <p>Membro afnaiof</p>
+                                    <p>Membro afnaiof</p>
+                                    <p>Membro afnaiof</p>
+                                    <p>Membro afnaiof</p>
+                                </div>
+
+
+                                <div className='conquistas'>
+                                    <Chip sx={{ width: '25%', mt: 1, mb: 1, ml: 2 }} icon={<FaceIcon />} label="With Icon" />
+                                    <Chip sx={{ width: '25%', mt: 1, mb: 1, ml: 2 }} icon={<FaceIcon />} label="With Icon" />
+                                    <Chip sx={{ width: '25%', mt: 1, mb: 1, ml: 2 }} icon={<FaceIcon />} label="With Icon" />
+                                    <Chip sx={{ width: '25%', mt: 1, mb: 1, ml: 2 }} icon={<FaceIcon />} label="With Icon" />
+                                </div>
                             </div>
-                            <h4>O que faz o display flex no CSS</h4>
-                            <Chip icon={<FaceIcon />} label="With Icon" />
-                            <p className="Faca_pergunta">Faça sua 1 pergunta</p>
+                            <Tabs />
                         </div>
                     </div>
-
-                    <div className="Emblemas3">
-                        <div>
-                            <div className="votos">
-                                <p>1 Voto</p>
-                                <p>256 Votos</p>
-                            </div>
-                            <h4>O que faz o display flex no CSS</h4>
-                            <Chip icon={<FaceIcon />} label="With Icon" />
-                            <p className="Faca_pergunta">Faça sua 1 pergunta</p>
-                        </div>
-                    </div>
-
-                    <div className="Emblemas4">
-                        <div>
-                            <div className="votos">
-                                <p>1 Voto</p>
-                                <p>256 Votos</p>
-                            </div>
-                            <h4>O que faz o display flex no CSS</h4>
-                            <Chip icon={<FaceIcon />} label="With Icon" />
-                            <p className="Faca_pergunta">Faça sua 1 pergunta</p>
-                        </div>
-                    </div>
-
-                    <div className="Emblemas5">
-                        <div>
-                            <div className="votos">
-                                <p>1 Voto</p>
-                                <p>256 Votos</p>
-                            </div>
-                            <h4>O que faz o display flex no CSS</h4>
-                            <Chip icon={<FaceIcon />} label="With Icon" />
-                            <p className="Faca_pergunta">Faça sua 1 pergunta</p>
-                        </div>
-                    </div>
-                </Box>
-            </Container>
+                </Menu>
+            </PrincipalContainer>
         </>
     );
 }
 
 export default Layout;
+

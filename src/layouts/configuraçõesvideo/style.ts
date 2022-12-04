@@ -66,7 +66,8 @@ flex-direction: row;
         border-radius: 5px;
     } 
     
-    .textfild {
-        margin-top: 3%;
+    h2 {
+      margin-top: 2.5%;
     }
+    
 `;

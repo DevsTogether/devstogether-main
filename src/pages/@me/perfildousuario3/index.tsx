@@ -1,6 +1,5 @@
 import Footer from '@src/components/Footer';
 import Header from '@src/components/Header';
-import Perfil from '@src/layouts/Perfilcomponente';
 import Layout from '@src/layouts/Perfildousuario3';
 import styled from 'styled-components';
 
@@ -11,7 +10,6 @@ function Sobre(): JSX.Element {
             <Header />
             <Container>
                 <main className="container">
-                    <Perfil />
                     <Layout />
                 </main>
             </Container>

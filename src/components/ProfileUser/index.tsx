@@ -1,11 +1,9 @@
-import MoreVertIcon from '@mui/icons-material/MoreVert';
 import Avatar from '@mui/material/Avatar';
 import Button from '@mui/material/Button';
 import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
 import CardHeader from '@mui/material/CardHeader';
 import CardMedia from '@mui/material/CardMedia';
-import { red } from '@mui/material/colors';
 import IconButton, { IconButtonProps } from '@mui/material/IconButton';
 import { styled } from '@mui/material/styles';
 import * as React from 'react';
@@ -34,55 +32,49 @@ export default function RecipeReviewCard() {
     };
 
     return (
-        <Card sx={{ maxWidth: 645, background: 'black', color: 'white', width: '80vw' }}>
+        <Card sx={{ maxWidth: 645, background: '#2d3237;', color: 'white', width: '80%' }}>
             <CardMedia
                 component="img"
-                height="60"
-                image="/static/images/cards/paella.jpg"
+                height="10vw"
+                image="/Entrar_comunidade.png"
                 alt="Paella dish"
             />
             <CardHeader
                 avatar={
-                    <Avatar sx={{ bgcolor: red[500] }} aria-label="recipe">
-                        R
-                    </Avatar>
+                    <Avatar alt="Remy Sharp" src="/conta.png" aria-label="recipe"></Avatar>
                 }
-                action={
-                    <IconButton aria-label="settings">
-                        <MoreVertIcon />
-                    </IconButton>
-                }
-                title="Shrimp and Chorizo Paella"
-                subheader="September 14, 2016"
+
+                title="Marcos Alves"
+                subheader=""
             />
             <CardContent>
                 <Estilo>
                     <div className="informations_user">
                         <div>
-                            <h3>Nome de usuário</h3>
+                            <h3>NOME DE USUÁRIO</h3>
                             <h4>Marcos Alves</h4>
                         </div>
-                        <Button variant="contained" href="#contained-buttons">
+                        <Button sx={{ height: '25%' }} variant="contained" href="#contained-buttons">
                             Link
                         </Button>
                     </div>
 
                     <div className="informations_user">
                         <div>
-                            <h3>Nome de usuário</h3>
-                            <h4>Marcos Alves</h4>
+                            <h3>E-MAIL</h3>
+                            <h4>**********@gmail.com</h4>
                         </div>
-                        <Button variant="contained" href="#contained-buttons">
+                        <Button sx={{ height: '25%' }} variant="contained" href="#contained-buttons">
                             Link
                         </Button>
                     </div>
 
                     <div className="informations_user">
                         <div>
-                            <h3>Nome de usuário</h3>
-                            <h4>Marcos Alves</h4>
+                            <h3>TELEFONE</h3>
+                            <h4>******2547</h4>
                         </div>
-                        <Button variant="contained" href="#contained-buttons">
+                        <Button sx={{ height: '25%' }} variant="contained" href="#contained-buttons">
                             Link
                         </Button>
                     </div>

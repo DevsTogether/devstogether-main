@@ -52,7 +52,7 @@ function Configuração(): JSX.Element {
                             </div>
 
                             <h2>Tamanho da fonte</h2>
-                            <TextField fullWidth label="fullWidth" id="fullWidth" />
+                            <TextField sx={{ mt: '3%', width: '70%', height: '20%' }} fullWidth label="fullWidth" id="fullWidth" />
                         </div>
                     </div>
                 </Menu>
