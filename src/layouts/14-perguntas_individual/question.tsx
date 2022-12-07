@@ -1,19 +1,12 @@
 import Button from '@mui/material/Button';
-<<<<<<< HEAD:src/layouts/Questions/question.tsx
-import LanguageMenu from '@src/components/LanguagesMenu';
-import { VoteButtons } from '@src/components/VoteButtons';
-import { useEffect } from 'react';
-=======
 import LanguageMenu from '@src/components/Communitycomponets/LanguagesMenu';
 import { VoteButtons } from '@src/components/Communitycomponets/VoteButtons';
-import { CommunityPageProps } from 'types/types';
->>>>>>> c513bd7 (muita coisa):src/layouts/14-perguntas_individual/question.tsx
+import { useEffect } from 'react';
 import { Container, LayoutQuestions } from './style';
 
 export default function Questions(props: any): JSX.Element {
     useEffect(() => {
-        console.log(props.question)
-    }) 
+    })
 
     return (
         <>

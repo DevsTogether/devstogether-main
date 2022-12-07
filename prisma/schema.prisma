@@ -159,7 +159,7 @@ model Response {
 }
 
 model Tag {
-  id          Int           @id @unique @default(autoincrement())
+  id          String        @id @unique
   name        String        @unique
   about       String?
   QuestionTag QuestionTag[]
@@ -168,7 +168,7 @@ model Tag {
 model QuestionTag {
   id         Int       @id @unique @default(autoincrement())
   tag        Tag?      @relation(fields: [tagId], references: [id])
-  tagId      Int?
+  tagId      String?
   question   Question? @relation(fields: [questionId], references: [id])
   questionId String?
 }

@@ -155,7 +155,7 @@ Table Response {
 }
 
 Table Tag {
-  id Int [pk, increment, unique]
+  id String [pk, unique]
   name String [unique, not null]
   about String
   QuestionTag QuestionTag [not null]
@@ -164,7 +164,7 @@ Table Tag {
 Table QuestionTag {
   id Int [pk, increment, unique]
   tag Tag
-  tagId Int
+  tagId String
   question Question
   questionId String
 }

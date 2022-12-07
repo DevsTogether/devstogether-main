@@ -2,14 +2,9 @@ import { ModalUnstyled } from '@mui/base';
 import { Javascript } from '@mui/icons-material';
 import { Box, Typography } from '@mui/material';
 import Button from '@mui/material/Button';
-<<<<<<< HEAD:src/layouts/Comunidade_comunidade/index.tsx
-import LanguageMenuOption from '@src/components/LanguageMenuOption';
-import QuestionItem from '@src/components/QuestionItem';
-import { useState } from 'react';
-=======
 import LanguageMenuOption from '@src/components/Communitycomponets/LanguageMenuOption';
 import QuestionItem from '@src/components/Communitycomponets/QuestionItem';
->>>>>>> c513bd7 (muita coisa):src/layouts/13-Comunidade_perguntas/index.tsx
+import { useState } from 'react';
 import { CommunityPageProps } from 'types/types';
 
 
