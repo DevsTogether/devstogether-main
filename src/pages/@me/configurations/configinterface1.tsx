@@ -1,4 +1,4 @@
-import Layout from '@src/layouts/configuraçõesprivacidade';
+import Layout from '@src/layouts/6-settings_privacidade';
 
 function Privacidade(): JSX.Element {
     return (

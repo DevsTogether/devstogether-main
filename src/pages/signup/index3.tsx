@@ -1,6 +1,6 @@
-import Footer from '@src/components/Footer';
-import Header from '@src/components/Header/index';
-import Layout from '@src/layouts/layout_sigup3';
+import Footer from '@src/components/LayoutComponets/Footer';
+import Header from '@src/components/LayoutComponets/Header/index';
+import Layout from '@src/layouts/3-sign_up';
 
 function SignUp(): JSX.Element {
     return (

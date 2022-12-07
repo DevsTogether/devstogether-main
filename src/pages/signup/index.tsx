@@ -1,8 +1,8 @@
-import Footer from '@src/components/Footer';
-import Header from '@src/components/Header/index';
-import LayoutHome from '@src/layouts/layout_sigup';
-import LayoutSelectLanguages from '@src/layouts/layout_sigup2';
-import LayoutTest from '@src/layouts/layout_sigup3';
+import Footer from '@src/components/LayoutComponets/Footer';
+import Header from '@src/components/LayoutComponets/Header/index';
+import LayoutHome from '@src/layouts/1-sign_up';
+import LayoutSelectLanguages from '@src/layouts/2-sign_up';
+import LayoutTest from '@src/layouts/3-sign_up';
 import LayoutProfile from '@src/layouts/layout_sigup4';
 import { useState } from 'react';
 

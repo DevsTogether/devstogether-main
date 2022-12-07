@@ -1,30 +1,17 @@
-import Footer from '@src/components/Footer';
-import Header from '@src/components/Header';
-import Layout from '@src/layouts/Perfildousuario1';
-import styled from 'styled-components';
+import Footer from '@src/components/LayoutComponets/Footer';
+import Header from '@src/components/LayoutComponets/Header';
+import Layout from '@src/layouts/12-Perfildousuario';
 
 function Sobre(): JSX.Element {
     return (
         <>
 
             <Header />
-            <Container>
-                <main className="container">
-                    <Layout />
-                </main>
-            </Container>
+            <Layout />
             <Footer />
         </>
     );
 }
 
-export const Container = styled.div`
-    .container {
-        display: flex;
-        width: 100%;
-
-        flex-direction: row;
-    }
-`;
-
 export default Sobre;
+

@@ -1,4 +1,4 @@
-import Layout from '@src/layouts/configuraçõesvideo';
+import Layout from '@src/layouts/9-settings_aparencia';
 
 function Privacidade(): JSX.Element {
     return (

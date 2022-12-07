@@ -1,6 +1,6 @@
-import Footer from '@src/components/Footer';
-import Header from '@src/components/Header';
-import Layout from '@src/layouts/Help';
+import Footer from '@src/components/LayoutComponets/Footer';
+import Header from '@src/components/LayoutComponets/Header';
+import Layout from '@src/layouts/16-ajuda';
 
 function Sobre(): JSX.Element {
     return (

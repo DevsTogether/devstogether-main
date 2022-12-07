@@ -1,5 +1,5 @@
-import Footer from '@src/components/Footer';
-import Header from '@src/components/Header/index';
+import Footer from '@src/components/LayoutComponets/Footer';
+import Header from '@src/components/LayoutComponets/Header/index';
 import Layout from '@src/layouts/EmailVerification';
 
 function EmailVerificationPage(): JSX.Element {
