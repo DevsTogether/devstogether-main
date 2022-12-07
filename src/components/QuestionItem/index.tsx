@@ -9,10 +9,10 @@ export interface QuestionItemProps {
 };
 
 export default function QuestionItem(props: QuestionItemProps) {
-    const { id, vote, title, date, description, tags, responses, views } = props.question;
+    const { id, vote, title, date, user, tags, responses, views } = props.question;
 
     return (
-        <Link href={`/community/questions/${id}`}>
+        <Link href={`/community/questions/${id}`} target="_blank">
             <QuestionItemContainer>
                 <div className="question-content">
                     <div className="question">
@@ -26,10 +26,16 @@ export default function QuestionItem(props: QuestionItemProps) {
                                 <span>{views} visualizações</span>
                             </div>
                             <p className="question-title">{title}</p>
-                            <div className="question-tags">
-                                {tags.map(tag => (
-                                    <Box className="tag">{tag}</Box>
-                                ))}
+                            <div className="question-footer">
+                                <div className="user">
+                                    <span><Link href={`/users/${user?.id ?? 0}`}>{user?.name ?? "No User"}</Link></span>
+                                    <span> • <>{date.}</></span>
+                                </div>
+                                <div className="tags">
+                                    {tags.map((tag, i) => (
+                                        <Box className="tag" key={i}>{tag}</Box>
+                                    ))}
+                                </div>
                             </div>
                         </div>
                     </div>
