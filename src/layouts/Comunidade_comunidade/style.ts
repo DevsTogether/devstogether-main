@@ -5,12 +5,12 @@ export const LanguageMenuContainer = styled.div`
     display: flex;
     flex-direction: column;
     width: max-content;
+    height: 100vh;
+    overflow-y: auto;
     color: ${theme.colors.text};
     padding: 1rem 2rem;
 
-    h3 {
-        margin-bottom: 1rem;
-    }
+    gap: .7rem;
 `;
 
 export const Container = styled.div`
@@ -47,6 +47,11 @@ export const QuestionContainer = styled.div`
 
     h1 {
         margin-bottom: 20px;
+    }
+
+    .pagination-container {
+        display: flex;
+        justify-content: center;
     }
 
     img {
@@ -111,5 +116,16 @@ export const Desafios = styled.div`
         border: 0;
         width: 100%;
         border-top: 1px solid #4d5a65;
+    }
+`;
+
+export const QuestionCreationModalStyle = styled.div`
+    .modal-external-container {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: -50%, -50%;
+        width: 500px;
+        background-color: "#ccc";
     }
 `;

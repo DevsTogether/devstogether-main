@@ -25,8 +25,9 @@ export async function getServerSideProps(context: GetServerSidePropsContext) {
     const { page, lang } = context.query;
 
     const questions: SimpleQuestion[] = await QuestionObject.getSimpleQuestionList(
-        Number(page || 0), 10,
-        lang ? Number(lang) : undefined
+        page ? parseInt(page.toString()) - 1 : 0,
+        10,
+        `${lang || ""}`
     );
 
     questions.forEach((val) => {

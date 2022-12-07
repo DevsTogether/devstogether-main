@@ -1,4 +1,5 @@
 import { Box } from '@mui/system';
+import { formatDateString } from '@src/utils/date';
 import Link from 'next/link';
 import { SimpleQuestion } from 'types/types';
 import { VoteButtons } from '../VoteButtons';
@@ -28,8 +29,8 @@ export default function QuestionItem(props: QuestionItemProps) {
                             <p className="question-title">{title}</p>
                             <div className="question-footer">
                                 <div className="user">
-                                    <span><Link href={`/users/${user?.id ?? 0}`}>{user?.name ?? "No User"}</Link></span>
-                                    <span> • <>{date.}</></span>
+                                    <span><Link href={`/users/${user?.id || ""}`}>{user?.name || "No User"}</Link></span>
+                                    <span> • <>{formatDateString(date)}</></span>
                                 </div>
                                 <div className="tags">
                                     {tags.map((tag, i) => (
@@ -44,3 +45,4 @@ export default function QuestionItem(props: QuestionItemProps) {
         </Link>
     );
 }
+

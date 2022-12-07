@@ -62,9 +62,9 @@ export function VoteButtons(props: VoteButtonsProps) {
 
     return (
         <VoteContainer>
-            <Image src={voteArrowIcon} width={18} height={18} className={`upvote-icon ${upvoted ? "selected" : ""}`} onClick={onUpClick} />
+            <Image src={voteArrowIcon} width={18} height={18} className={`upvote-icon ${upvoted ? "selected" : ""}`} onClick={onUpClick} alt="" />
             <span className="number">{number}</span>
-            <Image src={voteArrowIcon} width={18} height={18} className={`downvote-icon ${downvoted ? "selected" : ""}`} onClick={onDownClick} />
+            <Image src={voteArrowIcon} width={18} height={18} className={`downvote-icon ${downvoted ? "selected" : ""}`} onClick={onDownClick} alt="" />
         </VoteContainer>
     )
 }

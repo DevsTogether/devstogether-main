@@ -46,7 +46,7 @@ class Question {
             title: questionsResponse.title,
             description: questionsResponse.content,
             responses: questionsResponse.Responses.length,
-            views: 0,
+            views: questionsResponse.visits,
             tags: questionsResponse.tags.map((item) => (item.tag?.name ?? "")),
             vote: questionsResponse.Vote.reduce((p, c) => p + (c.point ?? 0), 0),
             date: questionsResponse.createdAt ?? "",
@@ -57,14 +57,16 @@ class Question {
         };
     }
 
-    async getSimpleQuestionList(offset: number, length: number, tagId?: number): Promise<SimpleQuestion[]> {
+    async getSimpleQuestionList(offset: number, length: number, tagId?: string | undefined): Promise<SimpleQuestion[]> {
         let filter = {};
 
         if (tagId) {
             filter = {
                 tags: {
                     some: {
-                        tagId: tagId
+                        tagId: {
+                            equals: tagId
+                        }
                     }
                 }
             }

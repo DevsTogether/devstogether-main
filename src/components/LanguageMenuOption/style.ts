@@ -1,10 +1,11 @@
 import styled from 'styled-components';
 
 export const Drawer = styled.div`
+    cursor: pointer;
+
     h4 {
         font-size: 13px;
         font-weight: 400;
-        margin-bottom: 20px;
     }
 
     hr {
