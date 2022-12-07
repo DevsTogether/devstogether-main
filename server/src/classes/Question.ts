@@ -29,6 +29,12 @@ class Question {
                         }
                     }
                 },
+                User: {
+                    select: {
+                        id: true,
+                        username: true
+                    }
+                }
             },
             where: {
                 id: questionId
@@ -43,7 +49,11 @@ class Question {
             views: 0,
             tags: questionsResponse.tags.map((item) => (item.tag?.name ?? "")),
             vote: questionsResponse.Vote.reduce((p, c) => p + (c.point ?? 0), 0),
-            date: questionsResponse.createdAt ?? ""
+            date: questionsResponse.createdAt ?? "",
+            user: {
+                id: questionsResponse.User?.id ?? "",
+                name: questionsResponse.User?.username ?? ""
+            }
         };
     }
 
@@ -88,6 +98,12 @@ class Question {
                         }
                     }
                 },
+                User: {
+                    select: {
+                        id: true,
+                        username: true
+                    }
+                }
             },
             where: filter
         });
@@ -100,7 +116,11 @@ class Question {
             views: item.visits,
             tags: item.tags.map((item) => (item.tag?.name ?? "")),
             vote: item.Vote.reduce((p, c) => p + (c.point ?? 0), 0),
-            date: item.createdAt ?? ""
+            date: item.createdAt ?? "",
+            user: {
+                id: item.User?.id ?? "",
+                name: item.User?.username ?? ""
+            }
         }));
     }
 
@@ -142,6 +162,12 @@ class Question {
                 closed: true,
                 type: true,
                 updatedAt: true,
+                User: {
+                    select: {
+                        id: true,
+                        username: true
+                    }
+                }
             },
             where: {
                 id: questionId
@@ -159,7 +185,11 @@ class Question {
             date: question.createdAt ?? "",
             closed: question.closed,
             type: question.type ?? "write",
-            updatedAt: question.updatedAt?.toLocaleDateString() ?? ""
+            updatedAt: question.updatedAt?.toLocaleDateString() ?? "",
+            user: {
+                id: question.User?.id ?? "",
+                name: question.User?.username ?? ""
+            }
         };
     }
 }

@@ -6,6 +6,10 @@ export interface SimpleQuestion {
     date: Date | string;
     tags: Array<string>;
     responses: number;
+    user: {
+        id: string;
+        name: string;
+    };
     views: number;
 };
 

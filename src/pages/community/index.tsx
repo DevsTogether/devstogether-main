@@ -10,7 +10,7 @@ export default function Community(props: CommunityPageProps): JSX.Element {
 
     return (
         <>
-            s
+            <Header />
             <Layout
                 questions={questions}
             />

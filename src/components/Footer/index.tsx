@@ -25,9 +25,13 @@ function Footer(): JSX.Element {
             <div className="RedesSociais">
                 <p>Copyright @Yout Website 2022</p>
                 <div className="Logo_RedeSocial">
-                    <img src="/logofooter.png" alt="" />
-                    <img src="/logofooter2.png" alt="" />
-                    <Link href="https://www.youtube.com/channel/UCym6nH2pDE1S00O0l62X8sg" target={'_blank'}>
+                    <Link href="#" target="_blank">
+                        <img src="/logofooter.png" alt="" />
+                    </Link>
+                    <Link href="#" target="_blank">
+                        <img src="/logofooter2.png" alt="" />
+                    </Link>
+                    <Link href="https://www.youtube.com/channel/UCym6nH2pDE1S00O0l62X8sg" target="_blank">
                         <img src="/logofooter3.png" alt="" />
                     </Link>
                 </div>

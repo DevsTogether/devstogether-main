@@ -11,7 +11,7 @@ export const Container = styled.div`
     .container {
         gap: 20px;
         width: 49vmin;
-        height: 600px;
+        min-height: 600px;
         background-color: #3c4144;
         box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.7);
         border-radius: 4px;

@@ -12,7 +12,7 @@ export const QuestionItemContainer = styled.div`
         background-color: #353E46;
     }
 
-    .question-content, .question-tags, .question, .content, .stats {
+    .question-content, .question-footer, .question, .content, .stats {
         display: flex;
     }
 
@@ -21,9 +21,10 @@ export const QuestionItemContainer = styled.div`
         gap: 16px;
     }
 
-    .question-tags {
+    .question-footer {
         gap: 4px;
-        justify-content: flex-end;
+        align-items: flex-end;
+        flex-direction: column;
     }
 
     .question-title {
@@ -42,10 +43,15 @@ export const QuestionItemContainer = styled.div`
         gap: 8px;
     }
 
+    .user {
+        font-size: 12px;
+    }
+    
     .tag {
         border-radius: 2px;
         font-size: 8pt;
         background-color: #37474F;
         padding: 2px 7px;
+        width: fit-content;
     }
 `;
