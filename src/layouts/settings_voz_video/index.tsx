@@ -55,7 +55,7 @@ function Configuração(): JSX.Element {
                             <h1>Vídeo</h1>
                             <SelectVideo />
                             <div className='imagem_vídeo'>
-                                <img src='/image 3.png' />
+                                <img src='/videoimage.png' />
                             </div>
                         </div>
                     </div>

@@ -1,4 +1,4 @@
-import Layout from '@src/layouts/8-settings_idioma';
+import Layout from '@src/layouts/settings_idioma';
 
 function Privacidade(): JSX.Element {
     return (

@@ -1,4 +1,4 @@
-import Layout from '@src/layouts/7-settings_conta';
+import Layout from '@src/layouts/settings_conta';
 
 function Privacidade(): JSX.Element {
     return (

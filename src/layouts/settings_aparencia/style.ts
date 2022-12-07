@@ -48,35 +48,35 @@ flex-direction: row;
       }
     }
 
-    p {
-      margin-left: 1%;
-    }
-
-    .Voz {
+    .Aparencia {
        display: flex;
        flex-direction: column;
        width: 75%;
-       height: 100%;
+       height: 130vh;
        color: white;
        background: #353e46;
     }
 
-    .VozItens {
+    .Aparenciaitens {
       display: flex;
       flex-direction: column;
       margin-top: 3%;
       margin-left: 10%;
     }
 
-    .checkbox {
-      display: flex;
-      flex-direction: row;
-      align-items: center;
+    .radio {
+        display: flex;
+        flex-direction: row;
+        width: 90%;
+        margin-top:2%;
+        height: 20%;
+        margin-bottom: 0.5%;
+        background: #5F6A75;
+        border-radius: 5px;
+    } 
+    
+    h2 {
+      margin-top: 2.5%;
     }
-
-    .imagem_vídeo {
-      display: flex;
-      margin-right: 20%;
-      justify-content: right;
-    }
+    
 `;

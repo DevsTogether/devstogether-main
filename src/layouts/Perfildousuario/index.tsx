@@ -19,14 +19,26 @@ function Layout(): JSX.Element {
                                     <Avatar sx={{ width: 76, height: 76, mr: 3 }} alt="Travis Howard" src="/static/images/avatar/2.jpg" />
                                     <div>
                                         <h2>Marcos Alves</h2>
-                                        <Chip icon={<FaceIcon />} label="With Icon" />
-                                        <Chip icon={<FaceIcon />} label="With Icon" />
+                                        <Chip icon={<FaceIcon />} sx={{ mt: 1, mr: 1 }} label="Dev Junior" color="primary" />
+                                        <Chip icon={<FaceIcon />} sx={{ mt: 1, mr: 1 }} label="122 Pontos" color="primary" />
                                     </div>
                                 </div>
                                 <div className='Perguntas'>
-                                    <p>Perguntas</p>
-                                    <p>Perguntas</p>
-                                    <p>Perguntas</p>
+                                    <div className='itensPerguntas'>
+                                        <p>Perguntas</p>
+                                        <p>3</p>
+                                    </div>
+
+                                    <div className='itensPerguntas'>
+                                        <p>Respostas</p>
+                                        <p>3</p>
+                                    </div>
+
+                                    <div className='itensPerguntas'>
+                                        <p>Agradeçeram</p>
+                                        <p>3</p>
+                                    </div>
+
 
                                 </div>
 
@@ -39,10 +51,21 @@ function Layout(): JSX.Element {
                                 </div>
 
                                 <div className='tags'>
-                                    <p>Membro afnaiof</p>
-                                    <p>Membro afnaiof</p>
-                                    <p>Membro afnaiof</p>
-                                    <p>Membro afnaiof</p>
+                                    <div className='itenstag'>
+                                        <p><img src='/cake.png' />Membro afnaiof</p>
+                                    </div>
+
+                                    <div className='itenstag'>
+                                        <p><img src='/emailicon.png' />Membro afnaiof</p>
+                                    </div>
+
+                                    <div className='itenstag'>
+                                        <p><img src='/twitch (3).png' />Membro afnaiof</p>
+                                    </div>
+
+                                    <div className='itenstag'>
+                                        <p><img src='/githubicon.png' />Membro afnaiof</p>
+                                    </div>
                                 </div>
 
 

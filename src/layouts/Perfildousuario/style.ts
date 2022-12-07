@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 export const PrincipalContainer = styled.div`
    width: 100%;
-   height: 140vh;
+   height: 170vh;
    display: flex;
    flex-direction: column;
 `
@@ -88,6 +88,20 @@ flex-direction: row;
     .conquistas {
       display: flex;
       flex-direction: column;
+    }
+
+    .itensPerguntas {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-left: 2%;
+    }
+
+    .itenstag {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      margin-bottom: 2%;
     }
 
 

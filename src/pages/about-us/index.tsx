@@ -1,6 +1,6 @@
 import Footer from '@src/components/LayoutComponets/Footer';
 import Header from '@src/components/LayoutComponets/Header/index';
-import Layout from '@src/layouts/15-sobre';
+import Layout from '@src/layouts/sobre';
 
 function Cards(): JSX.Element {
     return (

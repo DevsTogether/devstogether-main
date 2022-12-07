@@ -38,7 +38,7 @@ function Configuração(): JSX.Element {
                     <div className='Privacidade'>
                         <div className='Privacidadeitens'>
                             <h1>Privacidade e Segurança</h1>
-                            <h2>Ultilizar dados para melhorar a experiencia<Switch sx={{ ml: '20%' }} {...label} defaultChecked /></h2>
+                            <h2>Ultilizar dados para melhorar a experiencia<Switch sx={{ ml: '25%' }} {...label} defaultChecked /></h2>
                             <h4>
                                 Esta configuração nos permite a coleta de dados para
                                 melhorar a sua experiência
@@ -48,7 +48,7 @@ function Configuração(): JSX.Element {
                             <h4>
                                 Permite utilização de dados de usuario para ajudar a
                                 encontrar uma resposta para perguntas similares
-                            </h4>
+                                <Switch sx={{ ml: '3%' }} {...label} defaultChecked /></h4>
 
                             <h2>Utilizar dados para funcionamento</h2>
                             <h4>

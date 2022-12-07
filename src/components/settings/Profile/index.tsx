@@ -36,12 +36,12 @@ export default function RecipeReviewCard() {
             <CardMedia
                 component="img"
                 height="10vw"
-                image="/Entrar_comunidade.png"
+                image="/banner.png"
                 alt="Paella dish"
             />
             <CardHeader
                 avatar={
-                    <Avatar alt="Remy Sharp" src="/conta.png" aria-label="recipe"></Avatar>
+                    <Avatar sx={{ width: '100%' }} alt="Remy Sharp" src="/avatar.png" aria-label="recipe"></Avatar>
                 }
 
                 title="Marcos Alves"

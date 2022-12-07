@@ -2,7 +2,7 @@
 /* eslint-disable @next/next/no-img-element */
 import Footer from '@src/components/LayoutComponets/Footer';
 import Header from '@src/components/LayoutComponets/Header';
-import Layout from '@src/layouts/14-perguntas_individual/question';
+import Layout from '@src/layouts/perguntas_individual/question';
 import { GetServerSidePropsContext } from 'next';
 
 export default function page({ question }: any) {

@@ -1,6 +1,6 @@
 import Footer from '@src/components/LayoutComponets/Footer';
 import Header from '@src/components/LayoutComponets/Header';
-import Layout from '@src/layouts/10-home';
+import Layout from '@src/layouts/home';
 import { GetStaticProps } from "next";
 
 export default function Cards({ date }): JSX.Element {

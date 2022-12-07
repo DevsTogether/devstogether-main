@@ -1,9 +1,9 @@
 import Footer from '@src/components/LayoutComponets/Footer';
 import Header from '@src/components/LayoutComponets/Header/index';
-import LayoutHome from '@src/layouts/1-sign_up';
-import LayoutSelectLanguages from '@src/layouts/2-sign_up';
-import LayoutTest from '@src/layouts/3-sign_up';
-import LayoutProfile from '@src/layouts/layout_sigup4';
+import LayoutHome from '@src/layouts/sign_up1';
+import LayoutSelectLanguages from '@src/layouts/sign_up2';
+import LayoutTest from '@src/layouts/sign_up3';
+import LayoutProfile from '@src/layouts/sign_up4';
 import { useState } from 'react';
 
 export interface SignUpForm {

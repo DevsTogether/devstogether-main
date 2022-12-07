@@ -63,7 +63,7 @@ export default function MultipleSelect() {
                     multiple
                     value={personName}
                     onChange={handleChange}
-                    input={<OutlinedInput label="Name" />}
+                    input={<OutlinedInput label="Padrão" />}
                     MenuProps={MenuProps}
                 >
                     {names.map((name) => (

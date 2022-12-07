@@ -60,15 +60,15 @@ function Configuração(): JSX.Element {
                                 </Avatar>
 
                                 <Avatar sx={{ bgcolor: '#353e46', m: 2, width: '10%' }} variant="square">
-                                    <GitHubIcon />
+                                    <img src='/twitch.png' />
                                 </Avatar>
 
                                 <Avatar sx={{ bgcolor: '#353e46', m: 2, width: '10%' }} variant="square">
-                                    <GitHubIcon />
+                                    <img src='/youtube.png' />
                                 </Avatar>
 
                                 <Avatar sx={{ bgcolor: '#353e46', m: 2, width: '10%' }} variant="square">
-                                    <GitHubIcon />
+                                    <img src='/linkedin.png' />
                                 </Avatar>
                             </div>
 

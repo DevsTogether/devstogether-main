@@ -44,30 +44,34 @@ function Configuração(): JSX.Element {
 
                             <div className='radio'>
                                 <FormControlLabel
-                                    value="male"
+                                    value="Escuro"
                                     control={<Radio />}
-                                    label="Male"
+                                    label="Escuro"
+                                    sx={{ ml: 1 }}
                                 />
                             </div>
 
                             <div className='radio'>
                                 <FormControlLabel
-                                    value="male"
+                                    value="Claro"
                                     control={<Radio />}
-                                    label="Male"
+                                    label="Claro"
+                                    sx={{ ml: 1 }}
                                 />
                             </div>
 
                             <div className='radio'>
                                 <FormControlLabel
-                                    value="male"
+                                    value="Sincronizar com o sistema"
                                     control={<Radio />}
-                                    label="Male"
+                                    label="Sincronizar com o sistema"
+                                    sx={{ ml: 1 }}
                                 />
                             </div>
 
                             <h2>Tamanho da fonte</h2>
-                            <TextField sx={{ mt: '3%', width: '70%', height: '20%' }} fullWidth label="fullWidth" id="fullWidth" />
+                            <TextField sx={{ mt: '3%', width: '70%', height: '20%' }} fullWidth label="fullWidth" id="fullWidth" variant="standard" placeholder="Placeholder"
+                                multiline />
                         </div>
                     </div>
                 </Menu>

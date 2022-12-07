@@ -1,6 +1,6 @@
 import Footer from '@src/components/LayoutComponets/Footer';
 import Header from '@src/components/LayoutComponets/Header/index';
-import Layout from '@src/layouts/0-Signin';
+import Layout from '@src/layouts/Signin';
 import { GetServerSidePropsContext } from 'next';
 import { getCsrfToken } from "next-auth/react";
 
