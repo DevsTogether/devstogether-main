@@ -7,10 +7,10 @@ export const Menu = styled.div`
 
 .Respostas {
     display: flex;
-    width: 68%;
+    width: 100%;
     margin-bottom: 4%;
     height: 80%;
-    border: 2px;
+    border: 4.5px;
     flex-direction: column;
     border: 2px solid;
     border-color: gray;

@@ -25,11 +25,11 @@ flex-direction: row;
     .draweritens {
       display: flex;
       flex-direction: row;
-      justify-content: space-between;
       width: 100%;
       
       @media(max-width: 821px) {
         flex-direction: column;
+        justify-content: center;
         align-items: center;
       }
     }
@@ -41,6 +41,7 @@ flex-direction: row;
 
       @media(max-width: 821px) {
         width: 100%;
+        align-items: center;
       }
     }
 
@@ -57,10 +58,17 @@ flex-direction: row;
       margin-top: 2%;
       margin-bottom: 2%;
       margin-left: 3%;
+      
     }
 
     p {
       margin-right: 3%;
+      
+      @media(max-width: 821px) {
+        margin-right: 1%;
+        justify-content: center;
+      }
+      
     }
 
     .Sobremim {
@@ -70,6 +78,13 @@ flex-direction: row;
       margin-bottom: 2%;
       width: 25%;
       margin-left: 3%;
+
+      @media(max-width: 821px) {
+        width: 70%;
+        margin-left: 0%;
+        align-items: center;
+        justify-content: center;
+      }
     }
 
     h3 {
@@ -88,6 +103,12 @@ flex-direction: row;
     .conquistas {
       display: flex;
       flex-direction: column;
+
+      @media(max-width: 821px) {
+        width: 120%;
+        justify-content: center;
+        align-items: center;
+      }
     }
 
     .itensPerguntas {
@@ -100,8 +121,14 @@ flex-direction: row;
     .itenstag {
       display: flex;
       flex-direction: row;
-      align-items: center;
       margin-bottom: 2%;
+      width: 50%;
+
+      @media(max-width: 821px) {
+        width: 120%;
+        margin-bottom: 5%;
+        align-items: center;
+      }
     }
 
 

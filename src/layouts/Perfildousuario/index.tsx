@@ -16,7 +16,7 @@ function Layout(): JSX.Element {
                         <div className='draweritens'>
                             <div className='Container'>
                                 <div className='avatar'>
-                                    <Avatar sx={{ width: 76, height: 76, mr: 3 }} alt="Travis Howard" src="/static/images/avatar/2.jpg" />
+                                    <Avatar sx={{ width: 76, height: 76, mr: 3 }} alt="Travis Howard" src="/avatar.png" />
                                     <div>
                                         <h2>Marcos Alves</h2>
                                         <Chip icon={<FaceIcon />} sx={{ mt: 1, mr: 1 }} label="Dev Junior" color="primary" />
