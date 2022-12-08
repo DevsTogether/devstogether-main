@@ -13,7 +13,7 @@ export default function BasicModal() {
         <div className="Container">
             <Button
                 onClick={handleOpen}
-                sx={{ mt: 40, mb: 40 }}
+                sx={{ mt: 40, mb: 40, ml: '50%' }}
                 color="success"
             >
                 Open modal
@@ -26,10 +26,10 @@ export default function BasicModal() {
             >
                 <Box
                     sx={{
-                        width: 1100,
-                        height: 800,
-                        ml: 25,
+                        width: '65%',
+                        height: '85%',
                         mt: 5,
+                        ml: '15%',
                         backgroundColor: '#2D3237',
                         '&:hover': {
                             backgroundColor: 'gray',
@@ -42,7 +42,7 @@ export default function BasicModal() {
                     </div>
 
                     <TextField
-                        sx={{ mt: 2, ml: 25, width: 700, top: 20, mb: 2 }}
+                        sx={{ mt: 2, ml: '20%', width: '50%', top: 20, mb: 2 }}
                         id="filled-multiline-static"
                         label="Multiline"
                         multiline
@@ -52,7 +52,7 @@ export default function BasicModal() {
                     ></TextField>
 
                     <TextField
-                        sx={{ ml: 25, width: 700, top: 20 }}
+                        sx={{ ml: '20%', width: '50%', top: 20, mb: 4 }}
                         id="filled-multiline-static"
                         label="Multiline"
                         multiline
@@ -61,20 +61,22 @@ export default function BasicModal() {
                         variant="filled"
                     />
 
-                    <Button
-                        variant="outlined"
-                        sx={{ top: 50, mr: 18 }}
-                        color="success"
-                    >
-                        Próxima
-                    </Button>
-                    <Button
-                        variant="contained"
-                        sx={{ top: 50, ml: 90 }}
-                        color="success"
-                    >
-                        Próxima
-                    </Button>
+                    <div className='botões'>
+                        <Button
+                            variant="outlined"
+                            sx={{ mt: 2, mr: 2, ml: 3 }}
+                            color="success"
+                        >
+                            Próxima
+                        </Button>
+                        <Button
+                            variant="contained"
+                            sx={{ mt: 2, mr: 2, ml: '60%' }}
+                            color="success"
+                        >
+                            Próxima
+                        </Button>
+                    </div>
                 </Box>
             </Modal>
         </div>

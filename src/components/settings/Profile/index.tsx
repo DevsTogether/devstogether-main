@@ -32,7 +32,7 @@ export default function RecipeReviewCard() {
     };
 
     return (
-        <Card sx={{ maxWidth: 645, background: '#2d3237;', color: 'white', width: '80%' }}>
+        <Card sx={{ maxWidth: 645, background: '#2d3237;', color: 'white', width: '100%' }}>
             <CardMedia
                 component="img"
                 height="10vw"
@@ -41,11 +41,13 @@ export default function RecipeReviewCard() {
             />
             <CardHeader
                 avatar={
-                    <Avatar sx={{ width: '100%' }} alt="Remy Sharp" src="/avatar.png" aria-label="recipe"></Avatar>
+                    <>
+                        <div>
+                            <Avatar alt="Travis Howard" src="/avatar.png" />
+                        </div>
+                        <h2>Marcos Alves</h2>
+                    </>
                 }
-
-                title="Marcos Alves"
-                subheader=""
             />
             <CardContent>
                 <Estilo>

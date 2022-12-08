@@ -57,6 +57,7 @@ export const Rodapé = styled.div`
         
         & img {
             cursor: pointer;
+            height: 50%;
         }
     }
 
@@ -80,7 +81,7 @@ export const Rodapé = styled.div`
 
     img {
         margin-left: 30%;
-        height: 80%;
+        height: 50%;
     }
 
     ul {

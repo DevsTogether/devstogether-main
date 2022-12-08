@@ -13,7 +13,7 @@ export default function BasicModal() {
         <div className="Container">
             <Button
                 onClick={handleOpen}
-                sx={{ mt: 40, mb: 40 }}
+                sx={{ mt: 40, mb: 40, ml: '50%' }}
                 color="success"
             >
                 Open modal
@@ -26,10 +26,11 @@ export default function BasicModal() {
             >
                 <Box
                     sx={{
-                        width: 1100,
-                        height: 800,
-                        ml: 25,
+                        width: '70%',
+                        height: '85%',
                         mt: 5,
+                        ml: '15%',
+                        alignContent: 'center',
                         backgroundColor: '#2D3237',
                         '&:hover': {
                             backgroundColor: 'gray',
@@ -42,7 +43,7 @@ export default function BasicModal() {
                     </div>
 
                     <TextField
-                        sx={{ ml: 25, width: 700, top: 20 }}
+                        sx={{ ml: '20%', width: '50%', top: 20 }}
                         id="filled-multiline-static"
                         label="Multiline"
                         multiline
@@ -52,7 +53,7 @@ export default function BasicModal() {
                     />
 
                     <TextField
-                        sx={{ mt: 5, ml: 25, width: 700, top: 20 }}
+                        sx={{ mt: 5, ml: '20%', width: '50%', top: 20 }}
                         id="filled-multiline-static"
                         label="Multiline"
                         multiline

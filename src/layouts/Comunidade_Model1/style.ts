@@ -2,13 +2,14 @@ import styled from 'styled-components';
 
 export const Container = styled.div`
     width: 100%;
+    align-items: center;
     height: 100%;
 
     .Container {
-        position: relative;
         display: flex;
         justify-content: center;
         flex-direction: row;
+        margin-left: 50%;
         align-items: center;
         flex-wrap: wrap;
         z-index: 1;

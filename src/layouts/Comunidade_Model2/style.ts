@@ -18,4 +18,12 @@ export const Container = styled.div`
         margin-top: 500px;
         margin-bottom: 500px;
     }
+
+    .botões {
+        width: 80%;
+        display: flex;
+        flex-direction: row;
+        margin-top: 5%;
+        justify-content: space-around;
+    }
 `;

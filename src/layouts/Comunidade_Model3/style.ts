@@ -20,6 +20,26 @@ export const Container = styled.div`
     }
 
     .imagem {
-        margin-left: 40px;
+        margin-left: 60px;
+    }
+
+    .Itens {
+        display: flex;
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .option-card-container {
+        background-color: red;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        gap: 2rem;
+        width: 50%;
+        height: 50%;
+        margin: 20px auto auto 25%;
+        background-color: #2D3237;
     }
 `;

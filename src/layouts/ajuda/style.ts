@@ -11,7 +11,7 @@ export const Container = styled.div`
     height: 100%;
 
     .div_input {
-        width: 100%;
+        width: 50%;
         margin-bottom: 3%;
     }
 
@@ -20,7 +20,7 @@ export const Container = styled.div`
         flex-direction: row;
         border-radius: 2px;
         border: none;
-        width: 100vh;
+        width: 100%;
         height: 7vh;
         font-size: 20px;
     }
